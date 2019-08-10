@@ -1,0 +1,11 @@
+/vendor
+/nbproject
+/public/storeApp
+/public/storeDI
+/public/chrome
+.settings/*
+.buildpath
+.project
+composer.lock
+*.dat
+/public/*.sez
