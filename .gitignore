@@ -28,7 +28,7 @@ composer.lock
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
@@ -79,6 +79,7 @@ web_ramanavami.org/
 web_ramapriya.org/
 web_researchramayana.org/
 web_templeofmusic.co.in/
+
 
 library/CMS-EmailIds-bigrock-Export.xlsx
 library/CMS-EmailIds-gmail-Export.xlsx
