@@ -1,0 +1,119 @@
+<div class="row output-panels" id="pCollection">
+				<ul class="nav nav-tabs" id="colls_menu">
+					<li class="active"><a href="#add_colls" data-toggle="tab" id="addcollection">Add Collection</a></li>
+					<li><a href="#list_colls" data-toggle="tab" id="listcollsbut">List Collections</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="add_colls">
+						<!-- Collections -->
+						<div class="row">
+							<div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Collections <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+							</div>
+							<div class="col-lg-12" id="multiple_collections">
+								<div class="panel panel-warning">
+									<div class="panel-heading">
+										<strong>Collection</strong>&nbsp;
+									</div>
+									<div class="panel-body">
+										<form id="collsform">
+											<div class="row">
+												<div class="col-lg-6">
+													<!-- Collector -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Collector <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Collector" name="colls_coltr" type="text" id="colls_coltr" maxlength="100" />
+														<p class="help-block" id="colls_coltr_msg">Enter/ Select.</p>
+													</div>
+													<!-- Payer -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Payer <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Supplier / Customer / Retailer" name="colls_payer" type="text" id="colls_payer" maxlength="100" />
+														<p class="help-block" id="colls_payer_msg">Enter/ Select.</p>
+													</div>
+													<!-- Date -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date Of Collection <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Date Of Collection" name="colls_date" type="text" id="colls_date" maxlength="15" readonly="readonly"/>
+														<p class="help-block" id="colls_date_msg">Enter/ Select.</p>
+													</div>
+													<!-- Amount -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Amount <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Amount" name="colls_amt" type="text" id="colls_amt" maxlength="9" value="0" />
+														<p class="help-block" id="colls_amt_msg">Enter/ Select.</p>
+													</div>
+													<!-- Remark -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Remarks <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<textarea class="form-control" name="colls_rmk" type="text" id="colls_rmk" maxlength="100" placehoder="Remarks on the collection"></textarea>
+														<p class="help-block" id="colls_rmk_msg">Enter/ Select.</p>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<!-- Mode of payment -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Mode of Payment <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12" id="CTvMopType">
+														<input class="form-control" placeholder="Mode of Payment" name="mop_colls" type="text" id="mop_colls"/>
+														<p class="help-block" id="mop_colls_msg">Enter/ Select.</p>
+														Fetch the mode of payments
+													</div>
+													<div class="col-lg-12" id="CTvMopAcTit">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Bank Account <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12" id="CTvMopAc">
+														<input class="form-control" placeholder="Bank Account" name="colls_ac" type="text" id="colls_ac"/>
+														<p class="help-block" id="colls_ac_msg">Enter/ Select.</p>
+														Fetch the bank accounts
+													</div>
+													<div class="col-lg-12" id="CaddColBAC">&nbsp;</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12"><button class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="addcollsBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Pay</button></div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="list_colls">
+						<!--<div class="row">
+							<div class="col-lg-12">
+								<div class="col-md-6">
+									List
+								</div>
+								<!--<div class="col-md-6 text-right" id="serachpattymenu">
+									Search menu
+								</div>
+							</div>
+							<!--<div class="col-lg-12" id="searchcollshtml">
+								Search HTML
+							</div>
+						</div>-->
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="panel panel-primary">
+									<div class="panel-heading">
+										List collections
+									</div>
+									<div class="panel-body table-responsive" id="lstcollections"></div>
+									<div class="col-lg-12" id="lstcollsloader"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12" id="colls_message"></div>
+			</div>

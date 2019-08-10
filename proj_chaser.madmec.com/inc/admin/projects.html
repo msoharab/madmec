@@ -1,0 +1,61 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Projects
+        <small>Chaser</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">Projects</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content" ><ul class="nav nav-tabs">
+        <li class="active"><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Project's</a></li>
+        <li><a href="#Add" data-toggle="tab" id="Addfacility">Add Project</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade" id="Add">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><i class="fa fa-file-powerpoint-o fa-fw fa-x2"></i>&nbsp;<strong>Add Project</strong></div>
+                <div class="panel-body">
+                    <form id='projectaddform'>
+                     
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Project Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="projectname" name="projectname" type="text" class="form-control"  placeholder="Project Name" required=""/>
+                                 <span id="err_email"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Project Start Date : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="projectdate" name="projectdate" readonly="" type="text" class="form-control"  placeholder="Project Start Date"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+                            <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade in active" id="Show">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><i class="fa fa-file-powerpoint-o fa-fw fa-x2"></i>&nbsp;<strong>List Project's</strong></div>
+                <div class="panel-body">
+                    <div id='disvehicletype'>Loading............</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

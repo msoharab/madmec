@@ -1,0 +1,96 @@
+<!-- Client Purchase Order -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pPurchaseOrder">
+    <ul class="nav nav-tabs" id="clientpo_menu">
+        <li class="active"><a href="#add_cpo" data-toggle="tab" id="addcpobut">Client PO</a> </li>
+        <li><a href="#list_cpo" data-toggle="tab" id="listcpobut">List Client Purchase Order</a> </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_cpo">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    Upload purchase order. </div>
+                <div class="panel-body" id="upload_po">
+                    <!-- Upload CPO -->
+                    <form role="form" action="" method="post" name="uploadcpo" id="uploadcpo" enctype="multipart/form-data">
+                        <fieldset>
+                            <div class="row">
+                                <!-- Select requirement -->
+                                <div class="col-lg-4">
+                                    <div class="col-lg-12">
+                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Requirement Specification </strong>
+                                    </div>
+                                    <div class="col-lg-12" id="URequiCPOList">
+                                        <input class="form-control" placeholder="Select Requirement Specification" type="text" maxlength="100"/>
+                                        <p class="help-block">Select / Enter</p>
+                                    </div>
+                                </div>
+                                <!-- Reference No -->
+                                <div class="col-lg-4">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"></span> Reference No </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Reference No" name="clientpo_refno" type="text" id="clientpo_refno" maxlength="100" />
+                                        <p class="help-block" id="clientpo_refno_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <!-- Date Of Issue -->
+                                <div class="col-lg-4">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date Of Issue </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Date Of Issue" name="clientpo_doi" type="text" id="clientpo_doi" maxlength="15" readonly="readonly" />
+                                        <p class="help-block" id="clientpo_doi_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <!-- Requirement -->
+                                <div class="col-lg-12" id="requiCPO_doc"></div>
+                                <!-- Loader -->
+                                <div class="col-lg-12" id="pslCPO_loader"></div>
+                            </div>
+                            <!-- Upload Client Purchase Order -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4> Upload Client Purchase Order </h4>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                            <!-- Select a file -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="file" name="cpo_file_upload"   id="cpo_file_upload" />
+                                        <p class="help-block" id="cpo_file_upload_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                            <!-- Button -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-lg btn-primary btn-block"  name="upload_poBut" id="upload_poBut" >Upload and Save</button>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                            <!-- Loaders -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="progress" id="cpo_progress">
+                                        <div class="bar"  id="cpo_bar"></div >
+                                        <div class="percent"  id="cpo_percent">0%</div >
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" id="cpo_status" ></div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_cpo">
+            <div class="row">
+                <div class="col-lg-12" id="listCPO"> List Client Purchase Order </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="cpo_message"></div>
+
+</div>

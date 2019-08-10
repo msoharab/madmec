@@ -1,0 +1,208 @@
+<!-- Stock -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pStock">
+    <ul class="nav nav-tabs" id="stock_menu">
+        <li class="active"><a href="#add_item" data-toggle="tab" id="additmesbut">Add Item</a> </li>
+        <li><a href="#add_stock" data-toggle="tab" id="stockbut">Add stock</a> </li>
+        <li><a href="#view_stock" data-toggle="tab" id="viewstockbut">View Stock</a> </li>
+        <!--<li><a href="#issue_item" data-toggle="tab" id="issueitembut">Issue Item</a> </li>-->
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_item">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Add new item in to the stock. </div>
+                        <div class="panel-body" id="accordionadditem">
+                            <form id="additemForm">
+                                <!-- Item Type / Name -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Item Type / Name </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Item Type / Name" name="item_name12" type="text" id="item_name12" maxlength="200" />
+                                        <p class="help-block" id="item_name_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <!-- Minimum Criteria -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Minimum Criteria </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Minimum Criteria" name="min_crit" type="text" id="min_crit" maxlength="11" />
+                                        <p class="help-block" id="min_crit_msg">Enter / Select</p>
+                                        <input type="text" id="hiditemname" value="" name="hiditemname" hidden=""> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-lg btn-primary btn-block" id="additemBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="add_stock">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Add new item in to the stock.</div>
+                        <div class="panel-body" id="accordionaddstock">
+                            <form id="addstockForm">
+                                <!-- Select Item -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Item </strong> </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group" id="TVStocktype"> Fetch Added Items from the database. </div>
+                                    </div>
+                                </div>
+                                <!-- Quantity -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Quantity </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Available quantity" name="itm_qty" type="text" id="itm_qty" maxlength="11" />
+                                        <p class="help-block" id="itm_qty_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="addstockBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="mat_order"> </div>
+        <div class="tab-pane fade" id="issue_item">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Issue a item to Project.</h4> </div>
+                        <div class="panel-body" id="accordionissueitem">
+                            <form id="issueitemForm">
+                                <!-- Select Item -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Item </strong> </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group" id="TVItemtype"> Fetch Added Items from the database. </div>
+                                    </div>
+                                </div>
+                                <!-- Select Project -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Project </strong> </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group" id="TVProjtype"> Fetch projects from the database </div>
+                                    </div>
+                                </div>
+                                <!-- Date of Issue -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date of Issue </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Date of Issue" name="item_doi" type="text" id="item_doi" maxlength="200" />
+                                        <p class="help-block" id="item_doi_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <!-- Quantity -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Quantity </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Quantity" name="issue_qty" type="text" id="issue_qty" maxlength="6" />
+                                        <p class="help-block" id="issue_qty_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="issueitemBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="view_order">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-6"> List </div>
+                    <div class="col-md-6 text-right" id="serachitemmenu"> Search menu </div>
+                </div>
+                <div class="col-lg-12" id="searchitemhtml"> Search HTML </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"> Stock </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accorlistitem">
+                                <div class="panel panel-default" id="usrs_1">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-md-6"> <a data-toggle="collapse" data-parent="#accorlistuser" href="#user_type_1">{num} - {name} - {cell number} - {city} - {state} - {country}</a> </div>
+                                            <div class="col-md-6 text-right">
+                                                <button class="btn btn-primary btn-md"><i class="fa fa-flag fa-fw "></i> </button>&nbsp;
+                                                <button class="btn btn-warning btn-md"><i class="fa fa-edit fa-fw "></i> </button>&nbsp;
+                                                <button class="btn btn-danger btn-md"><i class="fa fa-trash fa-fw "></i> </button>&nbsp; </div>
+                                        </div>
+                                    </div>
+                                    <div id="user_type_1" class="panel-collapse collapse in">
+                                        <ul class="nav nav-pills">
+                                            <li class="active"><a href="#info_user_type_1" data-toggle="tab">Basic info</a> </li>
+                                            <li><a href="#prod_user_type_1" data-toggle="tab">Products</a> </li>
+                                            <li><a href="#trans_user_type_1" data-toggle="tab">Transactions</a> </li>
+                                            <li><a href="#cons_user_type_1" data-toggle="tab">Consignments</a> </li>
+                                            <li><a href="#sal_user_type_1" data-toggle="tab">Sales</a> </li>
+                                            <li><a href="#pur_user_type_1" data-toggle="tab">Purchase</a> </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="info_user_type_1">
+                                                <h4>Basic info</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="prod_user_type_1">
+                                                <h4>Products</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="trans_user_type_1">
+                                                <h4>Transactions</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="cons_user_type_1">
+                                                <h4>Consignments</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="sal_user_type_1">
+                                                <h4>Sales</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="pur_user_type_1">
+                                                <h4>Purchase</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" id="lstitemloader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="view_stock">
+            <div class="panel panel-primary">
+                <div class="panel-heading"> Avaliable Stock </div>
+                <div class="panel-body">
+                    <div class="col-lg-12 table-responsive" id="view_stock_list"> fetch avaliable stock from database </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="stock_message"></div>
+</div>

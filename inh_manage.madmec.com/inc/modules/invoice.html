@@ -1,0 +1,242 @@
+<!-- Invoice -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pInvoice">
+    <ul class="nav nav-tabs" id="inv_menu">
+        <li class="active"><a href="#add_inv" data-toggle="tab" id="addinvsbut">Add Invoice</a> </li>
+        <li><a href="#list_inv" data-toggle="tab" id="listinvbut">List Invoice</a> </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_inv">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Generate a invoice. </div>
+                        <div class="panel-body" id="accordionaddinv">
+                            <form id="addinvForm">
+                                <!-- Select requirement / Transporter / Driver -->
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Project <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12" id="URequiInvList">
+                                            <input class="form-control" placeholder="Select Project" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Transporter <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12" id="UTransInvList">
+                                            <input class="form-control" placeholder="Select Transporter" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Driver <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12" id="UDrivInvList">
+                                            <input class="form-control" placeholder="Select Driver" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <!-- Requirement -->
+                                    <div class="col-lg-12" id="requi_doc"></div>
+                                </div>
+                                <div class="col-lg-12" id="psl_loader"></div>
+                                <!-- Vehicle No / LR No / Mode Of Transport. -->
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Vehicle No </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Vehicle No" name="inv_vhno" type="text" id="inv_vhno" maxlength="500" />
+                                            <p class="help-block" id="inv_vhno_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> LR No </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="LR No" name="inv_lrno" type="text" id="inv_lrno" maxlength="500" />
+                                            <p class="help-block" id="inv_lrno_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Mode Of Transport </strong> </div>
+                                        <div class="col-lg-12" id="UMOTInvList">
+                                            <input class="form-control" placeholder="Mode Of Transport" name="inv_mot" type="text" id="inv_mot" maxlength="500" />
+                                            <p class="help-block" id="inv_mot_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Place / Subject / Description -->
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Delivery Place </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Delivery Place" name="inv_dlepla" type="text" id="inv_dlepla" maxlength="500" />
+                                            <p class="help-block" id="inv_dlepla_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Subject </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Subject of the invoice" name="inv_subject" type="text" id="inv_subject" maxlength="500" />
+                                            <p class="help-block" id="inv_subject_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Description </strong> </div>
+                                        <div class="col-lg-12">
+                                            <textarea class="form-control" id="inv_desc" name="inv_desc"></textarea>
+                                            <p class="help-block" id="inv_desc_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Total / Vat @ 14.5% on supply / 50% @ 12.36% on Labour-->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-4">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    Installation Cost
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <!-- Total -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Installation Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Total" name="inv_totins" type="text" id="inv_totins" maxlength="11" readonly="readonly" />
+                                                            <p class="help-block" id="inv_totins_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- STC -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> STC @ 12.36% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="STC" name="inv_totins_stc" type="text" id="inv_totins_stc" maxlength="11"/>
+                                                            <p class="help-block" id="inv_totins_stc_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- E.Cess 50% on 2% -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> E.Cess 50% on 2% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="E.Cess 50% on 2%" name="inv_totins_ecess" type="text" id="inv_totins_ecess" maxlength="11" />
+                                                            <p class="help-block" id="inv_totins_ecess_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- H E.Cess 50% on 1% -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> H E.Cess 50% on 1% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="H E.Cess 50% on 1%" name="inv_totins_hecess" type="text" id="inv_totins_hecess" maxlength="11" />
+                                                            <p class="help-block" id="inv_totins_hecess_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- Net Total -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Net Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Net Total" name="invtotins" type="text" id="invtotins" maxlength="11"  readonly="readonly"  />
+                                                            <p class="help-block" id="invtotins_msg">Enter / Select</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    Painting Cost
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <!-- Total -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Painting Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Total" name="inv_paint" type="text" id="inv_paint" maxlength="11" readonly="readonly" />
+                                                            <p class="help-block" id="inv_paint_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- STC -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> STC @ 12.36% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="STC" name="inv_paint_stc" type="text" id="inv_paint_stc" maxlength="11"/>
+                                                            <p class="help-block" id="inv_paint_stc_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- E.Cess 50% on 2% -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> E.Cess 50% on 2% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="E.Cess 50% on 2%" name="inv_paint_ecess" type="text" id="inv_paint_ecess" maxlength="11" />
+                                                            <p class="help-block" id="inv_paint_ecess_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- H E.Cess 50% on 1% -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> H E.Cess 50% on 1% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="H E.Cess 50% on 1%" name="inv_paint_hecess" type="text" id="inv_paint_hecess" maxlength="11" />
+                                                            <p class="help-block" id="inv_paint_hecess_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- Net Total -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Net Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Net Total" name="invtotpaint" type="text" id="invtotpaint" maxlength="11"  readonly="readonly" />
+                                                            <p class="help-block" id="invtotpaint_msg">Enter / Select</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    Supply Cost
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <!-- Total -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Supply Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Total" name="inv_totsup" type="text" id="inv_totsup" maxlength="11" readonly="readonly" />
+                                                            <p class="help-block" id="inv_totsup_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- Vat @ 14.5% on supply -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Vat @ 14.5% on supply (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Vat @ 14.5% on supply" name="inv_totsup_vat" type="text" id="inv_totsup_vat" maxlength="11" />
+                                                            <p class="help-block" id="inv_totsup_vat_msg">Enter / Select</p>
+                                                        </div>
+                                                        <!-- Net Total -->
+                                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Net Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" placeholder="Net Total" name="supinvntotins" type="text" id="supinvntotins" maxlength="11"  readonly="readonly"  />
+                                                            <p class="help-block" id="supinvntotins_msg">Enter / Select</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grand Total -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Grand Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Grand Total" name="inv_gtotal" type="text" id="inv_gtotal" maxlength="11" readonly="readonly" />
+                                        <p class="help-block" id="inv_gtotal_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <!-- <button class="btn btn-lg btn-danger" href="javascript:void(0);" id="addinvoicePDFBut"><i class="fa fa-file-pdf-o fa-fw fa-2x"></i> &nbsp;PDF</button>&nbsp; -->
+                                        <button class="btn btn-lg btn-danger" href="javascript:void(0);" id="addinvoiceXLSXBut"><i class="fa fa-file-excel-o fa-fw fa-2x"></i> &nbsp;XLSX</button>&nbsp; 
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_inv">
+            <div class="row">
+                <div class="col-lg-12" id="listINV"> List Production Control Chart </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="inv_message"></div>
+</div>
+

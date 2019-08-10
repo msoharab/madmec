@@ -1,0 +1,63 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#Add" data-toggle="tab" id="Addfacility">Info</a></li>
+    <li><a href="#Show" data-toggle="tab" id="Showdonormenubut">Password</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="Add">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-user fa-fw fa-x2"></i>&nbsp;<strong>Info</strong></div>
+            <div class="panel-body">
+                <div class="col-lg-12" id="disdonors">
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="Show">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-key fa-fw fa-x2"></i>&nbsp;<strong>Password</strong></div>
+            <div class="panel-body">
+                <form id="changePasswordForm">
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    <div class="col-lg-12">
+                        <strong><i class="fa fa-star text-danger">&nbsp;</i>Current Password : <i class="fa fa-caret-down fa-fw"></i></strong>
+                    </div>
+                    <div class="col-lg-12">
+                        <input  id="cpassword" name="cpassword" type="password" class="form-control" placeholder="Current Password "/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">&nbsp;</div>
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    <div class="col-lg-12">
+                        <strong><i class="fa fa-star text-danger">&nbsp;</i>New Password : <i class="fa fa-caret-down fa-fw"></i></strong>
+                    </div>
+                    <div class="col-lg-12">
+                        <input  id="npassword" name="npassword" type="password" class="form-control" placeholder="New Password "/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">&nbsp;</div>
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    <div class="col-lg-12">
+                        <strong><i class="fa fa-star text-danger">&nbsp;</i>Confirm Password : <i class="fa fa-caret-down fa-fw"></i></strong>
+                    </div>
+                    <div class="col-lg-12">
+                        <input  id="cfpassword" name="cfpassword" type="password" class="form-control" placeholder="Confirm Password "/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">&nbsp;</div>
+            <div class="col-lg-12"><div class="col-lg-6 text-center">
+                <button type="submit" name="changepasssub" id="changepasssub" class="btn btn-primary">&nbsp;Change Password</button>
+                </div>
+            </div>
+        </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.manditory{color: #A94442; font-weight:bold;}
+#load_box{display:none;position:fixed;top: 50%;
+left: 50%;
+margin-top: -100px;
+margin-left: -200px;    width:400px;
+    height:200px;
+    background-color:#FFF;
+    padding:10px;
+    border:5px solid #CCC;
+    z-index:200;}
+	
+.dis_letters{background-color:#FFF; box-shadow:0px 0px 10px 3px #ccc; font-size: 16px;font-weight:bold;  padding:0px 20px; max-width:900px;font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+.caps{ text-transform:capitalize; font-weight:bold;color:#700000;}
+.report_menu{padding:25px;}
+.report_menu div{padding:12px;}
+.report_menu a{color:#FFF;}
+.report_menu h2{color:#FFF;}
+.bg-red{ background-color:#DB0630;}
+.bg-green{ background-color:#357EBD;}

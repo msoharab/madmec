@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+body{width:100%;height:100%;font-family:Georgia, "Times New Roman", Times, serif;background-image:url(../images/back-repeat.png);background-repeat:repeat;font-size:18px;}
+#body-main{position:absolute;left:0px;right:0px;width:100%;height:80%;}
+#body-center{position:relative;margin-left:auto;margin-right:auto;width:1000px;height:auto;box-shadow:5px 5px 25px 5px #000000;background-color:#FFF;}
+#body-header{position:relative;top:0px;border-left:solid 1px #009900;border-right:solid 1px #009900;border-bottom:solid 1px #009900;background-image:url(../images/new_header3.jpg);background-repeat:no-repeat;background-position:center;width:1000px;height:200px;}
+#body-body{position:relative;width:1000px;height:auto;border-left:solid 1px #009900;border-right:solid 1px #009900;/*background-image:url(../images/stc-logo1.png);background-repeat:no-repeat;background-position:center;background-color:#9ED69E;*/}
+#menu-header{position:relative;top:0px;width:1000px;height:30px;/*border-left:solid 1px #FFFFFF;border-right:solid 1px #FFFFFF;*/background-color:#009900;text-align:center;vertical-align:middle;}
+#menu-header .items{position:relative;top:0px;width:200px;height:inherit;text-align:center;border-right:solid 2px #FFFFFF;border-left:solid 2px #FFFFFF;display:inline;color:#FFFFFF;font-weight:bold;padding-left:20px;padding-right:20px;cursor:pointer;font-size:18px;letter-spacing:1px;vertical-align:middle;}
+#menu-header .items:hover{text-decoration:underline;}
+#menu-content{position:relative;top:2px;width:989px;height:auto;border:hidden;padding-left:5px;padding-right:5px;text-align:justify;word-wrap:break-word;word-spacing:2px;letter-spacing:1px;line-height:30px;}
+#menu-content table,tr,td {text-align:justify;}
+#wrap-cont1 .heading, #wrap-cont2 .heading{font-size:22px;text-decoration:underline;color:#009900;}
+#menu-content #wrap-img-content{width:989px;height:auto;}
+#wrap-img-content #wrap-img{width:142px;padding-left:2px;padding-right:2px;float:left;font-size:12px;text-align:center;word-spacing:2px;letter-spacing:1px;line-height:15px;color:#009900;}
+#wrap-img-content #wrap-cont1{width:830px;float:left;}
+#eq_box{width:300px;bottom:0px; position:fixed; border:solid 1px #000; border-top-left-radius: 10px;border-top-right-radius: 10px; background-color:#FFFFFF; padding:5px; padding-bottom:0px; display:none;}
+#wrap {border:solid 1px #000000;border-top-left-radius: 10px;border-top-right-radius: 10px;background-image:url(images/bottomheaderbg.gif); padding:0px;color:#000000;}
+.text{border-radius:5px; height:19px; padding-left:10px;}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+	body{background-repeat:no-repeat; background-attachment:fixed; background-size:cover; color:#666; width:1000px; margin-right:auto; margin-left:auto;}
+	#header_panel{ position:fixed; left:0px; top:0px; width:100%; height:45px; background-color:#fff; box-shadow:0px 0px 0px 4px #CCC; z-index:10; background-color:#000; }
+	#content{margin-right:auto; margin-left:auto; width:1000px;}
+	#logo{ width:px; position:relative; }
+	#option{ width:1000px; position:relative; height:40px;}
+	.box{ padding:10px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+	.box a{  color: #FFFFFF;text-decoration: none; }
+	.box a:hover{ text-decoration:underline; color:#838383;}
+	#center_panel{ top:50px; position:relative; background-color:#fff; box-shadow:0px 0px 10px 0px #999; }
+	#footer_panel{ position:relative; padding:20px; }
+	
+	.page_gap{ position:relative; height:50px;}
+	.heading{ font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight:bolder;}
+	
+	.img_div{overflow:hidden; width:250px; height:170px; float:left;}
+	
+	.call{color:#090; font-size:18px; font-weight:bold;}
+	.caption{ color: #A5232F;font-size:24px;}
+	.sub_head{ color:#A5232F; font-size:18px;}
+	p{padding-bottom:15px;}
+	
+	

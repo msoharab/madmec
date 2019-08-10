@@ -1,0 +1,361 @@
+<div class="col-lg-12" id="centerLoad" style="position:fixed;top:50%;left:50%;opacity:0.5;z-index:99;color:black;"></div>
+<div class="row output-panels" id="pgym">
+    <ul class="nav nav-tabs" id="user_menu">
+        <li class="active">
+            <a href="#add_new_usr" data-toggle="tab" id="addusrbut">Add Admin</a>
+        </li>
+        <li>
+            <a href="#assign_gym" data-toggle="tab" id="listgymsbut">Assign Club / Gym to Admin</a>
+        </li>
+        <li>
+            <a href="#list_gym" data-toggle="tab" id="listusersbut">List Admin's</a>
+        </li>
+    </ul> 
+    <div class="tab-content">
+        <div class="tab-pane fade " id="list_gym">
+            <div id="row">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                        <strong>List Admin&#39;s</strong>
+                    </div>
+                    <div class="panel panel-body">
+                        <div class="col-lg-12">
+                            <div id="displayowneruser">
+                                Loading......
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+        <div class="tab-pane fade in active" id="add_new_usr">  
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Add New Admin</strong>
+                        </div>
+                        <div class="panel-body" id="acrdaddgym">
+                            <!--
+                        <form id="addusrForm" enctype='multipart/form-data'>
+                            -->
+                            <form action="Tamboola" name="addusrForm" id="addusrForm" method="post" onsubmit="return false" enctype="multipart/form-data">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Name :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Name" required="required" pattern='^[-a-zA-Z ]+$' name="user_name" type="text" id="u_user_name" maxlength="100">
+                                                <p class="help-block" id="user_comsg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div>
+                                        </div><!-- dob -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Date of birth :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="YY-MM-DD" name="user_dob" type="text" id="user_dob" readonly="readonly" maxlength="100">
+                                                <p class="help-block" id="user_dob_msg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div>
+                                        </div><!-- gender -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Gender :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <select id="u_user_gender" name="user_gender" class="form-control">
+                                                    <option value="1">
+                                                        Male
+                                                    </option>
+                                                    <option value="2">
+                                                        Female
+                                                    </option>
+                                                    <option value="3">
+                                                        Other
+                                                    </option>
+                                                </select>
+                                                <p class="help-block" id="usr_dimsg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div>
+                                        </div><!-- usertype -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Admin type :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <select id="addusertype" name="addusertype" class="form-control" required="">
+                                                    <!--                                                    <option value="">
+                                                                                                            Select Usertype
+                                                                                                        </option>
+                                                                                                        <option value="1">
+                                                                                                            Owner
+                                                                                                        </option>-->
+                                                    <option value="3">
+                                                        Admin
+                                                    </option>
+                                                </select>
+                                                <p class="help-block" id="usr_dimsg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Email:</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Email" type='email' name="user_email" id="user_email" required="required" maxlength="100">
+                                                <p class="help-block" id="user_email_msg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Cell Number:</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Mobile Number" type='number' name="mobile" id="mobile" required="required" maxlength="100">
+                                                <p class="help-block" id="user_mobile_msg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Documents Type :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <select id="u_doc_type" name="doc_type" class="form-control">
+                                                    <option>
+                                                        Driver&#39;s license
+                                                    </option>
+                                                    <option>
+                                                        Passport
+                                                    </option>
+                                                    <option>
+                                                        Rations Cards
+                                                    </option>
+                                                    <option>
+                                                        Gas Connection Bill
+                                                    </option>
+                                                    <option>
+                                                        Electricity bill
+                                                    </option>
+                                                    <option>
+                                                        Voter ID card
+                                                    </option>
+                                                    <option>
+                                                        National Identification Number.
+                                                    </option>
+                                                </select>
+                                                <p class="help-block" id="user_comsg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div>
+                                        </div><!-- document number -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Document Number :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Document Number" required="" name="doc_number" type="text" id="u_doc_number" maxlength="100">
+                                                <p class="help-block" id="doc_num_msg">&nbsp;</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12">
+                                        &nbsp;
+
+                                    </div>
+                                    <div class="panel panel-info" style="display : none;">
+                                        <div class="panel-heading">
+                                            <strong>Address</strong>&nbsp; 
+                                            <button class="text-info btn btn-info btn-md" type="button" id="addr_show_but" onclick="$('#gym_address_body').show(300);"><i class="fa fa-plus fa-fw"></i></button>&nbsp;
+                                            <button class="text-info btn btn-danger btn-md" type="button" id="addr_hide_but" onclick="$('#gym_address_body').hide(300);"><i class="fa fa-minus fa-fw"></i></button>&nbsp;
+                                        </div>
+                                        <div class="panel-body" id="gym_address_body" style="display:none;">
+                                            <!-- Country -->
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>Country :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Country" name="gym_country" required="" type="text" id="gym_country" maxlength="100">
+                                                        <p class="help-block" id="gym_comsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div><!-- State / Province -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>State / Province :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="State / Province" name="gym_province" required="required" type="text" id="gym_province" maxlength="150">
+                                                        <p class="help-block" id="gym_prmsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div><!-- District / Department -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>District / Department :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="District / Department" name="gym_district" required="required" type="text" id="gym_district" maxlength="100">
+                                                        <p class="help-block" id="gym_dimsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!-- City / Town -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>City / Town :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="City / Town" name="gym_city_town" required="required" type="text" id="gym_city_town" maxlength="100">
+                                                        <p class="help-block" id="gym_citmsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div><!-- Street / Locality -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>Street / Locality :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Street / Locality" name="gym_st_loc" type="text" id="gym_st_loc" maxlength="100">
+                                                        <p class="help-block" id="gym_stlmsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div><!-- Address Line -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>Address Line :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Address Line" name="gym_addrs" type="text" id="gym_addrs" maxlength="200">
+                                                        <p class="help-block" id="gym_admsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!-- Zipcode -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>Zipcode :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Zipcode" name="gym_zipcode" required="" type="text" id="gym_zipcode" maxlength="6">
+                                                        <p class="help-block" id="gym_zimsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div><!-- Personal Website -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong>Website :</strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Personal Website" name="gym_website" type="text" id="gym_website" maxlength="250" value="http://">
+                                                        <p class="help-block" id="gym_wemsg">&nbsp;</p>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div><!-- Google Map URL -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!--
+                                        <button class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="addusrBut"><i class="fa fa-upload fa-fw "></i> &nbsp;Add</button>
+                                            -->
+                                            <button type="button" name="submit" class="btn btn-lg btn-primary btn-block" id="addusrBut"> &nbsp; Save</button>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="assign_gym">  
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>    Assign Club / Gym to Admin </strong>
+                    </div>
+                    <div class="panel-body">
+                        <form id="assignuserform" name="assignuserform">
+                            <div class="col-lg-12">
+                                <div class="col-lg-4">
+                                    <strong>Select Admin :</strong>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input class="form-control" placeholder="SELECT USER" required="" name="asignuser" type="text" id="asignuser" maxlength="100">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="col-lg-4">
+                                    <strong>Select Gyms :</strong>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input class="form-control" placeholder="SELECT GYM" required="" name="asigngym" type="text" id="asigngym" maxlength="100">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" id="addusrBut">&nbsp; ADD</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

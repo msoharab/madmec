@@ -1,0 +1,488 @@
+<div class="row output-panels" id="pClients">
+    <div class="col-lg-12" id="centerLoad" style="position:fixed;top:50%;left:50%;opacity:0.5;z-index:99;color:black;"></div>
+    <div class="col-lg-12">&nbsp;</div>
+    <ul class="nav nav-tabs" id="user_menu">
+        <li class="active"><a href="#add_new_client" data-toggle="tab" id="addbut">Add Client</a></li>
+        <li><a href="#list_client" data-toggle="tab" id="listbut">List Client</a></li>
+    </ul>
+    <div class="col-lg-12">&nbsp;</div>
+    <div class="tab-content">
+        <!-- Data paste start --->
+        <div class="tab-pane fade in active" id="add_new_client">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Add New Client
+                        </div>
+                        <div class="panel-body" id="acrdadd">
+                            <form action="control.php" name="addusrForm" id="addusrForm" method="post" enctype="multipart/form-data">
+                                <fieldset>
+                                    <input type="hidden" name="action1" value="clientAdd" />
+                                    <input type="hidden" name="autoloader" value="true" />
+                                    <input type="hidden" name="type" value="master" />
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <strong><span class="text-danger"></span> Business Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="Business Name" required="required" pattern='^([a-zA-Z]+\s)*[a-zA-Z]+$' name="distributer_name" type="text" id="distributer_name" maxlength="100" />
+                                            <p class="help-block" id="Distributer_name_msg">&nbsp;</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <strong><span class="text-danger"></span> Owners Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="Owners Name" required="required" pattern='^([a-zA-Z]+\s)*[a-zA-Z]+$' name="owners_name" type="text" id="owners_name" maxlength="100" />
+                                            <p class="help-block" id="owners_name_msg">&nbsp;</p>
+                                        </div>
+                                        <div class="col-lg-4" id="validitytype">
+                                            <strong><span class="text-danger"></span>UserName :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="UserName" name="usernameclient" type="text" pattern=".{8,20}" title="Username Should be minimum 8 Characters" id="usernameclient" maxlength="25" required="" />
+                                            <input type="text" name="checkunameclient" id="checkunameclient" required="" hidden="" />
+                                            <p class="help-block" id="usernameclient_msg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!--<div class="row">
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-4">
+                                    <strong><span class="text-danger"></span>Payment Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                    <input class="form-control" placeholder="Payment Date" name="payment_date" type="text" id="payment_date" required="" maxlength="100" readonly/>
+                                    <p class="help-block" id="payment_date_msg">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                    <strong><span class="text-danger"></span>Subscribe Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                    <input class="form-control" placeholder="Subscribe Date" name="subscribe_date" type="text" id="subscribe_date" maxlength="100" readonly/>
+                                    <p class="help-block" id="subscribe_date_msg">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                    <strong><span class="text-danger"></span>UserName :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                    <input class="form-control" placeholder="UserName" name="usernameclient" type="text" pattern=".{8,20}" title="Username Should be minimum 8 Characters" id="usernameclient" maxlength="25" required="" />
+                                    <input type="text" name="checkunameclient" id="checkunameclient" required="" hidden="" />
+                                    <p class="help-block" id="usernameclient_msg">&nbsp;</p>
+                                    </div>
+                                    </div>-->
+                                    <div class="row">
+                                        <div class="col-lg-12">&nbsp;</div>
+                                        <div class="col-lg-12">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    Email Ids, Cell Numbers
+                                                </div>
+                                                <div class="panel-body">
+                                                    <ul class="nav nav-pills">
+                                                        <li class="active"><a href="#pfemails-pills" data-toggle="tab">Email Ids</a>
+                                                        </li>
+                                                        <li><a href="#pfcnums-pills" data-toggle="tab">Cell Numbers</a>
+                                                        </li>
+                                                        <li><a href="#usrdocs-pills" data-toggle="tab">Documents</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="col-lg-12">&nbsp;</div>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade in active" id="pfemails-pills">
+                                                            <!-- Email Id -->
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <strong><span class="text-danger"></span> Email Id :<i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                                                    <button type="button" class="text-primary btn btn-success  btn-md" id="pfplus_email_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                                </div>
+                                                                <div class="col-lg-12" id="pfmultiple_email">
+                                                                </div>
+                                                                <div class="col-lg-12">&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="pfcnums-pills">
+                                                            <!-- Cell Number -->
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <strong><span class="text-danger"></span> Cell Number :<i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                                                    <button type="button" class="text-primary btn btn-success  btn-md" id="pfplus_cnumber_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                                </div>
+                                                                <div class="col-lg-12" id="pfmultiple_cnumber">
+                                                                </div>
+                                                                <div class="col-lg-12">&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="usrdocs-pills">
+                                                            <!-- Documents -->
+                                                            <div class="col-lg-3">
+                                                                <div class="col-lg-12">
+                                                                    <strong><span class="text-danger"></span> Documents Type :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <select id="doc_type" name="doc_type" class="form-control">
+                                                                        <option>Drivering license</option>
+                                                                        <option>Passport</option>
+                                                                        <option>Rations Cards</option>
+                                                                        <option>Gas Connection Bill</option>
+                                                                        <option>Electricity bill</option>
+                                                                        <option>Voter ID card</option>
+                                                                        <option>National Identification Number.</option>
+                                                                    </select>
+                                                                    <p class="help-block" id="doc_type_msg">&nbsp;</p>
+                                                                </div>
+                                                                <div class="col-lg-12">&nbsp;</div>
+                                                            </div>
+                                                            <!-- document number -->
+                                                            <div class="col-lg-3">
+                                                                <div class="col-lg-12">
+                                                                    <strong><span class="text-danger"></span> Document Number :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <input class="form-control" placeholder="Document Number" required name="doc_number" type="text" id="doc_number" maxlength="100" />
+                                                                    <p class="help-block" id="doc_num_msg">&nbsp;</p>
+                                                                </div>
+                                                                <div class="col-lg-12">&nbsp;</div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="col-lg-12">
+                                                                    <strong><span class="text-danger"></span> Upload Document :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <!-- begin_picedit_box -->
+                                                                    <div class="picedit_box">
+                                                                        <!-- Placeholder for messaging -->
+                                                                        <div class="picedit_message">
+                                                                            <span class="picedit_control ico-picedit-close" data-action="hide_messagebox"></span>
+                                                                            <div></div>
+                                                                        </div>
+                                                                        <!-- Picedit navigation -->
+                                                                        <div class="picedit_nav_box picedit_gray_gradient">
+                                                                            <div class="picedit_pos_elements"></div>
+                                                                            <div class="picedit_nav_elements">
+                                                                                <!-- Picedit button element begin -->
+                                                                                <div class="picedit_element">
+                                                                                    <span class="picedit_control picedit_action ico-picedit-pencil" title="Pen Tool"></span>
+                                                                                    <div class="picedit_control_menu">
+                                                                                        <div class="picedit_control_menu_container picedit_tooltip picedit_elm_3">
+                                                                                            <label class="picedit_colors">
+                                                                                                <span title="Black" class="picedit_control picedit_action picedit_black active" data-action="toggle_button" data-variable="pen_color" data-value="black"></span>
+                                                                                                <span title="Red" class="picedit_control picedit_action picedit_red" data-action="toggle_button" data-variable="pen_color" data-value="red"></span>
+                                                                                                <span title="Green" class="picedit_control picedit_action picedit_green" data-action="toggle_button" data-variable="pen_color" data-value="green"></span>
+                                                                                            </label>
+                                                                                            <label>
+                                                                                                <span class="picedit_separator"></span>
+                                                                                            </label>
+                                                                                            <label class="picedit_sizes">
+                                                                                                <span title="Large" class="picedit_control picedit_action picedit_large" data-action="toggle_button" data-variable="pen_size" data-value="16"></span>
+                                                                                                <span title="Medium" class="picedit_control picedit_action picedit_medium" data-action="toggle_button" data-variable="pen_size" data-value="8"></span>
+                                                                                                <span title="Small" class="picedit_control picedit_action picedit_small" data-action="toggle_button" data-variable="pen_size" data-value="3"></span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Picedit button element end -->
+                                                                                <!-- Picedit button element begin -->
+                                                                                <div class="picedit_element">
+                                                                                    <span class="picedit_control picedit_action ico-picedit-insertpicture" title="Crop" data-action="crop_open"></span>
+                                                                                </div>
+                                                                                <!-- Picedit button element end -->
+                                                                                <!-- Picedit button element begin -->
+                                                                                <div class="picedit_element">
+                                                                                    <span class="picedit_control picedit_action ico-picedit-redo" title="Rotate"></span>
+                                                                                    <div class="picedit_control_menu">
+                                                                                        <div class="picedit_control_menu_container picedit_tooltip picedit_elm_1">
+                                                                                            <label>
+                                                                                                <span>90° CW</span>
+                                                                                                <span class="picedit_control picedit_action ico-picedit-redo" data-action="rotate_cw"></span>
+                                                                                            </label>
+                                                                                            <label>
+                                                                                                <span>90° CCW</span>
+                                                                                                <span class="picedit_control picedit_action ico-picedit-undo" data-action="rotate_ccw"></span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Picedit button element end -->
+                                                                                <!-- Picedit button element begin -->
+                                                                                <div class="picedit_element">
+                                                                                    <span class="picedit_control picedit_action ico-picedit-arrow-maximise" title="Resize"></span>
+                                                                                    <div class="picedit_control_menu">
+                                                                                        <div class="picedit_control_menu_container picedit_tooltip picedit_elm_2">
+                                                                                            <label>
+                                                                                                <span class="picedit_control picedit_action ico-picedit-checkmark" data-action="resize_image"></span>
+                                                                                                <span class="picedit_control picedit_action ico-picedit-close" data-action=""></span>
+                                                                                            </label>
+                                                                                            <label>
+                                                                                                <span>Width (px)</span>
+                                                                                                <input type="text" class="picedit_input" data-variable="resize_width" value="0">
+                                                                                            </label>
+                                                                                            <label class="picedit_nomargin">
+                                                                                                <span class="picedit_control ico-picedit-link" data-action="toggle_button" data-variable="resize_proportions"></span>
+                                                                                            </label>
+                                                                                            <label>
+                                                                                                <span>Height (px)</span>
+                                                                                                <input type="text" class="picedit_input" data-variable="resize_height" value="0">
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Picedit button element end -->
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Picedit canvas element -->
+                                                                        <div class="picedit_canvas_box">
+                                                                            <div class="picedit_painter">
+                                                                                <canvas></canvas>
+                                                                            </div>
+                                                                            <div class="picedit_canvas">
+                                                                                <canvas></canvas>
+                                                                            </div>
+                                                                            <div class="picedit_action_btns active">
+                                                                                <div class="picedit_control ico-picedit-picture" data-action="load_image"></div>
+                                                                                <div class="picedit_control ico-picedit-camera" data-action="camera_open"></div>
+                                                                                <div class="center">or copy/paste image here</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Picedit Video Box -->
+                                                                        <div class="picedit_video">
+                                                                            <video autoplay></video>
+                                                                            <div class="picedit_video_controls">
+                                                                                <span class="picedit_control picedit_action ico-picedit-checkmark" data-action="take_photo"></span>
+                                                                                <span class="picedit_control picedit_action ico-picedit-close" data-action="camera_close"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Picedit draggable and resizeable div to outline cropping boundaries -->
+                                                                        <div class="picedit_drag_resize">
+                                                                            <div class="picedit_drag_resize_canvas"></div>
+                                                                            <div class="picedit_drag_resize_box">
+                                                                                <div class="picedit_drag_resize_box_corner_wrap">
+                                                                                    <div class="picedit_drag_resize_box_corner"></div>
+                                                                                </div>
+                                                                                <div class="picedit_drag_resize_box_elements">
+                                                                                    <span class="picedit_control picedit_action ico-picedit-checkmark" data-action="crop_image"></span>
+                                                                                    <span class="picedit_control picedit_action ico-picedit-close" data-action="crop_close"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end_picedit_box -->
+                                                                    <p class="help-block" id="doc_num_msg">&nbsp;</p>
+                                                                </div>
+                                                                <div class="col-lg-12">&nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">&nbsp;</div>
+                                    </div>
+                                    <!-- Telephone Number -->
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <strong><span class="text-danger"></span> STD Code :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="080" name="pcode" type="text" id="pcode" maxlength="15" />
+                                            <p class="help-block" id="tp_msg">&nbsp;</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <strong><span class="text-danger"></span>Land Line :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="Telephone Number" name="telephone" type="text" id="telephone" maxlength="20" />
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <strong><span class="text-danger"></span> SMS cost :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="SMS cost per SMS" name="sms_cost" type="text" id="sms_cost" maxlength="15" />
+                                            <p class="help-block" id="sms_msg">&nbsp;</p>
+                                        </div>
+                                        <div class="col-lg-12">&nbsp;</div>
+                                    </div>
+                                    <!-- ADDRESS -->
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <strong>Address</strong>&nbsp;
+                                            <button type="button" class="text-info btn btn-info  btn-md" id="addr_show_but" onClick="$('#address_body').show(300);"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                            <button type="button" class="text-info btn btn-danger  btn-md" id="addr_hide_but" onClick="$('#address_body').hide(300);"><i class="fa fa-minus fa-fw fa-x2"></i></button>&nbsp;
+                                        </div>
+                                        <div class="panel-body" id="address_body" style="display:none;">
+                                            <div class="row">
+                                                <!-- Country -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> Country :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Country" name="country" type="text" id="country" maxlength="100" />
+                                                        <p class="help-block" id="comsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- State / Province -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> State / Province :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="State / Province" name="province" type="text" id="province" maxlength="150" />
+                                                        <p class="help-block" id="prmsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- District / Department -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> District / Department :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="District / Department" name="district" type="text" id="district" maxlength="100" />
+                                                        <p class="help-block" id="dimsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!-- City / Town -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> City / Town :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="City / Town" name="city_town" type="text" id="city_town" maxlength="100" />
+                                                        <p class="help-block" id="citmsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Street / Locality -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> Street / Locality :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Street / Locality" name="st_loc" type="text" id="st_loc" maxlength="100" />
+                                                        <p class="help-block" id="stlmsg">&nbsp;</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Address Line -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> Address Line :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Address Line" name="addrs" type="text" id="addrs" maxlength="200" />
+                                                        <p class="help-block" id="admsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!-- Zipcode -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> Zipcode :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Zipcode" name="zipcode" type="text" id="zipcode" maxlength="25" />
+                                                        <p class="help-block" id="zimsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Personal Website -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> Personal Website :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Personal Website" name="website" type="text" id="website" maxlength="250" value="http://" />
+                                                        <p class="help-block" id="wemsg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Google Map URL -->
+                                                <div class="col-lg-4">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"></span> Google Map URL :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Google Map URL" name="gmaphtml" type="text" id="gmaphtml" value="http://" />
+                                                        <p class="help-block" id="gmmsg">Press enter or go button to update user address.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!--
+                                            <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block"  id="addClientBut1"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                            -->
+                                            <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" id="addusrBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp; Save</button>
+                                        </div>
+                                        <div class="col-lg-12">&nbsp;</div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_client">
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            List Client
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accorlist">
+                                <div class="panel panel-default" id="usr_1">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a data-toggle="collapse" data-parent="#accorlistusr" href="#usr_type_1">{num} - {name} - {subscribe date} - {lastmodified date} - {city} - {state} - {country}</a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <button class="btn btn-primary btn-md"><i class="fa fa-flag fa-fw "></i></button>&nbsp;
+                                                <button class="btn btn-warning btn-md"><i class="fa fa-edit fa-fw "></i></button>&nbsp;
+                                                <button class="btn btn-danger btn-md"><i class="fa fa-trash fa-fw "></i></button>&nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="usr_type_1" class="panel-collapse collapse in">
+                                        <ul class="nav nav-pills">
+                                            <li class="active"><a href="#info_usr_type_1" data-toggle="tab">Basic info</a></li>
+                                            <li><a href="#doc_usr_type_1" data-toggle="tab">Documents</a></li>
+                                            <li><a href="#history_usr_type_1" data-toggle="tab">History</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="info_usr_type_1">
+                                                <h4>Basic info</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="doc_usr_type_1">
+                                                <h4>Documents</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="history_usr_type_1">
+                                                <h4>History</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" id="usr_2">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accorlistusr" href="#usr_type_2">Collapsible Group Item #2</a>
+                                        </h4>
+                                    </div>
+                                    <div id="usr_type_2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" id="usr_3">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accorlistusr" href="#usr_type_3">Collapsible Group Item #3</a>
+                                        </h4>
+                                    </div>
+                                    <div id="usr_type_3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" id="lstusrloader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="usr_message"></div>
+    <!-- Data paste over ---->
+</div>

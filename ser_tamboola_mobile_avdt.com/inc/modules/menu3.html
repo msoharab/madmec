@@ -1,0 +1,96 @@
+<div class="col-lg-12" id="centerLoad" style="position:fixed;top:50%;left:50%;opacity:0.5;z-index:99;color:black;"></div>
+<div class="row output-panels" id="pgym">
+	<div class="col-lg-12">&nbsp;</div>
+	<ul class="nav nav-tabs" id="user_menu">
+		<li class="active"><a href="#add_new_offer" data-toggle="tab" id="addgymtab">Add Offers</a></li>
+		<li><a href="#list_offer" data-toggle="tab" id="listoffersmenubut">List Offer's</a></li>
+	</ul>
+	<div class="col-lg-12">&nbsp;</div>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="add_new_offer">
+			<div class="row output-panels" id="ctrlAddOffer">
+				<div class="col-lg-12" id="ctAddOffer">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="panel panel-primary">
+									<div class="panel-heading"> Add offers </div>
+									<div class="panel-body">
+										<form id="addofferform" method="post">
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Name <i class="fa fa-caret-down fa-fw"></i></label> <span><input type="text" name="of_name" id="of_name" class="form-control" placeholder="individual" /><label id="valid_nm"></label></span> </div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Duration <i class="fa fa-caret-down fa-fw"></i></label>
+												<div id="disdura"></div>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Number of days <i class="fa fa-caret-down fa-fw"></i></label> <span><input type="text" name="of_no_days" id="of_no_days" class="form-control" placeholder="30" /><label id="valid_num"></label></span> </div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Facility type <i class="fa fa-caret-down fa-fw"></i></label>
+												<div id="disfac"></div>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Prizing <i class="fa fa-caret-down fa-fw"></i></label> <span><input type="text" name="of_prize" id="of_prize" class="form-control" placeholder="1000" /><label id="valid_price"></label></span> </div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Minimum members <i class="fa fa-caret-down fa-fw"></i></label> 
+												<span>
+													<select name="of_member" id="of_member" class="form-control">
+														<option selected value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+													</select>
+													<label id="valid_member"></label>
+												</span> 
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Gym Name <i class="fa fa-caret-down fa-fw"></i></label>
+												<div id='displaygyms'> fetch List of User Gyms </div>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="col-lg-12">
+												<label><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Description <i class="fa fa-caret-down fa-fw"></i></label> <span><textarea placeholder="Details about the offer" name="of_des" id="of_des" rows='5' class="form-control" ></textarea></span>
+												<p class="help-block">Press<b> Tab </b>or go button to move to next field.</p>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+											<div class="row show-grid">
+												<div class="col-md-12">
+													<button type="button" class="btn btn-lg btn-primary btn-block" id="offersave">
+														<label>Save</label>
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade in" id="list_offer">
+			<div class="row output-panels" id="ctrlListOffer">
+				<div class="col-lg-12">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="panel panel-primary">
+									<div class="panel-heading"> List Offers </div>
+									<div class="panel-body">
+										<div id='disoffes'> fetch offers from database </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

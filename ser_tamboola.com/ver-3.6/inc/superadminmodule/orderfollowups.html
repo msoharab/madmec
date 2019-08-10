@@ -1,0 +1,141 @@
+<div class="row output-panels" id="order_follow_ups">
+    <ul class="nav nav-tabs" id="order_follow_ups_menu">
+        <li class="active"><a href="#add_fups" data-toggle="tab" id="add_order_follow_ups">Add Follow-ups</a></li>
+        <li><a href="#list_fups" data-toggle="tab" id="list_order_follow_ups">List Follow-ups</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_fups">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Add Order Follow-up
+                        </div>
+                        <div class="panel-body">
+                            <form id="addfupsForm">
+                                <div class="row"><br>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Client Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Client Name" name="clientname" type="text" id="client_name" maxlength="100" />
+                                            <p class="help-block" id="client_name_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Cell Number :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Cell Number" name="clientnum" type="text" id="client_number" maxlength="10"/>
+                                            <p class="help-block" id="client_number_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Email :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Email-ID" name="clientemail" type="text" id="client_email" maxlength="100" />
+                                            <p class="help-block" id="client_email_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Handeled By :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Handeled-By" name="clienthandeledby" type="text" id="client_handby" maxlength="100"/>
+                                            <p class="help-block" id="client_handby_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Referenced BY :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Refered by" name="clientreferedby" type="text" id="client_refby" maxlength="100" />
+                                            <p class="help-block" id="client_refby_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Order Probability :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="order Probabities" name="orderprobabities" type="text" id="client_order_prob" maxlength="100" />
+                                            <p class="help-block" id="client_order_prob_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Comments :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <textarea class="form-control" placeholder="comments" name="comments"  id="client_comments" ></textarea>
+                                            <p class="help-block" id="client_comment_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Date" name="date" type="text" id="client_date" maxlength="1000" />
+                                            <p class="help-block" id="client_date_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-lg btn-primary btn-block" type="button" id="addclientBut"><i class="fa fa-upload fa-fw "></i> &nbsp;Add</button>
+                                        <p class="help-block" id="client_add_msg"></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade " id="list_fups">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            List Clients
+                        </div>
+                        <div class="panel-body table-responsive" id="lstclients"></div>
+                        <div class="col-lg-12" id="lstcollsloader"></div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">
+            <div class="col-lg-12">
+            <div class="panel panel-default">
+             /.panel-heading 
+            <div class="panel-body">
+             Nav tabs 
+            <ul class="nav nav-tabs">
+            <li class="active"><a href="#followOutput" id="tFollowTab" data-toggle="tab">Today's follow-ups</a></li>
+            <li><a href="#followOutput" id="pFollowTab" data-toggle="tab">Pending follow-ups</a></li>
+            <li><a href="#followOutput" id="exFollowTab" data-toggle="tab">Expired follow-ups</a></li>
+            </ul>
+             Tab panes 
+            <div class="tab-content">
+            <div class="col-lg-12">&nbsp;</div>
+            <div class="tab-pane fade in active" id="followOutput">
+            Today
+            </div>
+            </div>
+            </div>
+            </div>
+             /.panel-body 
+            </div>
+             /.panel 
+            </div>-->
+        </div>
+    </div>
+    <div class="col-lg-12" id="fups_message"></div>
+</div>

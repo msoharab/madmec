@@ -1,0 +1,98 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#Add" data-toggle="tab" id="Addfacility">Add Bike</a></li>
+    <li><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Bike's</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="Add">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-taxi fa-fw fa-x2"></i>&nbsp;<strong>Add Bike</strong></div>
+            <div class="panel-body">
+                <form id='vehicletypeform'>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle TYPE : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayvtype'>Loading.......</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle Make : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayvmake'>
+                                <select class="form-control" name="vehiclemakee" id="vehiclemakee" required="">
+                                    <option value="'">Please Select the Vehicle Make</option></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle Model : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayvmodel'>
+                                <input  id="vehiclemodell" name="vehiclemodel" type="text" class="form-control" placeholder="Vehicle Model" required=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle Reg no. (EX. KA12A1234) : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input  id="vehicleregno" name="vehicleregno" type="text" class="form-control" placeholder="Vehicle Reg no. (EX. KA12A1234)" required=""/>
+                            <span id="err_email"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle Nick Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input  id="vehiclenickname" name="vehiclenickname" type="text" class="form-control" placeholder="Vehicle Nick Name" required=""/>
+                            <span id="err_email"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Preferred Service Center : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input  id="pscenter" name="pscenter" type="text" class="form-control" placeholder="Preferred Service Center" required=""/>
+                            <span id="err_email"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Comment : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <textarea  id="comment" name="comment"  class="form-control" placeholder="Comment" required="" style="resize: none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="Show">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-taxi fa-fw fa-x2"></i>&nbsp;<strong>List Bike's</strong></div>
+            <div class="panel-body">
+                <div id='disvehicletype'>Loading............</div>
+            </div>
+        </div>
+    </div>
+</div>

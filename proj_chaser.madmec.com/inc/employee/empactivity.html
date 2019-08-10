@@ -1,0 +1,73 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Activity
+        <small>Chaser</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">Activity</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content" ><ul class="nav nav-tabs">
+        <li class="active"><a href="#Add" data-toggle="tab" id="Addfacility">Add Activity</a></li>
+        <li><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Activity's</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="Add">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><i class="fa fa-gears fa-fw fa-x2"></i>&nbsp;<strong>Add Activity</strong></div>
+                <div class="panel-body">
+                    <form id='activityaddform'>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i> Select Project : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <select  id="selectproject" name="selectproject" class="form-control" required="">
+                                    <option value="">Select Project</option>
+                                </select>
+                                 <span id="err_email"></span>
+                            </div>
+                        </div>
+                          <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i> Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="name" name="name" type="text" class="form-control"  placeholder="Activity Name" required=""/>
+                                 <span id="err_email"></span>
+                            </div>
+                        </div>
+                          <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Description : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <textarea class="form-control" name="description" placeholder="Description" id="description" required="" style="resize: none;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+                            <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="Show">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><i class="fa fa-gears fa-fw fa-x2"></i>&nbsp;<strong>List Activity's</strong></div>
+                <div class="panel-body">
+                    <div id='displayactivities'>Loading............</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

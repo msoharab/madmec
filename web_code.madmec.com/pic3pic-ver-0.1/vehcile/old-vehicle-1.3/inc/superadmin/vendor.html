@@ -1,0 +1,206 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#Add" data-toggle="tab" id="Addfacility">Add Vendor</a></li>
+    <li><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Vendor's</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="Add">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-user-md fa-fw fa-x2"></i>&nbsp;<strong>Add Vendor</strong></div>
+            <div class="panel-body">
+                <form id="addIndiDonorForm">
+                    <div class="col-lg-12">
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Shop Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="name" name="name" type="text" class="form-control" placeholder="Name"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle Make TYPE: <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <div  id="discorptype">Loading......</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Email : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="email" name="email" type="email" class="form-control" placeholder="Email" required=""/>
+                                <span id="err_email"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Mobile : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="mobile" name="mobile" type="text" class="form-control" placeholder="Mobile" required=""/>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>STD Code : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="stdcode" name="stdcode" type="text" class="form-control" placeholder="STD Code" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Landline : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="landline" name="landline" type="text" class="form-control" placeholder="LandLine" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Representative Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="repname" name="repname" type="text" class="form-control" placeholder="Representative Name" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Representative Mobile : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="repmobile" name="repmobile" type="text" class="form-control" placeholder="Representative Mobile" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <!-- ADDRESS -->
+                        <div class="panel panel-info">
+                            <div class="col-lg-12 panel-heading">
+                                <span>
+                                    <div class="col-lg-6 text-left">
+                                        <strong>Address</strong>
+                                    </div>
+                                    <div class="col-lg-6 text-right">
+                                        <button  type="button" class="text-info btn btn-info btn-circle  btn-md" type="button" id="addr_show_but" onClick="$(this).hide();
+                                                $('#addr_hide_but').show();
+                                                $('#gym_address_body').show(300);"><i class="fa fa-arrow-down fa-fw fa-x2"></i></button>&nbsp;
+                                        <button  type="button" class="text-info btn btn-danger btn-circle btn-md" type="button" id="addr_hide_but" onClick="$(this).hide();
+                                                $('#addr_show_but').show();
+                                                $('#gym_address_body').hide(300);" style="display:none;"><i class="fa fa-close fa-fw fa-x2"></i></button>&nbsp;
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="panel-body" id="gym_address_body">
+                                <!-- Country -->
+                                <div class="row">
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong> Country :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Country" name="country" required="" type="text" id="country" maxlength="100"/>
+                                            <p class="help-block" id="gym_comsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- State / Province -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong> State / Province :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="State / Province" name="province" required="required" type="text" id="province" maxlength="150" />
+                                            <p class="help-block" id="gym_prmsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- District / Department -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong> District / Department :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="District / Department" name="district" required="required" type="text" id="district" maxlength="100"/>
+                                            <p class="help-block" id="gym_dimsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- City / Town -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger" style="display:none;"></span> City / Town :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="City / Town" name="city_town" required="required" type="text" id="city_town" maxlength="100"/>
+                                            <p class="help-block" id="gym_citmsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Street / Locality -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger" style="display:none;"></span> Street / Locality :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Street / Locality" name="st_loc" type="text" id="st_loc" maxlength="100"/>
+                                            <p class="help-block" id="gym_stlmsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- Address Line -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger" style="display:none;"></span> Address Line :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Address Line" name="addrs" type="text" id="addrs" maxlength="200"/>
+                                            <p class="help-block" id="gym_admsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- Zipcode -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong> Zipcode :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Zipcode" name="zipcode" required type="text" maxlength="6" id="zipcode" maxlength="25" />
+                                            <p class="help-block" id="gym_zimsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- Personal Website -->
+                                    <div class="col-lg-3">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger" style="display:none;"></span> Website :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Personal Website" name="website" required type="text" id="website" maxlength="250" value="http://"/>
+                                            <p class="help-block" id="gym_wemsg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <!-- Google Map URL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="Show">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-user-md fa-fw fa-x2"></i>&nbsp;<strong>List Vendor's</strong></div>
+            <div class="panel-body">
+                <div id='disdonors'>Loading............</div>
+            </div>
+        </div>
+    </div>
+</div>

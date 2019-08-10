@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="assets/www/assets/js/jquery-1.11.0.js|assets/www/assets/js/jquery-1.9.1.min.js|assets/www/assets/js/jquery-ui.min.js|assets/www/assets/js/modernizr-2.6.2-respond-1.1.0.min.js|assets/www/www/assets/js/jquery-1.11.0.js|assets/www/www/assets/js/jquery-ui.min.js" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

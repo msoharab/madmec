@@ -1,0 +1,249 @@
+<div class="col-lg-12" id="centerLoad" style="position:fixed;top:50%;left:50%;opacity:0.5;z-index:99;color:black;"></div>
+<div class="row output-panels" id="pgym">
+    <div class="col-lg-12">&nbsp;</div>
+    <ul class="nav nav-tabs" id="user_menu">
+        <li class="active"><a href="#add_new_gym" data-toggle="tab" id="addgymtab">Add Gym</a></li>
+        <li><a href="#list_gym" data-toggle="tab" id="listgymsmenubut">List Gym's</a></li>
+    </ul>
+    <div class="col-lg-12">&nbsp;</div>
+    <div class="tab-content">
+        <!-- add gym --->
+        <div class="tab-pane fade in active" id="add_new_gym">
+		<div class="container">
+			<div class="row">
+			<div class="col-lg-12">
+			    <div class="panel panel-default">
+				<div class="panel-heading">
+				    Add New GYM
+				</div>
+				<div class="panel-body" id="acrdaddgym">
+				    <form id="addgymForm">
+					<fieldset>
+					    <div class="row">
+						<div class="col-lg-6">
+						    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Gym Type <i class="fa fa-caret-down fa-fw"></i></strong>
+						    <span>
+							<select  name="gym_type" id="gym_type" type="text" class="form-control">
+							    <option value="main">Main</option>
+							    <option value="branch">Branch</option>
+							</select>
+						    </span>
+						    <p class="help-block" id="gym_type_msg">Press enter or go button to move to next field.</p>
+						</div>
+						<div class="col-lg-6">
+						    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> GYM Name <i class="fa fa-caret-down fa-fw"></i></strong>
+						    <input class="form-control" placeholder="GYM Name" name="gym_name" type="text" id="gym_name" required="required" maxlength="100"/>
+						    <p class="help-block" id="gym_name_msg">Press enter or go button to move to next field.</p> 
+						</div>
+						<div class="col-lg-12">&nbsp;</div>
+					    </div>
+					    <div class="row">
+						<div class="col-lg-6">
+						    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Registrtion Fee <i class="fa fa-caret-down fa-fw"></i></strong>
+						    <input class="form-control" placeholder="Registrtion Fee" name="gym_fee" type="text" id="gym_fee" required="required" maxlength="100"/>
+						    <p class="help-block" id="gym_fee_msg">Press enter or go button to move to next field.</p>
+						</div>
+						<div class="col-lg-6">
+						    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Service Tax <i class="fa fa-caret-down fa-fw"></i></strong>
+						    <input class="form-control" placeholder="Service Tax" name="gym_tax" type="text" required="required" id="gym_tax" maxlength="100"/>
+						    <p class="help-block" id="gym_tax_msg">Press enter or go button to move to next field.</p>
+						</div>
+						<div class="col-lg-12">&nbsp;</div>
+					    </div>
+					    <div class="row">
+						<div class="col-lg-12">&nbsp;</div>
+						<div class="col-lg-12">
+						    <div class="panel panel-primary">
+							<div class="panel-heading">
+							    Email IDs, Cell Numbers
+							</div>
+							<div class="panel-body">
+							    <ul class="nav nav-pills">
+								<li class="active"><a href="#pfemails-pills" data-toggle="tab">Email IDs</a>
+								</li>
+								<li><a href="#pfcnums-pills" data-toggle="tab">Cell Numbers</a>
+								</li>
+							    </ul>
+							    <div class="tab-content">
+								<div class="tab-pane fade in active" id="pfemails-pills">
+								    <div class="row">
+									<div class="col-lg-12">
+									    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Email ID <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+									    <button  type="button" class="text-primary btn btn-success  btn-md" id="pfplus_email_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+									</div>
+									<div class="col-lg-12" id="pfmultiple_email">
+									</div>
+									<div class="col-lg-12">&nbsp;</div>
+								    </div>
+								</div>
+								<div class="tab-pane fade" id="pfcnums-pills">
+								    <div class="row">
+									<div class="col-lg-12">
+									    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Cell Number <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+									    <button  type="button" class="text-primary btn btn-success  btn-md" id="pfplus_cnumber_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+									</div>
+									<div class="col-lg-12" id="pfmultiple_cnumber">
+									</div>
+									<div class="col-lg-12">&nbsp;</div>
+								    </div>
+								</div>
+							    </div>
+							</div>
+						    </div>
+						</div>
+						<div class="col-lg-12">&nbsp;</div>
+					    </div>
+					    <div class="row">
+						<div class="col-lg-12">
+						    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Telephone Number <i class="fa fa-caret-down fa-fw"></i></strong>
+						</div>
+						<div class="col-lg-12">
+						    <div class="col-lg-4">
+							<input class="form-control" placeholder="080" name="gym_pcode" type="text" id="gym_pcode" maxlength="15" />
+						    </div>
+						    <div class="col-lg-8">
+							<input class="form-control" placeholder="Telephone Number" name="gym_telephone" type="text" id="gym_telephone" maxlength="20" />
+						    </div>
+						    <p class="help-block" id="gym_tp_msg">Press enter or go button to move to next field.</p>
+						</div>
+						<div class="col-lg-12">&nbsp;</div>
+					    </div>
+					    <div class="panel panel-info">
+						<div class="panel-heading">
+						    <strong>Address</strong>&nbsp;
+						    <button  type="button" class="text-info btn btn-info  btn-md" type="button" id="addr_show_but" onClick="$('#gym_address_body').show(300);"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+						    <button  type="button" class="text-info btn btn-danger  btn-md" type="button" id="addr_hide_but" onClick="$('#gym_address_body').hide(300);"><i class="fa fa-minus fa-fw fa-x2"></i></button>&nbsp;
+						</div>
+						<div class="panel-body" id="gym_address_body" style="display:none;">
+						    Country 
+						    <div class="row">
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Country <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="Country" name="gym_country" required type="text" id="gym_country" maxlength="100"/>
+								<p class="help-block" id="gym_comsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+							State / Province 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> State / Province <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="State / Province" name="gym_province" required="required" type="text" id="gym_province" maxlength="150" />
+								<p class="help-block" id="gym_prmsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+							District / Department 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> District / Department <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="District / Department" name="gym_district" required="required" type="text" id="gym_district" maxlength="100"/>
+								<p class="help-block" id="gym_dimsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+						    </div>
+						    <div class="row">
+							City / Town 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> City / Town <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="City / Town" name="gym_city_town" required="required" type="text" id="gym_city_town" maxlength="100"/>
+								<p class="help-block" id="gym_citmsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+							Street / Locality 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Street / Locality <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="Street / Locality" name="gym_st_loc" type="text" id="gym_st_loc" maxlength="100"/>
+								<p class="help-block" id="gym_stlmsg">Press enter or go button to move to next feild.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+							Address Line 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Address Line <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="Address Line" name="gym_addrs" type="text" id="gym_addrs" maxlength="200"/>
+								<p class="help-block" id="gym_admsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+						    </div>
+						    <div class="row">
+							Zipcode 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Zipcode <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="Zipcode" name="gym_zipcode" required type="text" id="gym_zipcode" maxlength="25" />
+								<p class="help-block" id="gym_zimsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+							Personal Website 
+							<div class="col-lg-4">
+							    <div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Website <i class="fa fa-caret-down fa-fw"></i></strong>
+							    </div>
+							    <div class="col-lg-12">
+								<input class="form-control" placeholder="Personal Website" name="gym_website" type="text" id="gym_website" maxlength="250" value="http://"/>
+								<p class="help-block" id="gym_wemsg">Press enter or go button to move to next field.</p>
+							    </div>
+							    <div class="col-lg-12">&nbsp;</div>
+							</div>
+							Google Map URL 
+						    </div>
+						</div>
+					    </div>
+					    <div class="row">
+						<div class="col-lg-12">
+						    <button  type="button" class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="addgymBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+						</div>
+						<div class="col-lg-12">&nbsp;</div>
+					    </div>
+					</fieldset>										
+				    </form>
+				</div>
+			    </div>
+			</div>
+			</div>
+		</div>
+        </div>
+        <div class="tab-pane fade in" id="list_gym">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                List Gym's
+                            </div>
+                            <div class="panel-body" >
+                                <div id="dislistofgyms">
+                                    Fetch Gym's From Database
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12" id="lstgymloader"></div>
+            </div>
+        </div>
+    </div>
+</div>

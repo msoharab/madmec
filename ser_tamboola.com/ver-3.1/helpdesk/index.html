@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Tamboola</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+                <link href="assets/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet">
+                <link href="assets/css/jquery-ui.min.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.structure.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.theme.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.1.10.4.css" rel="stylesheet"/>
+		<!--[if lt IE 9]>
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="assets/css/styles.css" rel="stylesheet">
+		<!-- signin -->
+		<link href="assets/css/signin.css" rel="stylesheet">
+		<link rel="stylesheet"  href="assets/css/lightGallery.css"/>
+    <style>
+    	ul{
+			list-style: none outside none;
+		    padding-left: 0;
+		}
+		.gallery li {
+			display: block;
+			float: left;
+			height: 100px;
+			margin-bottom: 6px;
+			margin-right: 6px;
+			width: 100px;
+		}
+		.gallery li a {
+			height: 200px;
+			width: 200px;
+		}
+		.gallery li a img {
+			max-width: 200px;
+		}
+    </style>
+	</head>
+        <body onload="goto_home()">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                                    <a class="navbar-brand" href="index.html">Tamboola</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a class="navbar-brand" id="displaydocname" style="float: right"></a>
+				</div>
+				<div class="collapse navbar-collapse" align="right">
+                     <ul class="nav navbar-nav">
+                        <li><a href="javascript:void(0);" id="registrationmenuBut"  style="float: right" onclick="javascript:goto_home();"><b>Home</b></a></li>
+						<li style="display: none;"><a href="javascript:void(0);"  style="float: right" onclick="javascript:goto_costmuer();" ><b>OUR CUSTOMER</b></a></li>
+						<li><a href="javascript:void(0);"   style="float: right" onclick="javascript:goto_prizing();"><b> PRIZING</b></a></li> 
+                        <li><a href="javascript:void(0);"  style="float: right" onclick="javascript:goto_helpdesk();" id='helpdeskmenuBut'><b>Help Desk</b></a></li>
+						  <li><a href="javascript:void(0);"  style="float: right" onclick="javascript:goto_contactdesk();" id='contactdeskmenuBut'><b>Contact Us</b></a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		<div class="container">
+                    <section class="sub_container" id="homedetails">
+                        <center><div class="alert alert-info" role="alert"><h2>Get Growing With Tamboola Software</h2></div></center>
+                        <h3 class="text-warning">Features</h3>
+                        <div class="col-lg-12">&nbsp;</div>
+						<div class="col-lg-12">
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Enquiry</h4>   
+									<P class="text-justify">
+										Records the enquiry made by the customers.
+										And follow that enquiry with 3 different dates, makes the appropriate update of the follow ups.
+										Once the customer is willing to join he can be added directorly.
+									</P>
+								</div>
+						    </div>
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Customers</h4>   
+									<p class="text-justify">
+										Add the new customer to the club under which facility he is willing to join.
+										View all customer, perform operation like Delete, Flag, Unflag and Edit.
+										A group of customer can be added under a group.
+										Import Excel file with bluk customer records.
+									</p>
+								</div>
+						    </div>
+						</div>
+						<div class="col-lg-12">
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Trainer</h4>   
+									<p class="text-justify">
+										Add the new trainer to the club under which facility he is working.
+										View all trainers, perform operation like Delete, Flag, Unflag and Edit.
+										Import Excel file with bluk trainer records.
+									</p>
+								</div>
+						    </div>
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Accounts</h4>
+									<p class="text-justify">
+										Managing accounts was never so easy, we provide you a software which can mange your club/gym accout with ease.  
+									</p>				
+								</div>
+						    </div>
+						</div>
+                        <div class="col-lg-12">&nbsp;</div>
+                       <div class="col-lg-12">
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Manage</h4>
+									<p>
+										With this software you can keep track of your customer payment and attendace.
+									</p>  
+								</div>
+						    </div>
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Stats</h4>
+									<p>
+										Check daily statistic of your gym.
+										Daily statistic of accounts, customers, and trainer on the go. any-time with your mobile or your PC.
+									</p> 				
+								</div>
+						    </div>
+						</div>
+                         <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">Reports</h4>   
+									<p>
+										Generate report of your account any-time, with customizable report generation you can get monthly, yearly or your customised period of time  
+									</p>  
+								</div>
+						    </div>
+							<div class="col-lg-6">
+								<div class="well well-lg">
+									<h4 class="text-danger">CRM</h4>
+									<p>
+										we provide Mobile application for your gym customer.
+										so that they can manage there workout and lot more with ther mobile.
+										mobile app are meant to improve your business.
+									</p>				
+								</div>
+						    </div>
+						</div>
+                        <div class="col-lg-12">&nbsp;</div>
+                    </section>
+                    <section class="sub_container" id="costmuerdetails">
+                        <div class="col-lg-12">
+                             <h2 class="text-center text-info">Our Happy Coustomers.</h2>
+                        </div>
+                        <div class="col-lg-12">
+							 <div class="col-lg-6">
+								<div class="well well-lg">
+									<h4>Fusion fitness(Btm layout,Bangalore)</h4>
+									<p>
+										<img src="assets/images/f2.jpg" width="300"/>
+									</p>
+								</div>
+							  </div>
+							  <div class="col-lg-6">
+								<div class="well well-lg">
+									<h4>Ultimate Fitness(Chamraj-pet, Bangalore)</h4>
+									<p>
+										<img src="assets/images/uf.jpg" width="300"/> 
+									</p>
+								</div>
+							  </div>
+                        </div> 
+                    </section>
+                    <section class="sub_container" id="prizingdetails">
+                        <div class="col-lg-12">
+                             <h2 class="text-center text-info">Prizing option.</h2>  
+                        </div>
+						  <div class="col-lg-12">
+							  <div class="col-lg-6">
+								<div class="well well-lg">
+									<h4>Prize Scheme 1</h4>
+									<p>
+										Product charges: Rs.15,000/year.<br />
+										Mantainence charges: Rs.1000/month. 
+									</p>
+								</div>
+							  </div>
+							  <div class="col-lg-6">
+								<div class="well well-lg">
+									<h4>Prize Scheme 2</h4>
+									<p>
+										Product charges: Rs.15,00/month.<br />
+										Mantainence charges: Rs.1000/month.
+									</p>
+								</div>
+							  </div>
+						</div>
+						<video src="dashboard.webm" controls loop poster="crm_email.png" width="600px" height="320px" >
+						  Sorry, your browser doesn't support embedded videos, 
+						  but don't worry, you can <a href="videofile.ogg">download it</a>
+						  and watch it with your favorite video player!
+						</video> 
+                      </section>
+                      <!--Contact Us-->
+                       <!--Contact Us-->
+                    <section class="sub_container" id="contactdetails">
+                        <div class="col-lg-12">
+                             <h2 class="text-center">Contact Us </h2>  
+                        </div>
+                         <div id="address">
+                         <div class="col-lg-12">
+                             <div class="alert-warning" role="alert">
+                                 <div class="col-lg-6">
+									<div class="well well-lg"> 
+									<h3 class="text-left">Address :</h3>  
+									<p class="text-justify">
+									   #42, 5th cross, 22nd main,<br/>
+                                       opp to Mahaveer wilton apartment,<br/>
+                                       J P Nagar 5th phase<br/>
+                                       Bangalore: 560078, India. <br/>
+                                   </p>
+                                   </div>
+                                 </div>
+                                 <div class="col-lg-6">
+									 <div class="well well-lg">
+                                    <h3 class="text-left">Contact :</h3>  
+                                    <p class="text-justify">
+                                       Email: info@madmec.com<br/>
+                                       phone: +91 9916282628 / 8892268380 / 9900418133 
+                                   </p>
+                                 </div>
+                                 </div>
+                             </div>
+                         </div>   
+                         </div>
+                    </section>
+                      <!--Help Desk-->
+                    <section class="sub_container" id="helpdeskdetails">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h5> Help Desk</h5>
+                            </div>
+                            <div class="panel-body">
+                               <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-success" id="enquirymodulesnap">Enquiry</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-danger" id="customermodulesnap">Customers</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-warning" id="trainermodulesnap">Trainer</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-success" id="accountmodulesnap">Account</button>
+                                </div>
+                                 <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-danger" id="managemodulesnap">Manage</button>
+                                </div>
+                                 <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-warning" id="statmodulesnap">Stats</button>
+                                </div>
+                                   <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-success" id="reportsmodulesnap">Reports</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-danger" id="crmmodulesnap">CRM</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-warning" id="signoutmodulesnap">signOut</button>
+                                </div>
+                              </div> 
+                                <div class="col-lg-12">&nbsp;</div>
+                                <h2 class="text-center text-danger">  Welcome to the help Desk..</h2>
+								<!--enquiry module-->
+                                <div id="enquirymoduledesp">
+                                    <div class="col-lg-12">
+										<div class="col-lg-6">
+										  <h3 class="text-left text-danger"> 1. Enquiry</h3> 
+										   <h4 class="text-left text-warning">  Enquiry has three sub features:</h4>
+										   <h5 class="text-left text-primary"> 1.1 Add Enquiry </h5>
+										   <h5 class="text-left text-primary"> 1.2 Follow ups</h5>
+											<h5 class="text-left text-primary"> 1.3 List all </h5>
+										</div> 
+										<div class="col-lg-6"></div> 
+                                    </div>
+                                    <div class="col-lg-12">
+										<div class="col-lg-6">
+											<h4 class="text-left text-success"> 1.1 Add Enquiry  </h4> 
+										   <p class="text-justify">Whenever a new custumer visits to enquire about the gym/club it you can save customers basic information such as:</p>
+										   <h6 class="text-left text-warning"># Person who referred visitor </h6>
+										   <h6 class="text-left text-warning"># Person who handled visitor :  </h6>
+										   <h6 class="text-left text-warning"># Visitor name : </h6>
+										   <h6 class="text-left text-warning"># Email </h6>
+										   <h6 class="text-left text-warning"># Cell Number </h6>
+										   <h6 class="text-left text-warning"># First follow up :</h6>
+										   <h6 class="text-left text-warning"># Second follow up : </h6>
+										   <h6 class="text-left text-warning"># Third follow up : </h6>
+										   <h6 class="text-left text-warning"># Interested in : </h6>
+										   <h6 class="text-left text-warning"># Joining probability : </h6>
+										   <p class="text-justify">After Filling all the details click on <strong>save</strong> button.</p>
+										</div> 
+                                    <div class="col-lg-6">
+                                     <!--<img src="assets/screnshots/add_user.png" width="450px" height="350px"/>--> 
+                                     <ul id="enquiry_add_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/enquiry_add.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/enquiry_add.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+										<div class="col-lg-6">
+										   <h4 class="text-left text-success"> 1.2 Follow ups </h4> 
+										   <p class="text-justify">Follow up the customer enquiry. </p>
+										   <h5 class="text-left text-primary">1.2.1  Today's follow up :</h5>
+										   <h5 class="text-left text-primary">1.2.2  Pending follow up :</h5>
+										   <h5 class="text-left text-primary">1.2.3  Expired follow up :</h5>
+										</div> 
+                                    </div>
+                                    <div class="col-lg-12">
+										<div class="col-lg-6">
+											<h4 class="text-left text-info"> 1.2.1 Today's follow up </h4> 
+										   <p class="text-justify">Here the Present day follow up will be list and can also be updated.<br/>
+													We can view details like as follows.
+										   </p>
+										   <h6 class="text-left text-warning"># Basic</h6>
+										   <h6 class="text-left text-warning"># Info</h6>
+										   <h6 class="text-left text-warning"># Follow-Up</h6>
+										   <h6 class="text-left text-warning"># Status</h6>
+										   <h6 class="text-left text-warning"># Add</h6>
+										   <h6 class="text-left text-warning"># Delete</h6>
+										</div> 
+                                    <div class="col-lg-6">
+                                     <!--<img src="assets/screnshots/add_user.png" width="450px" height="350px"/>--> 
+                                     <ul id="enquiry_follow1_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/enquiry_follow1.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/enquiry_follow1.png" />
+                                            </a> 
+                                        </li>
+                                     </ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">
+										<div class="col-lg-6">
+											<h4 class="text-left text-info"> 1.2.2 Pending follow up </h4> 
+										   <p class="text-justify">Here the Pending follow up will be list and can also be updated.<br/>
+													We can view details like as follows.
+										   </p>
+										   <h6 class="text-left text-warning"># Basic</h6>
+										   <h6 class="text-left text-warning"># Info</h6>
+										   <h6 class="text-left text-warning"># Follow-Up</h6>
+										   <h6 class="text-left text-warning"># Status</h6>
+										   <h6 class="text-left text-warning"># Add</h6>
+										   <h6 class="text-left text-warning"># Delete</h6>
+										</div> 
+                                    <div class="col-lg-6">
+                                     <!--<img src="assets/screnshots/add_user.png" width="450px" height="350px"/>--> 
+                                     <ul id="enquiry_follow2_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/enquiry_follow2.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/enquiry_follow2.png" />
+                                            </a> 
+                                        </li>
+                                     </ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">
+										<div class="col-lg-6">
+											<h4 class="text-left text-info"> 1.2.3 Expired follow up </h4> 
+										   <p class="text-justify">Here the Expired follow up will be list and can also be updated.<br/>
+													We can view details like as follows.
+										   </p>
+										   <h6 class="text-left text-warning"># Basic</h6>
+										   <h6 class="text-left text-warning"># Info</h6>
+										   <h6 class="text-left text-warning"># Follow-Up</h6>
+										   <h6 class="text-left text-warning"># Status</h6>
+										   <h6 class="text-left text-warning"># Add</h6>
+										   <h6 class="text-left text-warning"># Delete</h6>
+										</div> 
+                                    <div class="col-lg-6">
+                                     <!--<img src="assets/screnshots/add_user.png" width="450px" height="350px"/>--> 
+                                     <ul id="enquiry_follow3_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/enquiry_follow3.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/enquiry_follow3.png" />
+                                            </a> 
+                                        </li>
+                                     </ul>
+                                    </div>
+                                    </div>
+                                      <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                         <h4 class="text-left text-success"> 1.3 List All </h4> 
+                                       <p class="text-justify">Here you can view all Enquiry Details<br/>
+											And also the search enquiry.
+                                        </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_users.png" width="450px" height="350px"/>-->
+                                        <ul id="enquiry_list_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/enquiry_list.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/enquiry_list.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <!--customer module-->
+                                <div id="customermoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                        <h3 class="text-left text-danger"> 2. Customer</h3> 
+                                       <h4 class="text-left text-warning">   customer has Five sub features:</h4>
+                                       <h5 class="text-left text-primary"> 2.1 Add Customer </h5>
+                                       <h5 class="text-left text-primary"> 2.2 List Customer </h5>
+<!--                                       <h5 class="text-left text-primary"> 2.3 Add Group </h5>
+                                       <h5 class="text-left text-primary"> 2.4 List Groups </h5>-->
+                                       <h5 class="text-left text-primary"> 2.3 Import Customer</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                      <h4 class="text-left text-danger"> 2.1 Add Customer</h4> 
+                                      <p class="text-justify">here you can add customer for that have to fill below details</p>
+                                       <h6 class="text-left text-warning"># Fee  </h6>
+                                       <h6 class="text-left text-warning"># Name</h6>
+                                       <h6 class="text-left text-warning"># Sex </h6>
+                                       <h6 class="text-left text-warning"># DOB </h6>
+                                       <h6 class="text-left text-warning"># Address Person who referred the customer to join  </h6>
+                                       <h6 class="text-left text-warning"># Date Of Join </h6>
+                                       <h6 class="text-left text-warning"># Company  </h6>
+                                       <h6 class="text-left text-warning"># Occupation  </h6>
+                                       <h6 class="text-left text-warning"># Emergency name </h6>
+                                       <h6 class="text-left text-warning"># Access Id  </h6>  
+                                       <h6 class="text-left text-warning"># Facility Type  </h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_patty.png" width="450px" height="350px"/>-->
+                                        <ul id="add_cust_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_patty.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_patty.png" />
+                                            </a> 
+                                        </li></ul>                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.2 List Customer</h4> 
+                                      <p class="text-justify">here you have to select facility type of customer.</p></div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_sale_entry.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_cust_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_sale_entry.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_sale_entry.png" />
+                                            </a> 
+                                        </li></ul>  
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12" style="display : none;">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.3 Add Group</h4> 
+                                      <p class="text-justify">here you have number of member in a group</p>
+                                       <h6 class="text-left text-warning"># Group Type  </h6>
+                                       <h6 class="text-left text-warning"># Group Owner </h6>
+                                       <h6 class="text-left text-warning"># Person who referred the customer to join  </h6>
+                                       <h6 class="text-left text-warning"># Number of Memeber </h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/generate_bill.png" width="450px" height="350px"/>-->  
+                                         <ul id="generate_bill_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/generate_bill.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/generate_bill.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12"  style="display : none;">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.4 List Groups</h4> 
+                                      <p class="text-justify">here you can view group List.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_pattys.png" width="450px" height="350px"/>-->
+                                        <ul id="list_pattys_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_pattys.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_pattys.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                     <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.3 Import Customers</h4> 
+                                      <p class="text-justify">here you import customer.</p>
+										 <h6 class="text-left text-warning"># Facility Type  </h6> 
+										 <h6 class="text-left text-warning"># Select a xls file  </h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_pattys.png" width="450px" height="350px"/>-->
+                                        <ul id="import_cust_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_pattys.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_pattys.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <!--trainer module-->
+                                <div id="trainermoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 3. Trainer</h3> 
+                                       <h4 class="text-left text-warning">   Trainer has three sub features:</h4>
+                                       <h5 class="text-left text-primary"> 3.1 Add Employee </h5>
+                                       <h5 class="text-left text-primary"> 3.2 List Employee </h5>
+                                       <h5 class="text-left text-primary"> 3.3 Import Employee </h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 3.1  Add Employee </h4> 
+                                      <p class="text-justify">Here you can add Employee by filling the from and clicking on save button.</p>
+                                       <h6 class="text-left text-warning"># Name </h6>
+                                       <h6 class="text-left text-warning"># Sex</h6>
+                                       <h6 class="text-left text-warning"># Facility type</h6>
+                                       <h6 class="text-left text-warning"># Trainer type</h6>
+                                       <h6 class="text-left text-warning"># Mobile</h6>
+                                       <h6 class="text-left text-warning"># E-Mail Id</h6>
+                                       <h6 class="text-left text-warning"># Date Of Birth</h6>
+                                        <h6 class="text-left text-warning"># Date Of Join</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_collection.png" width="450px" height="350px"/>--> 
+                                        <ul id="employee_add_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_add.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_add.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                   <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 3.2 List Employee's</h4> 
+										  <p class="text-justify">Here you can view all Employee list who are in the GYM/Club.<br/>
+												Some details like name, mobile no., and type of services are given in this table.<br/>
+												You can search any Employee by his any details listed in the table by typing it in the given field<br/>
+												It can also perform some operation like:<br/>
+												  <h6 class="text-left text-warning"># Delete</h6>
+												  <h6 class="text-left text-warning"># Flag/Unflag</h6>
+												  <h6 class="text-left text-warning"># Edit</h6>
+										  </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_list_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_list.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_list.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-info">Delete Operation </h4> 
+										  <p class="text-justify">By clicking on the delete button we can delete the record.<br/>
+										  </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_delete_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_delete.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_delete.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                      <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-info">Flag/Unflag Operation </h4> 
+										  <p class="text-justify">By clicking on the Flag button employee will be suspended.<br/>
+														By clicking on the Unflag button employee will be active once again.
+										  </p>
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_flag_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_flag.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_flag.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_unflag_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_unflag.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_unflag.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>  
+                                    </div>
+                                      <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-info">Edit Operation </h4> 
+										  <p class="text-justify">By clicking on the Edit button we can update the photo and details of the employee.<br/>
+										  </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_edit_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_edit.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_edit.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                      <div class="col-lg-12">&nbsp;</div> <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 3.3 Import Employee</h4> 
+                                      <p class="text-justify">Here we can import the Excel file of the employee details i.e bluk record can be inserted.<br/>
+												1st image shows the formate of the Excel sheet.
+                                      </p>
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_excel_sheet_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_excel_sheet.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_excel_sheet.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                     <div class="col-lg-3">
+                                        <!--<img src="assets/screnshots/list_collections.png" width="450px" height="350px"/>-->  
+                                        <ul id="employee_import_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/employee_import.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/employee_import.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <!--account module-->
+                                <div id="accountmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 4. Account</h3> 
+                                       <h4 class="text-left text-warning">   Accounts has Five sub features:</h4>
+                                       <h5 class="text-left text-primary"> 4.1 Fee </h5>
+                                       <h5 class="text-left text-primary"> 4.2 Package </h5>
+                                       <h5 class="text-left text-primary"> 4.1 Staff Payments</h5>
+                                       <h5 class="text-left text-primary"> 4.2 Club Expences</h5>
+                                         <h5 class="text-left text-primary"> 4.2 Due/Balance</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 4.1  Fee </h4> 
+                                      <p class="text-justify">Here the list of customer is displayed where you select one for whom you want to collect the fess.<br/>
+										After which the a form is displayed and fill the form and click on save button.<br/>
+										Their is list of different facility available they are:
+										 <h6 class="text-left text-warning">#  GYM</h6>
+										  <h6 class="text-left text-warning"># Aerobics</h6>
+										  <h6 class="text-left text-warning"># Dance</h6>
+										   <h6 class="text-left text-warning"># Zumba</h6>
+										    <h6 class="text-left text-warning"># Yoga</h6>
+                                      </p>
+                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="acc_fee_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/acc_fee.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/acc_fee.png"/>
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 4.2 Package Fee</h4> 
+                                      <p class="text-justify">here you can view Package Fee List with Customer Details.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="acc_package_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/acc_package.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/acc_package.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                      <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 4.3 Staff Payments</h4> 
+                                      <p class="text-justify">Payment of staff like trainer, receptionist etc</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="acc_staff_pay_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/acc_staff_pay.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/acc_staff_pay.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                      <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 4.4 Club Expences</h4> 
+                                      <p class="text-justify">Expences of club is added here for example like water bills, electricity bills.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="acc_club_expence_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/acc_club_expence.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/acc_club_expence.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                      <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 4.5 Due/Balance</h4> 
+                                      <p class="text-justify">Dues of customer are collected here.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="acc_due_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/acc_due.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/acc_due.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <!--Manages module-->
+								<div id="managemoduledesp">
+                                     <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 5. Manage</h3> 
+                                       <h4 class="text-left text-warning">   Manage has six sub features:</h4>
+                                       <h5 class="text-left text-primary"> 5.1 Mark Attendance </h5>
+                                       <h5 class="text-left text-primary"> 5.2 Add Facility </h5>
+                                       <h5 class="text-left text-primary"> 5.3 Add Offer</h5>
+                                       <h5 class="text-left text-primary"> 5.4 List Offer</h5>
+                                       <h5 class="text-left text-primary"> 5.5 Add Package </h5>
+                                       <h5 class="text-left text-primary"> 5.6 list Packages </h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.1  Mark Attendance</h4> 
+                                      <p class="text-justify">here you can have Mark Attendance Details of Dance,Aerobics etc and Search .</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="add_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/add_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/add_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.2 Add Facility</h4> 
+                                      <p class="text-justify">here you can Add Facility,follow are the basic details you have to fill .</p>
+										
+                                      
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                  
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.3  Add Offer</h4> 
+                                      <p class="text-justify">here you can add offer  with some fields e.g. name, duration, number of days, facility tyupe, description, prizing, total members.</p>
+											 <h6 class="text-left text-warning">#  Name </h6>
+											 <h6 class="text-left text-warning">#  Duration </h6>
+											 <h6 class="text-left text-warning"># Number Of Days</h6>
+											 <h6 class="text-left text-warning">#  Facility Type </h6>
+											 <h6 class="text-left text-warning"># Prizing </h6>
+											 <h6 class="text-left text-warning">#  Minimum Member</h6>
+											 <h6 class="text-left text-warning"># Description </h6>
+											     
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                     
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.4 List Offer</h4> 
+                                      <p class="text-justify">here you can view list offer Details as well as having option to edit/add and delete details.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.5 Add Package</h4> 
+                                      <p class="text-justify">here you can add package,follow are the basic details you have to fill.</p>
+											<h6 class="text-left text-warning">#  Package Type </h6>
+											<h6 class="text-left text-warning"># Number Of Session </h6>
+											<h6 class="text-left text-warning">#  Prize </h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                   
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.5 list Package</h4> 
+                                      <p class="text-justify">here you can view all list package Details. </p>
+											
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div>                                
+                                <!--Stats Module-->
+								<div id="statmoduledesp">
+                                     <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 6. Stats</h3> 
+                                       <h4 class="text-left text-warning">   Manage has four sub features:</h4>
+                                       <h5 class="text-left text-primary"> 6.1 Accounts </h5>
+                                       <h5 class="text-left text-primary"> 6.2 Registration </h5>
+                                       <h5 class="text-left text-primary"> 6.3 Customer</h5>
+                                       <h5 class="text-left text-primary"> 6.4 Employee</h5>
+                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success">6.1 Accounts</h4> 
+                                      <p class="text-justify">here you can get to know present/todays status todays accounts, todays incoming amounts, todays outgoing amounts only of todays.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="stats_acc_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/stats_acc.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/stats_acc.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 6.2 Registration</h4> 
+                                      <p class="text-justify">here you can Registration would be number of registration with the details of registered person be available only of today.</p>
+										
+                                      
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="stats_reg_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/stats_reg.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/stats_reg.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                  
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 6.3 Customer</h4> 
+                                      <p class="text-justify">here Custumers would be having who are the custumers, who's expiry date is today, who are the custumers who attended the gym today. .</p>
+											 										     
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="stats_cust_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/stats_cust.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/stats_cust.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                     
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 6.4 Employee</h4>
+                                      <p class="text-justify">here you can view who are the employee came to the gym today..</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="stats_emp_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/stats_emp.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/stats_emp.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <!--Reports module-->
+								<div id="reportsmoduledesp">
+                                     <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 7. Reports</h3> 
+                                       <h4 class="text-left text-warning">   Reports has nine sub features:</h4>
+                                       <h5 class="text-left text-primary"> 7.1 Club</h5>
+                                       <h5 class="text-left text-primary"> 7.2 Package </h5>
+                                       <h5 class="text-left text-primary"> 7.3  Registration</h5>
+                                       <h5 class="text-left text-primary"> 7.4 Payments</h5>
+                                       <h5 class="text-left text-primary"> 7.5 Expenses </h5>
+                                       <h5 class="text-left text-primary"> 7.6 Balance Sheet </h5>
+                                       <h5 class="text-left text-primary"> 7.7 Customer </h5>
+                                       <h5 class="text-left text-primary"> 7.8 Employee </h5>
+                                       <h5 class="text-left text-primary"> 7.9 Receipts </h5>
+                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.1 Club</h4> 
+                                      <p class="text-justify">Here you can check the club report by selecting Todate and Fromdate then click on generate report.</p>
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_Club_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_Club.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_Club.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_gymfee_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_gymfee.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_gymfee.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.2 Package </h4> 
+                                      <p class="text-justify">Here you can check the package report by selecting Todate and Fromdate then click on generate report.</p>
+										
+                                      
+                                    </div> 
+                                   <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_package_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_package.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_package.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                  
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.3  Registration</h4> 
+                                      <p class="text-justify">here you can check the registration report by selecting Todate and Fromdate then click on generate report.</p>
+																						     
+                                    </div> 
+                                   <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_registration_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_registration.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_registration.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="rep_customer_registration_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/rep_customer_registration.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/rep_customer_registration.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.4 Payments</h4> 
+                                      <p class="text-justify">here you can check the payments report by selecting Todate and Fromdate then click on generate report.</p>
+											     </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="rep_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/rep_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/rep_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                   <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.5 Expenses</h4> 
+                                      <p class="text-justify">here you can check the expenses report by selecting Todate and Fromdate then click on generate report.</p>
+											
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_expences_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_expences.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_expences.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="rep_expences_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/rep_expences.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/rep_expences.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                   <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.6 Balance Sheet</h4> 
+                                      <p class="text-justify">here you can check the balance sheet report by selecting Todate and Fromdate then click on generate report.</p>
+											
+                                    </div> 
+                                   <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_balancesheet_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_balancesheet.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_balancesheet.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="rep_balancesheet_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/rep_balancesheet.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/rep_balancesheet.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                      <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.7 Customers</h4> 
+                                      <p class="text-justify">here you can check the expenses report by selecting Todate and Fromdate then click on generate report.</p>
+											
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_customer_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_customer.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_customer.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="rep_customer_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/rep_customer.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/rep_customer.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                      <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.8 Employee</h4> 
+                                      <p class="text-justify">here you can check the employee report by selecting Todate and Fromdate then click on generate report.</p>
+											
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_employee_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_employee.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_employee.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="rep_trainer_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/rep_trainer.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/rep_trainer.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                      <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 7.9 Receipts</h4> 
+                                      <p class="text-justify">here you can check the receipts report by name, email-id and date we can search receipt.</p>
+											
+                                    </div> 
+                                   <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_receipt_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_receipt.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_receipt.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="report_rec_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/report_rec.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/report_rec.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div> 
+                                <!--CRM module-->
+								<div id="crmmoduledesp">
+                                     <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 8. CRM</h3> 
+                                       <h4 class="text-left text-warning">   CRM has Five sub features:</h4>
+                                       <h5 class="text-left text-primary"> 8.1 Mobile App</h5>
+                                       <h5 class="text-left text-primary"> 8.2 Email Manager </h5>
+                                       <h5 class="text-left text-primary"> 8.3  SMS Manager</h5>
+                                       <h5 class="text-left text-primary"> 8.4 Feedbacks</h5>
+                                       <h5 class="text-left text-primary"> 8.5 Expiry Intimation </h5>
+                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 8.1 Mobile App</h4> 
+                                      <p class="text-justify">Here you can view all the massage sent to customer.<br/>
+												It can also perform some operation like:<br/>
+												  <h6 class="text-left text-warning"># Compose</h6>
+												  <h6 class="text-left text-warning"># OutBox</h6>
+												  <h6 class="text-left text-warning"># Expired</h6>
+												  <h6 class="text-left text-warning"># No Show-ups</h6>
+												  <h6 class="text-left text-warning"># Follow-ups</h6>
+												  <h6 class="text-left text-warning"># Statistics</h6>
+                                      </p>
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_mobile_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_mobile.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_mobile.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_mobile_sent_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_mobile_sent.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_mobile_sent.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 8.2 Email Manager</h4> 
+                                      <p class="text-justify">Here you can view all the Emails sent to customer.
+												It can also perform some operation like:<br/>
+												  <h6 class="text-left text-warning"># Compose</h6>
+												  <h6 class="text-left text-warning"># OutBox</h6>
+												  <h6 class="text-left text-warning"># Expired</h6>
+												  <h6 class="text-left text-warning"># No Show-ups</h6>
+												  <h6 class="text-left text-warning"># Follow-ups</h6>
+												  <h6 class="text-left text-warning"># Statistics</h6>
+                                      </p>
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_email_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_email.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_email.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_email_sent_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_email_sent.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_email_sent.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>   
+                                    </div>
+                                  
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 8.3  SMS Manager</h4> 
+                                      <p class="text-justify">Here you can view all the SMS sent to customer.
+												It can also perform some operation like:<br/>
+												  <h6 class="text-left text-warning"># Compose</h6>
+												  <h6 class="text-left text-warning"># OutBox</h6>
+												  <h6 class="text-left text-warning"># Expired</h6>
+												  <h6 class="text-left text-warning"># No Show-ups</h6>
+												  <h6 class="text-left text-warning"># Follow-ups</h6>
+												  <h6 class="text-left text-warning"># Statistics</h6>
+                                      </p>
+																						     
+                                    </div> 
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_sms_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_sms.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_sms.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_sms_sent_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_sms_sent.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_sms_sent.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>  
+                                    </div>
+                                     
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    
+                                    
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 8.4 Feedbacks</h4> 
+                                      <p class="text-justify">In feedback we can we all the feedbacks of the customer and also give the feedback and we stats of the feedback.
+										  Feedback can be given bt filling the follow basic details .<br/>
+                                      
+                                      </p>
+											<h6 class="text-left text-warning"># Equipment</h6>
+											<h6 class="text-left text-warning"># Atmosphere</h6>
+											<h6 class="text-left text-warning"># Price</h6>
+											<h6 class="text-left text-warning"># Music</h6>
+											<h6 class="text-left text-warning"># Trainer</h6>
+											<h6 class="text-left text-warning"># GYM Cleanliness</h6>
+											<h6 class="text-left text-warning"># GYM facility</h6>
+											<h6 class="text-left text-warning"># Lightings</h6>
+											<h6 class="text-left text-warning"># Suggestion</h6>
+                                    </div> 
+                                   <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_feed_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_feed.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_feed.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!--<img src="assets/screenshot/add_payments.png" width="450px" height="350px"/>-->
+                                        <ul id="crm_feed_stats_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/crm_feed_stats.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/crm_feed_stats.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div>  
+                                    </div>
+                                 
+                                   
+                                    <div class="col-lg-12">&nbsp;</div>
+                                     <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-success"> 8.5 Expiry Intimation</h4> 
+                                      <p class="text-justify">Coming Soon. </p>
+											
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screenshot/list_payments.png" width="450px" height="350px"/>--> 
+                                        <ul id="list_payments_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screenshot/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                </div> 
+								<!--signout-->
+                                <div id="signoutmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 9. Signout</h3> 
+                                       <h4 class="text-left text-warning">  Thank you see you again</h4>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <ul id="signout_lightGallery" class="gallery">
+                                        <li data-src="assets/screenshot/signout.png" > 
+                                                <a href="#">
+                                                   
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+        </div><!-- /.container -->
+		<!-- script references -->
+		<script src="assets/js/jquery-1.11.0.js"></script>
+                <script src="assets/js/jquery.form.js"></script>
+                <script src="assets/js/jquery.wallform.js"></script>
+                <script src="assets/js/jquery-ui.min.js"></script>
+                <script src="assets/js/jquery.calendar-widget.js"></script>
+				<script src="assets/js/bootstrap.min.js"></script>
+                <script src="assets/js/lightGallery.js"></script>
+                <script src="assets/js/index.js"></script>
+        <script>
+			function goto_home(){
+				$(".sub_container").slideUp(1000);
+				$("#homedetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_costmuer(){
+				$(".sub_container").slideUp(1000);
+				$("#costmuerdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_prizing(){
+				$(".sub_container").slideUp(1000);
+				$("#prizingdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_helpdesk(){
+				$(".sub_container").slideUp(1000);
+				$("#helpdeskdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_contactdesk(){
+				$(".sub_container").slideUp(1000);
+				$("#contactdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+		</script>
+	</body>
+</html>

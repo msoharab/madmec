@@ -1,0 +1,111 @@
+<div class="row output-panels" id="pPayments">
+				<ul class="nav nav-tabs" id="paym_menu">
+					<li class="active"><a href="#payms_colls" data-toggle="tab" id="addpayments">Add Payments</a></li>
+					<li><a href="#list_payms" data-toggle="tab" id="listpaymsbut">List Payments</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="payms_colls">
+						<!-- Payments -->
+						<div class="row">
+							<div class="col-lg-12">
+								<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Payments <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+							</div>
+							<div class="col-lg-12" id="multiple_payms">
+								<div class="panel panel-warning">
+									<div class="panel-heading">
+										<strong>Payment</strong>&nbsp;
+									</div>
+									<div class="panel-body">
+										<form id="paymsform">
+											<div class="row">
+												<div class="col-lg-6">
+													<!-- Payee -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Payee <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Supplier / Customer / Retailer" name="payms_payer" type="text" id="payms_payer" maxlength="100"/>
+														<p class="help-block" id="payms_payer_msg">Select a Supplier / Customer / Retailer add collection.</p>
+													</div>
+													<!-- Date -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date Of Payment <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Date Of Payment" name="payms_date" type="text" id="payms_date" maxlength="15" readonly="readonly"/>
+														<p class="help-block" id="payms_date_msg">Enter/ Select.</p>
+													</div>
+													<!-- Amount -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Amount <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<input class="form-control" placeholder="Amount" name="payms_amt" type="number" id="payms_amt" maxlength="9" value="0" />
+														<p class="help-block" id="payms_amt_msg">Enter/ Select.</p>
+													</div>
+													<!-- Remark -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Remarks <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12">
+														<textarea class="form-control" name="payms_rmk" type="text" id="payms_rmk" maxlength="100" placehoder="Remarks on the payments"></textarea>
+														<p class="help-block" id="payms_rmk_msg">Enter/ Select.</p>
+													</div>
+												</div>
+												<div class="col-lg-6">
+													<!-- Mode of payment -->
+													<div class="col-lg-12">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Mode of Payment <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12" id="PTvMopType">
+														<input class="form-control" placeholder="Mode of Payment" name="mop_payms" type="text" id="mop_payms"/>
+														<p class="help-block" id="mop_payms_msg">Enter/ Select.</p>
+														Fetch the mode of payments
+													</div>
+													<div class="col-lg-12" id="PTvMopAcTit">
+														<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Bank Account <i class="fa fa-caret-down fa-fw"></i></strong>
+													</div>
+													<div class="col-lg-12" id="PTvMopAc">
+														<input class="form-control" placeholder="Bank Account" name="payms_ac" type="text" id="payms_ac"/>
+														<p class="help-block" id="payms_ac_msg">Enter/ Select.</p>
+														Fetch the bank accounts
+													</div>
+													<div class="col-lg-12" id="PaddPayBAC">&nbsp;</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12"><button class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="addpaymsBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Pay</button></div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="list_payms">
+						<!--<div class="row">
+							<div class="col-lg-12">
+								<div class="col-md-6">
+									List
+								</div>
+								<div class="col-md-6 text-right" id="serachpattymenu">
+									Search menu
+								</div>
+							</div>
+							<div class="col-lg-12" id="searchpaymshtml">
+								Search HTML
+							</div>
+						</div>-->
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="panel panel-primary">
+									<div class="panel-heading">
+										List payments
+									</div>
+									<div class="panel-body table-responsive" id="lstpayments"></div>
+									<div class="col-lg-12" id="lstpaymsloader"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12" id="payms_message"></div>
+			</div>

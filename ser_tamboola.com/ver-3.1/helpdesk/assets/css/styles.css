@@ -1,0 +1,20 @@
+body {
+  padding-top: 50px;
+}
+.sub_container{display:none;}
+.status{ color:#D2322D;}
+.doc_module{display:none;}
+.btn-rounded{display: inline-block;
+margin-bottom: 0px;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+border-radius:50%;
+white-space: nowrap;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857;
+-moz-user-select: none;}

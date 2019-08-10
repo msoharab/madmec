@@ -1,0 +1,78 @@
+<!-- employee/trainers Import-->
+<div class="row output-panels" id="ctrlTrainerImport">
+    <h3 class="page-header text-primary"><label>&nbsp; Import Employee</label></h3>
+    <div class="col-lg-12" id="ctTrainerImport">
+        <!-- light box Start -->
+        <div id="center_loader" style="display:none;"></div>
+        <div id="fadebody" class="black_overlay_body"></div>
+        <div id="lbchangeimg" class="white_content_body" align="center"></div><!-- light box End -->
+        <!-- BS integration starts here -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div id="output">
+                            <div id="user_import">
+                                <form role="form" action="control.php" method="post" name="trainerdetailsxls" id="trainerdetailsxls" enctype="multipart/form-data">
+                                    <input type="hidden" name="action1" value="uploadFile"> <input type="hidden" name="autoloader" value="true"> <input type="hidden" name="type" value="master"> <input type="hidden" name="gym_id" id="gym_id">
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <span id="import_facility_msg" style="display:none; color:#FF0000; font-size:25px;">*</span> <label>Facility Type :</label> <span><select name="import_facility" id="import_facility" class="form-control">
+                                                            </select></span>
+                                                        <p class="help-block" id="ftype_import_msg"><span>&nbsp;</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <span id="import_msg" style="display:none; color:#FF0000; font-size:25px;">*</span> <label>Trainer Type :</label> <select name="import_gym" id="import_gym" class="form-control">
+                                                        </select>
+                                                        <p class="help-block" id="ttype_import_msg">&nbsp;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <span>&nbsp;<label>Select a xls file:</label> <input type="file" name="xls_users_file"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <span>&nbsp;<label>Example File</label></span>
+                                                </div>
+                                                <div id="dissamplefileformat"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <p>&nbsp;</p><input class="btn btn-lg btn-success btn-block" type="submit" value="Upload File to Server">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12" align="center">
+                                                <div class="progress">
+                                                    <div class="bar"></div>
+                                                    <div class="percent">
+                                                        0%
+                                                    </div>
+                                                </div>
+                                                <div id="status"></div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-12 -->
+        </div>
+    </div>
+</div>
+
+

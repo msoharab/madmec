@@ -1,0 +1,131 @@
+<?php
+$List = isset($this->idHolders["ricepark"]["dashboard"]["ListProducts"]) ? (array) $this->idHolders["ricepark"]["dashboard"]["ListProducts"] : false;
+?>
+<div id="content-outer">
+    <!-- start content -->
+    <div id="content">
+
+        <!--  start page-heading -->
+        <div id="page-heading">
+            <h1>Product List</h1>
+        </div>
+        <!-- end page-heading -->
+
+        <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+            <tr>
+                <th rowspan="3" class="sized"><img src="images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                <th class="topleft"></th>
+                <td id="tbl-border-top">&nbsp;</td>
+                <th class="topright"></th>
+                <th rowspan="3" class="sized"><img src="images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+            </tr>
+            <tr>
+                <td id="tbl-border-left"></td>
+                <td>
+                    <!--  start content-table-inner ...................................................................... START -->
+                    <div id="content-table-inner">
+
+                        <!--  start table-content  -->
+                        <div id="table-content">
+                            <!--  start product-table ..................................................................................... -->
+                            <div>
+                                <table id="<?php echo $List["fields"][0]; ?>"  border="0" width="100%" cellpadding="0" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Product Name</th>
+                                            <th>Brand</th>
+                                            <th>Category</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                            <!--<th>Picture</th>-->
+                                            <th>Description</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody">
+                                    </tbody>
+                                </table>
+                                <!--  end product-table................................... -->
+                            </div>
+                        </div>
+                        <!--  end content-table  -->
+
+                        <div class="clear"></div>
+
+                    </div>
+                    <!--  end content-table-inner ............................................END  -->
+                </td>
+                <td id="tbl-border-right"></td>
+            </tr>
+            <tr>
+                <th class="sized bottomleft"></th>
+                <td id="tbl-border-bottom">&nbsp;</td>
+                <th class="sized bottomright"></th>
+            </tr>
+        </table>
+        <div class="clear">&nbsp;</div>
+
+    </div>
+    <!--  end content -->
+    <div class="clear">&nbsp;</div>
+</div>
+<!--  end content-outer........................................................END -->
+<!--<div id="content-outer">
+     start content
+    <section id="content">
+        <div class="container">
+            <div class=" col-xs-12 row">
+                <div class="box">
+                    <div class="box-body table-responsive">
+                        <table id="<?php echo $List["fields"][0]; ?>" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Product Name</th>
+                                    <th>Brand</th>
+                                    <th>Category</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Picture</th>
+                                    <th>Description</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div> /.box-body
+                </div> /.col
+            </div> /.row
+            <div class="clear">&nbsp;</div>
+        </div>
+    </section>
+      end content
+    <div class="clear">&nbsp;</div>
+</div>-->
+<script>$(document).ready(function () {
+        var this_js_script = $("script[src$='Dashboard.js']");
+        if (this_js_script) {
+            var flag = this_js_script.attr('data-autoloader');
+            if (flag === 'true') {
+                LogMessages('I am In Dashboard');
+                var para = getJSONIds({
+                    autoloader: true,
+                    action: 'getIdHolders',
+                    url: URL + 'Dashboard/getIdHolders',
+                    type: 'POST',
+                    dataType: 'JSON'
+                }).ricepark.dashboard;
+                var obj = new dashboardController();
+                obj.__constructor(para);
+                obj.__ListProduct(para);
+            }
+            else {
+                LogMessages('I am Out Dashboard');
+            }
+        }
+    });
+</script>

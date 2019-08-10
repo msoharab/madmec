@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url>
+  <loc>http://www.tamboola.com/</loc>
+     <image:image>
+       <image:loc>http://www.tamboola.com/assets/images/tamboola/Banner-1200-627.png</image:loc>
+       <image:caption>Tamboola Banner</image:caption>
+    </image:image>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/index.php</loc>
+     <image:image>
+       <image:loc>http://www.tamboola.com/assets/images/tamboola/Banner-1200-627.png</image:loc>
+       <image:caption>Tamboola Banner</image:caption>
+    </image:image>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Home</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Features</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Find</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#SignIn</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Register</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Owner</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Facebook</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Google+</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Linkedin</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Twitter</loc>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.tamboola.com/#Blogspot</loc>
+	<changefreq>daily</changefreq>
+</url>
+</urlset>

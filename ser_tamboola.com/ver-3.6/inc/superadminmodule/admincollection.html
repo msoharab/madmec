@@ -1,0 +1,155 @@
+<div class="row output-panels" id="pCollection">
+    <ul class="nav nav-tabs" id="colls_menu">
+        <li class="active"><a href="#add_colls" data-toggle="tab" id="addcollection">Add Collection</a></li>
+        <li><a href="#list_colls" data-toggle="tab" id="listcollsbut">List Collections</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_colls">
+            <!-- Collections -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <strong><span class="text-danger"></span> Collections :<i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                </div>
+                <div class="col-lg-12" id="multiple_collections">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <strong>Collection</strong>&nbsp;
+                        </div>
+                        <div class="panel-body">
+                            <form id="collsform">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <!-- Payer -->
+                                        <div class="col-lg-12">
+                                            <a href="client.html"></a>
+                                            <strong><span class="text-danger"></span> Payer :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input type="text" class="form-control" placeholder="SELECT PAYER" name="colls_payer" id="colls_payer"></select>
+                                            <a href="client.html"></a>
+                                            <p class="help-block" id="colls_payer_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>  
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12" id="validitytype">
+                                            <strong><span class="text-danger"></span> Validity :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <select class="form-control" name="validity_type" id="validity_type"></select>
+                                            <p class="help-block" id="validity_type_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Mode Of Payment :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12" id="CTvMopType">
+                                            <input class="form-control" placeholder="Mode Of Payment" name="mop_colls" type="text" id="mop_colls"/>
+                                            <p class="help-block" id="mop_colls_msg">Enter/ Select.</p>
+                                            Fetch the Mode Of Payments
+                                        </div> 
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span>Payment Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="Payment Date" name="payment_date" type="text" id="payment_date" maxlength="100" readonly/>
+                                            <p class="help-block" id="payment_date_msg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span>Subscribe Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            <input class="form-control" placeholder="Subscribe Date" name="subscribe_date" type="text" id="subscribe_date" maxlength="100" readonly/>
+                                            <p class="help-block" id="subscribe_date_msg">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Due Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Due Date" name="colls_due_date" type="text" id="colls_due_date" maxlength="15" readonly="readonly"/>
+                                            <p class="help-block" id="colls_due_date_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Total Amount :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Amount" readonly="" name="colls_amt" type="text" id="colls_amt" maxlength="9" value="0" />
+                                            <p class="help-block" id="colls_amt_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Amount Paid : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Amount Paid" name="colls_amt_paid" type="text" id="colls_amt_paid" maxlength="9" value="0" />
+                                            <p class="help-block" id="colls_amt_paid_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span> Amount Due :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Amount Due" name="colls_amt_due" type="text" id="colls_amt_due" maxlength="9" value="0" readonly="readonly"/>
+                                            <p class="help-block" id="colls_amt_due_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12">
+                                                <strong><span class="text-danger"></span> Remarks :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <textarea class="form-control" name="colls_rmk" id="colls_rmk"></textarea>
+                                                <p class="help-block" id="colls_rmk_msg">Enter/ Select.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div id="displayfollowups">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"></span> Follow-up Dates</strong>&nbsp;
+                                                    <button class="text-primary btn btn-success  btn-md" type="button" id="plus_followups_"><i class="fa fa-plus fa-fw "></i></button>&nbsp;</div>
+                                                <div class="col-lg-12" id="multiple_followups">
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12"><button class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="addcollsBut"><i class="fa fa-upload fa-fw "></i> &nbsp;Pay</button></div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_colls">
+            <!--<div class="row">
+            <div class="col-lg-12">
+            <div class="col-md-6">
+            List
+            </div>
+            <!--<div class="col-md-6 text-right" id="serachpattymenu">
+            Search menu
+            </div>
+            </div>
+            <!--<div class="col-lg-12" id="searchcollshtml">
+            Search HTML
+            </div>
+            </div>-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            List collections
+                        </div>
+                        <div class="panel-body table-responsive" id="lstcollections"></div>
+                        <div class="col-lg-12" id="lstcollsloader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="colls_message"></div>
+</div>

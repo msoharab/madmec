@@ -1,0 +1,46 @@
+<!-- Expenses -->
+<div class="row output-panels" id="ctrlRExpenses">
+    <h3 class="page-header text-primary"><label>&nbsp; Expenses</label></h3>
+    <div class="col-lg-12" id="ctRExpenses">
+        <!-- Expences form start -->
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <div class="panel-body" id="ff">
+                                <form id="expform" name="expform">
+                                    <!-- form id-->
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>From :</label> <input name="expdate1" type="text" class="form-control" id="expdate1" placeholder="Date" readonly="readonly" style="cursor:pointer"><!-- date1 id-->
+                                            <span class="text-success"><!--
+                                           <input type="text" id="alternate1" size="30" readonly="readonly" class="form-control" style="border:hidden;"/>
+                                                --></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>To :</label> <input name="expdate2" type="text" class="form-control" id="expdate2" placeholder="Date" readonly="readonly" style="cursor:pointer"><!-- date2 id-->
+                                            <span class="text-success"><!--
+                                           <input type="text" id="alternate2" size="30" readonly="readonly" class="form-control" style="border:hidden;"/>
+                                                --></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>&nbsp;</label> <input type="button" class="btn btn-lg btn-success btn-block" name="genrep" id="expbutton" value="Generate"><!--form btn id-->
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" id="expOutput"></div><!--output id-->
+                </div>
+            </div>
+        </div><!-- pay form over -->
+    </div>
+</div>
+
+

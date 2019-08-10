@@ -1,0 +1,51 @@
+<!-- Petty Cash -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pPettyCash">
+    <ul class="nav nav-tabs" id="patty_menu">
+        <li class="active"><a href="#pattycash_add" data-toggle="tab" id="addpettycash">Add Petty Cash</a> </li>
+        <li><a href="#list_pattycash" data-toggle="tab" id="listpattycashbut">List Petty Cash</a> </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="pattycash_add">
+            <div id="row">
+                <div class="col-lg-12" id="multiple_pattyadd">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading"> <strong>Add Petty Cash</strong>&nbsp; </div>
+                        <div class="panel-body">
+                            <form id="addpettycashform">
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Amount (in<i class="fa fa-rupee fa-fw"></i>)</strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Enter Amount" name="pettyamount" type="text" id="pettyamount" maxlength="10" />
+                                        <p class="help-block" id="pettyamount_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Remark </strong> </div>
+                                    <div class="col-lg-12">
+                                        <textarea class="form-control" placeholder="Enter Remark" name="pettyamountremark" type="text" id="pettyamountremark"></textarea>
+                                        <p class="help-block" id="pettyamountremark_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-lg btn-primary btn-block" id="addpattycashBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;ADD</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade " id="list_pattycash">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="pettycashhistory"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="patty_msg"></div>
+</div>
+

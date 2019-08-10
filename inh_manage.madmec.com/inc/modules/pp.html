@@ -1,0 +1,167 @@
+<!-- Project Plan -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pProjectPlan">
+    <ul class="nav nav-tabs" id="proj_menu">
+        <li class="active"><a href="#add_proj" data-toggle="tab" id="addprojbut">Create Plan</a> </li>
+        <li><a href="#list_proj" data-toggle="tab" id="listprojbut">List Project Plans</a> </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_proj">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Create a new project plan. </div>
+                        <div class="panel-body" id="accordionaddproj">
+                            <form role="form" action="" method="post" name="addprojForm" id="addprojForm" enctype="multipart/form-data">
+                                <div class="row">
+                                    <!-- Select requirement -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Requirement Specification </i></strong>
+                                        </div>
+                                        <div class="col-lg-12" id="URequiProjList">
+                                            <input class="form-control" placeholder="Select Requirement Specification" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <!-- MD -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Project MD </strong> </div>
+                                        <div class="col-lg-12" id="UProjMDList">
+                                            <input class="form-control" placeholder="Select Project MD" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <!-- Manager -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Project Manager </strong> </div>
+                                        <div class="col-lg-12" id="UProjMNGList">
+                                            <input class="form-control" placeholder="Select Project Manager" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <!-- Requirement -->
+                                    <div class="col-lg-12" id="requiPP_doc"></div>
+                                    <!-- Loader -->
+                                    <div class="col-lg-12" id="pslPP_loader"></div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <div class="row">
+                                    <!-- Engineer -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Project Engineer </strong> </div>
+                                        <div class="col-lg-12" id="UProjENGList">
+                                            <input class="form-control" placeholder="Select Project Engineer" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <!-- Holder -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Project Holder </strong> </div>
+                                        <div class="col-lg-12" id="UProjHLDList">
+                                            <input class="form-control" placeholder="Select Project Holder" type="text" maxlength="100"/>
+                                            <p class="help-block">Select / Enter</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <div class="row">
+                                    <!-- Planned Start Date -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Planned Start Date  </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Planned Start Date" name="proj_psd" type="text" id="proj_psd" maxlength="15" readonly="readonly" />
+                                            <p class="help-block" id="proj_psd_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <!-- Planned Committed Date -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Planned Committed Date </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Planned Committed Date" name="proj_pcd" type="text" id="proj_pcd" maxlength="15" readonly="readonly" />
+                                            <p class="help-block" id="proj_pcd_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <div class="row">
+                                    <!-- Seen / Discussed -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Seen / Discussed </strong> </div>
+                                        <div class="col-lg-12">
+                                            <select class="form-control" name="proj_sndd" id="proj_sndd">
+                                                <option value="NULL">Select status</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <p class="help-block" id="proj_sndd_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <!-- Details / Obstacles / Progress / Remarks -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Details / Obstacles / Progress / Remarks </strong> </div>
+                                        <div class="col-lg-12" id="UProjsttsList">
+                                            <select class="form-control" name="proj_stts" id="proj_stts">
+                                                <option value="NULL">Select state of project</option>
+                                                <option value="1">Initiated</option>
+                                                <option value="2">In progress</option>
+                                                <option value="3">Yet to start</option>
+                                                <option value="4">Pending</option>
+                                                <option value="5">Completed</option>
+                                                <option value="6">Delivered</option>
+                                            </select>
+                                            <p class="help-block" id="proj_stts_msg">Fetch project status from the db.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Met timeline / Status -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Met timeline / Status </strong> </div>
+                                        <div class="col-lg-12">
+                                            <select class="form-control" id="proj_tm" name="proj_tm">
+                                                <option value="NULL">Select timeline</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <p class="help-block" id="proj_tm_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <!-- Project Team Members -->
+                                <div class="row">
+                                    <div class="col-lg-12"> 
+                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Project Team Members </strong>&nbsp;
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                <h4>Task Manager.</h4>
+                                            </div>
+                                            <div class="panel-body" id="multiple_projtmem">
+                                                Select the requirement to assign task.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-lg btn-primary btn-block" id="addpplanBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_proj">
+            <div class="row">
+                <div class="col-lg-12"> List Project Plans </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="proj_message"></div>
+</div>
+

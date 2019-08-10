@@ -1,0 +1,108 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#Add" data-toggle="tab" id="Addfacility">Book Appointment</a></li>
+    <li><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Appointment's</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="Add">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-rocket fa-fw fa-x2"></i>&nbsp;<strong>Book Appointment</strong></div>
+            <div class="panel-body">
+                <form id='vehicletypeform'>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Select Vehicle : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayuvehicles'>
+                                <select class="form-control" name="uservehicle" id="uservehicle" required="">
+                                    <option value="'">Please Select the Vehicle</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Book a Service : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div> 
+                        <div class="col-lg-12">
+                            <div id='displayuvehicles'>
+                                <select class="form-control" name="bookaservice" id="bookaservice" required="">
+                                    <option value="">Please Select Book a Service</option>
+                                    <option value="In-Waranty">In-Warranty</option>
+                                    <option value="Out of warranty">Out of warranty</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Select Type of Service : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayuvehicles'>
+                                <select class="form-control" name="typeofservice" id="typeofservice" required="">
+                                    <option value="">Please Select the Vehicle</option>
+                                    <option value="Free">Free</option>
+                                    <option value="Paid">Paid</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Complaint TYPES : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12" id="discomplainttype">
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Remarks : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input  id="remark" name="remark" type="text" class="form-control" placeholder="Remarks" required=""/>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Preferred Service Center : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayvendordet'>
+                               <input  id="pscenter" name="pscenter" type="text" class="form-control" placeholder="Preferred Service Center" required=""/>
+                            <span id="err_email"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                   <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Available Slots : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id='displayvendorapp'>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="Show">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-hourglass-start fa-fw fa-x2"></i>&nbsp;<strong>List Appointment's</strong></div>
+            <div class="panel-body">
+                <div id="displayuvehicless"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+sw_volume: 62
+audio_device_state:1:My ALSA Device
+audio_device_state:1:Thyagrag
+state: play
+current: 1
+time: 128
+random: 1
+repeat: 1
+single: 1
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: nan
+playlist_begin
+0:Shakeel Atif Aslam/201602 - Shakeel/_MP3_Yaar_Ko_Hamne_Ja_Ba_Ja_Dekha_Abida_Parveen.mp3
+1:Shakeel Atif Aslam/201602 - Shakeel/001 - sanam re.mp3
+2:MadMec Atif Aslam/201602 - MadMec/001 - HUA HAIN AAJ PEHLI BAAR.mp3
+playlist_end

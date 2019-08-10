@@ -1,0 +1,1 @@
+<?php header('Location:http://automate.madmec.com/'); ?>

@@ -1,0 +1,86 @@
+<!-- expenses -->
+<div class="row output-panels" id="ctrlClubExpenses">
+    <h3 class="page-header text-primary"><label>&nbsp; Club Expenses</label></h1>
+        <div class="col-lg-12" id="ctClubExpenses">
+            <div class="panel-body text-primary">
+                <form id="frmexp">
+                    <fieldset name="expenses" id="expenses">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong><span id="expnm_msg" style="display:none; color:#FF0000; font-size:25px;">*</span>Name Of The Payee :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input name="name" type="text" class="form-control" placeholder="Water supply" id="expname" />
+                                </div>
+                                <div class="col-lg-12" id="enm_msg">&nbsp;</div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong><span id="expamt_msg" style="display:none; color:#FF0000; font-size:25px;">*</span>Amount :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="text" name="expamount" class="form-control" id="expamount" placeholder="0.00" />
+                                </div>
+                                <div class="col-lg-12" id="eamt_msg">&nbsp;</div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong><span id="exprpt_msg" style="display:none; color:#FF0000; font-size:25px;">*</span>Receipt No :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="text" class="form-control" name="exprpt_no" id="exprpt_no" placeholder="00000" />
+                                </div>
+                                <div class="col-lg-12" id="recipt_msg">&nbsp;</div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Date :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <span>
+                                        <input name="exppay_date" type="text" class="form-control" id="exppay_date" readonly="readonly"/>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-12">
+                                    <strong>Description :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea rows="6" cols="30" id="expdescription"  class="form-control" placeholder="Two months advance paid to water supply.."></textarea>
+                                </div>
+                                <div class="col-lg-12" id="edec_msg">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="button" class="btn-primary btn-lg btn-block" id="expsave" value="Save"/>
+                            </div>
+                            <div class="col-lg-12">&nbsp;</div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_exp" id="myModal_expbtn" style="display: none;"></button>
+                <div class="modal fade" id="myModal_exp" tabindex="-1" role="dialog" aria-labelledby="myModal_expfollow" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModal_expfollow"><i class="fa fa-bell fa-fw fa-x2"></i> Alert</h4>
+                            </div>
+                            <div class="modal-body" id="myModal_expbody"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal over -->
+            </div>
+        </div>
+</div>

@@ -1,0 +1,1 @@
+<?php header('Location:http://ask.madmec.com/'); ?>

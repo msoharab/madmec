@@ -1,0 +1,128 @@
+.ecommerce{
+    background: url(../images/site/ecom.jpg) no-repeat;
+    display: block!important; 
+    background-size: 100%;
+    color: #FFFFFF;
+    min-height: 300px;
+}
+.carousel-caption {
+    top: 5px;
+}
+.carousel-caption p{
+    font-size: 1vw;
+}
+
+@media (max-width:1366px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 275px;
+    }
+    .carousel-caption {
+        top: 5px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/* max-width:1280px*/
+@media (max-width:1280px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 255px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/* max-width:1024px */
+@media (max-width:1024px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 235px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/*max-width:800px  */
+@media (max-width:800px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 225px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/*max-width:768px  */
+@media (max-width:768px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 215px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/*max-width:640px  */
+@media (max-width:640px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 195px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/*max-width:480px  */
+@media (max-width:480px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 185px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}
+/*max-width:320px  */
+@media (max-width:320px) {
+    .ecommerce{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 175px;
+    }
+    .carousel-caption p{
+        font-size: 1vw;
+    }
+}

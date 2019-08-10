@@ -1,0 +1,655 @@
+<!-- group add add -->
+<div class="row output-panels" id="ctrlCGroupAdd">
+    <h3 class="page-header text-primary">
+        <label>&nbsp;Add Group</label>
+    </h3>
+    <div class="col-lg-12" id="ctCGroupAdd">
+        <div class="row">
+            <div id="loader" class="col-lg-12"></div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <strong>Add Group</strong>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div style="display:none" id="grpsucmeg"><center><font color="red"><b>&nbsp;&nbsp;&nbsp;Group successfully Added</b></font></center></div>
+                    <div class="col-lg-12">
+                        <dt>
+                        <label>&nbsp;&nbsp;&nbsp;Group Type :</label>
+                        </dt>
+                        <div class="form-group">
+                            <span>
+                                &nbsp;&nbsp;&nbsp;<input id="group_type_1" type="radio" value="couple" readonly="readonly" name="group_type1"/>: Couple
+                                <br>
+                                &nbsp;&nbsp;&nbsp;<input id="group_type_2" type="radio" value="group" readonly="readonly"  name="group_type1">: Group
+                                <br>
+                            </span>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                    <div class="col-lg-12">&nbsp;</div>  
+                    <div class="col-lg-12">
+                        <dt>
+                        <label>&nbsp;&nbsp;&nbsp;Group Owner :</label>
+                        </dt>
+                        <div class="form-group">
+                            <span>
+                                &nbsp;&nbsp;&nbsp;<input id="ownername_1" checked="" type="radio" value="1" name="ownername_1"/>: Customer 1
+                                <br>
+                                &nbsp;&nbsp;&nbsp;<input id="ownername_2" type="radio" value="2"  name="ownername_1">: Customer 2
+                                <br>
+                                <div class="form-group" id="group_membership"></div>
+                            </span>
+                        </div>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-lg-6">  
+                        <div class="col-lg-12">
+                            <strong><span class="text-danger"></span>Group Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="form-control" placeholder="Name" name="groupmainname" required type="text" id="groupmainname"/>
+                            <p class="help-block" id="custg_nmsg_1">&nbsp;</p>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                    </div>
+                    <div  class="col-lg-6">
+                        <div class="col-lg-12">
+                            <strong><span class="text-danger"></span>Group Email Id :<i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input class="form-control" placeholder="Email" name="groupmainemail" required type="text"  id="groupmainemail"/>
+                            <p class="help-block" id="custg_nmsg_1">&nbsp;</p>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="row" id="groupmodeofpament">
+                    <div class="col-lg-12">
+                        <strong>&nbsp;&nbsp;<span class="text-danger"></span>Registration Fee :<i class="fa fa-caret-down fa-fw"></i></strong>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <select name="grp_mod_pay" id="grp_mod_pay_1" class="form-control">
+                                    <option value="NULL">Select Mode Of Payment</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4" id="alltextgrp_1">
+                                <input name="user_fee"type="text" value="0" id="grp_fee_mop_1" class="form-control"/>
+                            </div>
+                            <div class="col-md-4">
+                                <a id="grp_addmop_1" class="btn btn-success" href="javascript:void(0);"  onClick="$(this).hide();"><i class="fa fa-plus"></i></a>
+                            </div>
+                            <div  id="keycodes" style="display:none">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form" id="addgroupform_1" name="addgroupform_1" method="POST">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>Number of members :</label>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="bs-example" id="cadmulti_groupmember1" >
+                                        <div class="panel-group" id="accordion">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#cadplus_member_1"><label>Customer 1:</label></a>
+                                                    </h4>
+                                                </div>
+                                                <div id="cadplus_member_1" class="panel-collapse collapse">
+                                                    <div class="panel-body" id="addgpmem_panel_1">
+                                                        <div class="col-lg-12" id="addgpmem_cols_1">
+                                                            <form role="form" method="POST" name="addgp_memfm_1" id="addgp_memfm_1">
+                                                                <fieldset>
+                                                                    <!-- name sex DOB 111  -->
+                                                                    <div class="row">
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input class="form-control" placeholder="Name" name="custg_name_1" required type="text" id="custg_name_1"/>
+                                                                                <p class="help-block" id="custg_nmmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <!-- sex -->
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Gender :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12" id="custg_sexParent_1">
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <!-- DOB -->
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger" style="display:none;"></span> Date Of Birth :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="gdateofbirth_1" type="text" class="form-control" id="gdateofbirth_1" placeholder="DOB" readonly="readonly" />
+                                                                                <p class="help-block" id="gymg_dobmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Date Of Join :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="gdateofjoin_1" type="text" class="form-control" id="gdateofjoin_1" required placeholder="DOJ" readonly="readonly"/>
+                                                                                <p class="help-block" id="gymg_dojmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- address field 111 -->
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <!-- ADDRESS -->
+                                                                            <div class="panel panel-info">
+                                                                                <div class="col-lg-12 panel-heading">
+                                                                                <span>
+                                                                                    <div class="col-lg-6 text-left">
+                                                                                    <strong>Address</strong>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6 text-right">
+                                                                                            <button  type="button" class="text-info btn btn-info btn-circle  btn-md" type="button" id="addr_show_but1" onClick="$(this).hide();$('#addr_hide_but1').show();$('#gym_gaddress_body_1').show(300);"><i class="fa fa-arrow-down fa-fw fa-x2"></i></button>&nbsp;
+                                                                                            <button  type="button" class="text-info btn btn-danger btn-circle btn-md" type="button" id="addr_hide_but1" onClick="$(this).hide();$('#addr_show_but1').show();$('#gym_gaddress_body_1').hide(300);" style="display:none;"><i class="fa fa-close fa-fw fa-x2"></i></button>&nbsp;
+                                                                                    </div>
+                                                                                </span>
+                                                                                </div>
+                                                                                <div class="panel-body" id="gym_gaddress_body_1" style="display:none;">
+                                                                                    <!-- Country state district 111-->
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Country :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Country" name="gymg_country_1" required type="text" id="gymg_country_1" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_comsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> State / Province :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="State / Province" name="gymg_province_1" required="required" type="text" id="gymg_province_1" maxlength="150" />
+                                                                                                <p class="help-block" id="gymg_prmsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> District / Department :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="District / Department" name="gymg_district_1" required="required" type="text" id="gymg_district_1" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_dimsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger" style="display:none;"></span> City / Town :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="City / Town" name="gymg_city_town_1" required="required" type="text" id="gymg_city_town_1" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_citmsg_">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!--City / Town Street / Locality Address Line111 -->
+                                                                                    <div class="row">
+                                                                                       
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger" style="display:none;"></span> Street / Locality :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Street / Locality" name="gymg_st_loc_1" type="text" id="gymg_st_loc_1" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_stlmsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger" style="display:none;"></span> Address Line :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Address Line" name="gymg_addrs_1" type="text" id="gymg_addrs_1" maxlength="200"/>
+                                                                                                <p class="help-block" id="gymg_admsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Zipcode :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Zipcode" name="gymg_zipcode_1" required type="text" id="gymg_zipcode_1" maxlength="6" />
+                                                                                                <p class="help-block" id="gymg_zimsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger" style="display:none;"></span> Website :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Personal Website" name="gymg_website_1" required type="text" id="gymg_website_1" maxlength="250" value="http://"/>
+                                                                                                <p class="help-block" id="gymg_wemsg_1">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!--Zipcode ,, Personal Website,,11 -->
+
+                                                                                </div> 
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">&nbsp;</div>
+                                                                    </div>  
+                                                                    <!-- Emaild Id Cell Code  Cell Number 111 -->
+                                                                    <div class="row">
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12" id="gr">
+                                                                               <strong><span class="text-danger"></span> Refered By<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <div id="listg_ref_1"></div>
+                                                                                <input  id="refg_boxadd_1" name="refg_boxadd_1" type="text" class="form-control" placeholder="Name - Email Id - Cell Number" />
+                                                                                <p class="help-block" id="custg_rfmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Emaild Id :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_email_1" type="text" class="form-control" required placeholder="Enter Email Id" id="emerg_email_1"/>
+                                                                                <p class="help-block" id="gemmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Cell Code :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="cellg_id_1" type="text" maxlength="5" class="form-control" id="cellg_id_1" required placeholder="cell_code" min=0 />
+                                                                                <p class="help-block" id="cellgmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Cell Number :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_cellnum_1" type="text" class="form-control" required  placeholder="9999999999" maxlength="10" id="emerg_cellnum_1" />
+                                                                                <p class="help-block" id="gcnummsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Name - Email Id - Cell Number ,DOJ , company 111 -->
+                                                                    <div class="row">
+                                                                        
+                                                                        
+                                                                        <!-- sex -->
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"  style="display:none;"></span> Company :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="compg_name_1" type="text" class="form-control" required placeholder="MadMec" id="compg_name_1"/>
+                                                                                <p class="help-block" id="customerg_cpmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"  style="display:none;"></span> Occupation :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <select  name="custg_occ_1" id="custg_occ_1" type="text" class="form-control" >
+                                                                                    <option value="student">student</option>
+                                                                                    <option value="professional">professional</option>
+                                                                                    <option value="other">other</option>
+                                                                                </select>
+                                                                                <p class="help-block" id="custg_ocmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"  style="display:none;"></span> Emergency Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_name_1" type="text" class="form-control" required placeholder="Your family member" id="emerg_name_1"/>
+                                                                                <p class="help-block" id="gemnmmsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"  style="display:none;"></span> Emergency Number :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_num_1" type="text" class="form-control" required placeholder="9999999999" maxlength="10" id="emerg_num_1"/>
+                                                                                <p class="help-block" id="gemnummsg_1">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </form>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#cadplus_member_2"><label>Customer 2:</label></a>
+                                                        <button type="button" class="text-primary btn btn-success  btn-md" id="cadplus_groupmember_2"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                    </h4>
+                                                </div>
+                                                <div id="cadplus_member_2" class="panel-collapse collapse">
+                                                    <div class="panel-body" id="addgpmem_panel_2">
+                                                        <div class="col-lg-12" id="addgpmem_cols_2">
+                                                            <form role="form" method="POST" name="addgroupform_2" id="addgroupform_2">
+                                                                <fieldset>
+                                                                    <!-- name sex DOB 111  -->
+                                                                    <div class="row">
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input class="form-control" placeholder="Name" name="custg_name_2" required type="text" id="custg_name_2"/>
+                                                                                <p class="help-block" id="custg_nmmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <!-- sex -->
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Gender :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12" id="custg_sexParent_2">
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <!-- DOB -->
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Date Of Birth :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="gdateofbirth_2" type="text" class="form-control" id="gdateofbirth_2" placeholder="DOB" readonly="readonly" />
+                                                                                <p class="help-block" id="gymg_dobmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Date Of Join :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="gdateofjoin_2" type="text" class="form-control" id="gdateofjoin_2" required placeholder="DOJ" readonly="readonly"/>
+                                                                                <p class="help-block" id="gymg_dojmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- address field 111 -->
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <!-- ADDRESS -->
+                                                                            <div class="panel panel-info">
+                                                                               <div class="col-lg-12 panel-heading">
+                                                                                <span>
+                                                                                    <div class="col-lg-6 text-left">
+                                                                                    <strong>Address</strong>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6 text-right">
+                                                                                            <button  type="button" class="text-info btn btn-info btn-circle  btn-md" type="button" id="addr_show_but2" onClick="$(this).hide();$('#addr_hide_but2').show();$('#gym_gaddress_body_2').show(300);"><i class="fa fa-arrow-down fa-fw fa-x2"></i></button>&nbsp;
+                                                                                            <button  type="button" class="text-info btn btn-danger btn-circle btn-md" type="button" id="addr_hide_but2" onClick="$(this).hide();$('#addr_show_but2').show();$('#gym_gaddress_body_2').hide(300);" style="display:none;"><i class="fa fa-close fa-fw fa-x2"></i></button>&nbsp;
+                                                                                    </div>
+                                                                                </span>
+                                                                                </div>
+                                                                                <div class="panel-body" id="gym_gaddress_body_2" style="display:none;">
+                                                                                    <!-- Country state district 111-->
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Country :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Country" name="gymg_country_2" required type="text" id="gymg_country_2" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_comsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> State / Province :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="State / Province" name="gymg_province_2" required="required" type="text" id="gymg_province_2" maxlength="150" />
+                                                                                                <p class="help-block" id="gymg_prmsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> District / Department :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="District / Department" name="gymg_district_2" required="required" type="text" id="gymg_district_2" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_dimsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> City / Town :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="City / Town" name="gymg_city_town_2" required="required" type="text" id="gymg_city_town_2" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_citmsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!--City / Town Street / Locality Address Line111 -->
+                                                                                    <div class="row">
+
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Street / Locality :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Street / Locality" name="gymg_st_loc_2" type="text" id="gymg_st_loc_2" maxlength="100"/>
+                                                                                                <p class="help-block" id="gymg_stlmsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Address Line :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Address Line" name="gymg_addrs_2" type="text" id="gymg_addrs_2" maxlength="200"/>
+                                                                                                <p class="help-block" id="gymg_admsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Zipcode :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Zipcode" name="gymg_zipcode_2" required type="text" id="gymg_zipcode_2" maxlength="6" />
+                                                                                                <p class="help-block" id="gymg_zimsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3">
+                                                                                            <div class="col-lg-12">
+                                                                                                <strong><span class="text-danger"></span> Website :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">
+                                                                                                <input class="form-control" placeholder="Personal Website" name="gymg_website_2" required type="text" id="gymg_website_2" maxlength="250" value="http://"/>
+                                                                                                <p class="help-block" id="gymg_wemsg_2">&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!--Zipcode ,, Personal Website,,11 -->
+                                                                                    <div class="row">
+
+                                                                                    </div>
+                                                                                </div> 
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">&nbsp;</div>
+                                                                    </div>  
+                                                                    <!-- Emaild Id Cell Code  Cell Number 111 -->
+                                                                    <div class="row">
+                                                                        <div class="col-lg-3">
+                                                                           
+                                                                            <div class="col-lg-12">
+                                                                                 <strong><span class="text-danger"></span>Refered By<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input  id="refg_boxadd_2" name="refg_boxadd_2" type="text" class="form-control" placeholder="Name - Email Id - Cell Number" />
+                                                                                <p class="help-block" id="custg_rfmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Emaild Id :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_email_2" type="text" class="form-control" required placeholder="Enter Email Id" id="emerg_email_2"/>
+                                                                                <p class="help-block" id="gemmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Cell Code :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="cellg_id_2" type="text" maxlength="5" class="form-control" id="cellg_id_2" required placeholder="cell_code" min=0 />
+                                                                                <p class="help-block" id="cellgmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Cell Number :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_cellnum_2" type="text" class="form-control" required  placeholder="9999999999" maxlength="10" id="emerg_cellnum_2" />
+                                                                                <p class="help-block" id="gcnummsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Name - Email Id - Cell Number ,DOJ , company 111 -->
+                                                                    <div class="row">
+                                                                        
+                                                                        
+                                                                        <!-- sex -->
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Company :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="compg_name_2" type="text" class="form-control" required placeholder="MadMec" id="compg_name_2"/>
+                                                                                <p class="help-block" id="customerg_cpmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Occupation :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <select  name="custg_occ_2" id="custg_occ_2" type="text" class="form-control" >
+                                                                                    <option value="student">student</option>
+                                                                                    <option value="professional">professional</option>
+                                                                                    <option value="other">other</option>
+                                                                                </select>
+                                                                                <p class="help-block" id="custg_ocmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Emergency Name :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_name_2" type="text" class="form-control" required placeholder="Your family member" id="emerg_name_2"/>
+                                                                                <p class="help-block" id="gemnmmsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="col-lg-12">
+                                                                                <strong><span class="text-danger"></span> Emergency Number :<i class="fa fa-caret-down fa-fw"></i></strong>
+                                                                            </div>
+                                                                            <div class="col-lg-12">
+                                                                                <input name="emerg_num_2" type="text" class="form-control" required placeholder="9999999999" maxlength="10" id="emerg_num_2"/>
+                                                                                <p class="help-block" id="gemnummsg_2">&nbsp;</p>
+                                                                            </div>
+                                                                            <div class="col-lg-12">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </form>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div id="accordion1">
+                                            </div>
+                                        </div><!-- panel-group  -->
+                                    </div><!-- bs-exapmle  -->
+                                </div><!-- col-lg-12  -->
+                            </div><!-- row  -->
+                        </fieldset>
+                    </form>
+                </div><!-- panel-body  -->
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <div id="custg_add_msg"></div>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-lg btn-success btn-block" value="Save" id="custg_savebtn"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

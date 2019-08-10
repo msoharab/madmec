@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>MIS</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+                <link href="assets/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet">
+                <link href="assets/css/jquery-ui.min.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.structure.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.theme.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet"/>
+                <link href="assets/css/jquery-ui.1.10.4.css" rel="stylesheet"/>
+		<!--[if lt IE 9]>
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="assets/css/styles.css" rel="stylesheet">
+		<!-- signin -->
+		<link href="assets/css/signin.css" rel="stylesheet">
+                <link rel="stylesheet"  href="assets/css/lightGallery.css"/>
+    <style>
+    	ul{
+			list-style: none outside none;
+		    padding-left: 0;
+		}
+		.gallery li {
+			display: block;
+			float: left;
+			height: 100px;
+			margin-bottom: 6px;
+			margin-right: 6px;
+			width: 100px;
+		}
+		.gallery li a {
+			height: 200px;
+			width: 200px;
+		}
+		.gallery li a img {
+			max-width: 200px;
+		}
+    </style>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    
+	</head>
+        <body onload="goto_home()">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                                    <a class="navbar-brand" href="index.html">MIS</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a class="navbar-brand" id="displaydocname" style="float: right"></a>
+				</div>
+				<div class="collapse navbar-collapse" align="right">
+                                    	<ul class="nav navbar-nav">
+                                                <li><a href="javascript:void(0);" id="registrationmenuBut"  style="float: right" onclick="javascript:goto_home();"><b>Home</b></a></li>
+						<li><a href="javascript:void(0);"  style="float: right" onclick="javascript:goto_costmuer();"><b>OUR CUSTOMER</b></a></li>
+						<li><a href="javascript:void(0);"   style="float: right" onclick="javascript:goto_prizing();"><b> PRIZING</b></a></li> 
+                                                <li><a href="javascript:void(0);"  style="float: right" onclick="javascript:goto_helpdesk();" id='helpdeskmenuBut'><b>Help Desk</b></a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		<div class="container">
+                    <section class="sub_container" id="homedetails">
+                        <center><div class="alert alert-info" role="alert"><h2>Get Growing With MIS Software</h2></div></center>
+                        <h3 class="text-warning">Features</h3>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-6">
+                         <h4 class="text-danger">User</h4>   
+                        </div>
+                        <div class="col-lg-6">
+                         <h4 class="text-danger">Stock</h4>   
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-6">
+                         <h4 class="text-danger">Material Order</h4>   
+                        </div>
+                        <div class="col-lg-6">
+                         <h4 class="text-danger">Project</h4>   
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-6">
+                         <h4 class="text-danger">Accounts</h4>   
+                        </div>
+                        <div class="col-lg-6">
+                         <h4 class="text-danger">Report</h4>   
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                    </section>
+                     <section class="sub_container" id="costmuerdetails">
+                        <div class="col-lg-12">
+                             <h2 class="text-center">Our Happy Coustomers.</h2>  
+                        </div>
+                         <div id="address">
+                         <div class="col-lg-12">
+                             <div class="alert-warning" role="alert">
+                                 <div class="col-lg-6">
+                                   <h3 class="text-left">Address :</h3>  
+                                   <p class="text-justify">
+                                       #42, 5th cross, 22nd main,<br/>
+                                       opp to Mahaveer wilton apartment,<br/>
+                                       J P Nagar 5th phase<br/>
+                                       Bangalore: 560078, India. <br/>
+                                   </p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <h3 class="text-left">Contact :</h3>  
+                                    <p class="text-justify">
+                                       Email: info@madmec.com<br/>
+                                       phone: +91 8892268380 / 9916282628 
+                                   </p>
+                                 </div>
+                             </div>
+                         </div>   
+                         </div>
+                    </section>
+                      <section class="sub_container" id="prizingdetails">
+                        <div class="col-lg-12">
+                             <h2 class="text-center text-info">Prizing option.</h2>  
+                        </div>
+                          <div id="address">
+                         <div class="col-lg-12">
+                             <div class="alert-warning" role="alert">
+                                 <div class="col-lg-6">
+                                   <h3 class="text-left">Address :</h3>  
+                                   <p class="text-justify">
+                                       #42, 5th cross, 22nd main,<br/>
+                                       opp to Mahaveer wilton apartment,<br/>
+                                       J P Nagar 5th phase<br/>
+                                       Bangalore: 560078, India. <br/>
+                                   </p>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <h3 class="text-left">Contact :</h3>  
+                                    <p class="text-justify">
+                                       Email: info@madmec.com<br/>
+                                       phone: +91 8892268380 / 9916282628 
+                                   </p>
+                                 </div>
+                             </div>
+                         </div>   
+                         </div>
+                    </section>
+                    <section class="sub_container" id="helpdeskdetails">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h5> Help Desk</h5>
+                            </div>
+                            <div class="panel-body">
+                               <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-success" id="usermodulesnap">User</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-danger" id="stockmodulesnap">Stock</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-warning" id="momodulesnap">Material Order</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-info" id="projectmodulesnap">Project</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-primary" id="accountsmodulesnap">Accounts</button>
+                                </div>
+                                   <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-danger" id="reportmodulesnap">Report</button>
+                                </div>
+                                   <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-success" id="logoutmodulesnap">SignOut</button>
+                                </div>
+                              </div> 
+                                <div class="col-lg-12">&nbsp;</div>
+                                <h2 class="text-center text-danger">  Welcome to the help Desk..</h2>
+                                <div id="usermoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 1. User</h3> 
+                                       <h4 class="text-left text-warning">   User has two sub features:</h4>
+                                       <h5 class="text-left text-primary"> 1.1 Add User </h5>
+                                       <h5 class="text-left text-primary"> 1.2 List User </h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 1.1 Add User </h4> 
+                                       <p class="text-justify">here you can add users based upon their type, follow are the basic details you have to fill</p>
+                                       <h6 class="text-left text-warning"># Usertype </h6>
+                                       <h6 class="text-left text-warning"># Username </h6>
+                                       <h6 class="text-left text-warning"># Product </h6>
+                                       <h6 class="text-left text-warning"># Email </h6>
+                                       <h6 class="text-left text-warning"># Mobile Number </h6>
+                                       <h6 class="text-left text-warning"># Bank Account </h6>
+                                       <h6 class="text-left text-warning"># Land Line Number </h6>
+                                       <h6 class="text-left text-warning"># Address </h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <ul id="adduser_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_user.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_user_thumb.jpg" />
+                                            </a> 
+                                        </li></ul>
+                                        <!--<img src="assets/screnshots/add_user.png" width='450' height="350"/>-->   
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 1.2 List User </h4> 
+                                       <p class="text-justify">here you can view all users Details as well as having option to edit/add details,</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_user.png" width='450' height="350"/>--> 
+                                        <ul id="listuser_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_user.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_user.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                </div>
+                                <div id="stockmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 2. Stock</h3> 
+                                       <h4 class="text-left text-warning">   Stock has Three sub features:</h4>
+                                       <h5 class="text-left text-primary"> 2.1 Add Item </h5>
+                                       <h5 class="text-left text-primary"> 2.2 Add Stock </h5>
+                                       <h5 class="text-left text-primary"> 2.3 Available Stock</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.1 Add Item</h4> 
+                                      <p class="text-justify">here you can add new Item in WareHouse for that have to fill below details</p>
+                                       <h6 class="text-left text-warning"># Item Name </h6>
+                                       <h6 class="text-left text-warning"># Minimum Criteria </h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_stock_item.png" width='450' height="350"/>--> 
+                                        <ul id="addstockitem_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_stock_item.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_stock_item.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.2 Add Stock</h4> 
+                                      <p class="text-justify">for Adding you have to select Item Name and enter quantity value.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_stock.png" width='450' height="350"/>--> 
+                                        <ul id="addstock_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_stock.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_stock.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 2.3 View Stock</h4> 
+                                      <p class="text-justify">here you can see Avaliable Stock of all type of items in warehouse</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/view_stock.png" width='450' height="350"/>--> 
+                                        <ul id="viewstock_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/view_stock.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/view_stock.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                </div>
+                                <div id="momoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 3. Material Order</h3> 
+                                       <h4 class="text-left text-warning">   Material Order has Four sub features:</h4>
+                                       <h5 class="text-left text-primary"> 3.1 Create Order </h5>
+                                       <h5 class="text-left text-primary"> 3.2 Add Item </h5>
+                                       <h5 class="text-left text-primary"> 3.3 View Order </h5>
+                                       <h5 class="text-left text-primary"> 3.4 Item Supplied</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 3.1  Create Order </h4> 
+                                      <p class="text-justify"> you can Create Order for that have to select/ fill below fields.</p>
+                                       <h6 class="text-left text-warning"># Vendor/Supplier </h6>
+                                       <h6 class="text-left text-warning"># Item</h6>
+                                       <h6 class="text-left text-warning"># Date of Order</h6>
+                                       <h6 class="text-left text-warning"># Expected Date of Deliver </h6>
+                                       <h6 class="text-left text-warning"># Quantity</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/create_mo.png" width='450' height="350"/>-->
+                                        <ul id="createmo_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/create_mo.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/create_mo.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 3.2 Add Item</h4> 
+                                      <p class="text-justify">here you can add more item to Existing Order what you Create in 3.1 module as well as having option to Edit/Delete Add Items, as soon as you click PDF Button it will generate Material Order Report in PDF file Format </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_item_mo.png" width='450' height="350"/>-->  
+                                         <ul id="additemmo_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_item_mo.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_item_mo.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 3.3 View Order</h4> 
+                                      <p class="text-justify">here you can view Generated Material Order Items and having option to Update stock-in, once you received all the Items the Order it won't appear </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/view_order.png" width='450' height="350"/>-->
+                                        <ul id="viewmo_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/view_order.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/view_order.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 3.4 Item Supplied</h4> 
+                                      <p class="text-justify">You Can view Item Supplied Details of all Created Orders.</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/item_supplied.png" width='450' height="350"/>--> 
+                                        <ul id="itemsupplied_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/item_supplied.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/item_supplied.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                </div>
+                                <div id="projectmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 4. Project</h3> 
+                                       <h4 class="text-left text-warning">   Project has Seven sub features:</h4>
+                                       <h5 class="text-left text-primary"> 4.1 Requirements </h5>
+                                       <h5 class="text-left text-primary"> 4.2 Quotation </h5>
+                                       <h5 class="text-left text-primary"> 4.3 Purchase order  </h5>
+                                       <h5 class="text-left text-primary"> 4.4 Project Plan </h5>
+                                       <h5 class="text-left text-primary"> 4.5 PCC </h5>
+                                       <h5 class="text-left text-primary"> 4.6 Drawing </h5>
+                                       <h5 class="text-left text-primary"> 4.7 Invoice</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.1  Requirements </h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_requirement.png" width='450' height="350"/>--> 
+                                        <ul id="requirement_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_requirement.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_requirement.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.2 Quotation</h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_quotation.png" width='450' height="350"/>-->    
+                                        <ul id="addquotation_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_quotation.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_quotation.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.3 Purchase order </h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_cpo.png" width='450' height="350"/>-->  
+                                        <ul id="addcpo_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_cpo.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_cpo.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.4 Project Plan </h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/create_pp.png" width='450' height="350"/>-->   
+                                        <ul id="createpp_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/create_pp.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/create_pp.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.5 PCC </h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/create_pcc.png" width='450' height="350"/>--> 
+                                        <ul id="createpcc_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/create_pcc.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/create_pcc.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.6 Drawing </h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_drawing.png" width='450' height="350"/>-->  
+                                        <ul id="listdrawing_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_drawing.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_drawing.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 4.7 Invoice </h4> 
+                                      <p class="text-justify"></p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_invoice.png" width='450' height="350"/>-->
+                                        <ul id="addinvoice_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_invoice.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_invoice.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                </div>
+                                <div id="accountmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 5. Accounts</h3> 
+                                       <h4 class="text-left text-warning">   Accounts has Five sub features:</h4>
+                                       <h5 class="text-left text-primary"> 5.1 Incoming</h5>
+                                       <h5 class="text-left text-primary"> 5.2 Outgoing </h5>
+                                       <h5 class="text-left text-primary"> 5.3 Petty Cash </h5>
+                                       <h5 class="text-left text-primary"> 5.4 Due </h5>
+                                       <h5 class="text-left text-primary"> 5.5 Fallow ups </h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.1 Incoming </h4> 
+                                      <p class="text-justify">Incoming has three sub features:</p>
+                                       <h5 class="text-left text-warning">5.1.1 Add Collection </h5>
+                                       <h5 class="text-left text-warning">5.1.2 Project Collection</h5>
+                                       <h5 class="text-left text-warning">5.1.3 List Collection</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.1.1 Add Collection </h4> 
+                                       <p class="text-justify"> You Can add Collection for that you have to select/fill below fields. </p>
+                                       <h6 class="text-left text-warning"># Select Payer </h6>
+                                       <h6 class="text-left text-warning"># Date of Collection</h6>
+                                        <h6 class="text-left text-warning"># Mode of Payment</h6>
+                                         <h6 class="text-left text-warning"># Amount</h6>
+                                         <h6 class="text-left text-warning"># Remark</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_collections.png" width='450' height="350"/>--> 
+                                        <ul id="addcollections_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_collections.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_collections.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.1.2 Project Collection </h4> 
+                                       <p class="text-justify"> You Can add Project Collection for that you have to select/fill below fields. </p>
+                                       <h6 class="text-left text-warning"># Select Client </h6>
+                                       <h6 class="text-left text-warning"># Select Project </h6>
+                                       <h6 class="text-left text-warning"># Date of Collection</h6>
+                                       <h6 class="text-left text-warning"># Amount</h6>
+                                       <h6 class="text-left text-warning"># Remark</h6>
+                                       <h6 class="text-left text-warning"># Due Date</h6>
+                                       <h6 class="text-left text-warning"># Fallow Date's</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_project_payments.png" width='450' height="350"/>--> 
+                                        <ul id="addprojectpayments_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_project_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_project_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.1.3 List Collection </h4> 
+                                       <p class="text-justify">  Displaying Collection Transaction History according to date wise</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/List_collection.png" width='450' height="350"/>--> 
+                                        <ul id="Listcollection_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/List_collection.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/List_collection.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.2 Outgoing </h4> 
+                                      <p class="text-justify">Outgoing has two sub features:</p>
+                                       <h5 class="text-left text-warning">5.2.1 Add Payment </h5>
+                                       <h5 class="text-left text-warning">5.2.2 List Payments</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.2.1 Add Payment </h4> 
+                                       <p class="text-justify"> You Can issue Payments for that you have to select/fill below fields. </p>
+                                       <h6 class="text-left text-warning"># Select Payee </h6>
+                                       <h6 class="text-left text-warning"># Date of Payment</h6>
+                                        <h6 class="text-left text-warning"># Mode of Payment</h6>
+                                         <h6 class="text-left text-warning"># Amount</h6>
+                                         <h6 class="text-left text-warning"># Remark</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <!--<img src="assets/screnshots/add_payments.png" width='450' height="350"/>--> 
+                                      <ul id="addpayments_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.2.2 List Payments </h4> 
+                                       <p class="text-justify">  Displaying Payment Transaction History according to date wise</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_payments.png" width='450' height="350"/>-->  
+                                        <ul id="listpayments_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_payments.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_payments.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.3 Petty Cash </h4> 
+                                      <p class="text-justify">Petty Cash has two sub features:</p>
+                                       <h5 class="text-left text-warning">5.3.1 Add Cash </h5>
+                                       <h5 class="text-left text-warning">5.3.2 Petty Cash History</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                          
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.3.1 Add Cash </h4> 
+                                       <p class="text-justify">   here, you can add amount to Existing Avaliable Petty Cash for that you have to fill Amount Field</p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/add_pettycash.png" width='450' height="350"/>-->
+                                        <ul id="addpettycash_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/add_pettycash.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/add_pettycash.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger">5.3.2 Petty Cash History</h4> 
+                                       Displaying Transaction History of Petty Cash
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_pettycash.png" width='450' height="350"/>--> 
+                                        <ul id="listpettycash_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_pettycash.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_pettycash.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.4 Due </h4> 
+                                        <p class="text-justify">here you would see all Due's of Project Records. </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/list_due.png" width='450' height="350"/>-->
+                                         <ul id="listdue_lightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/list_due.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/list_due.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.5 Fallow ups </h4> 
+                                      <p class="text-justify">Fallow ups has three sub features:</p>
+                                       <h5 class="text-left text-warning">5.5.1 Current</h5>
+                                       <h5 class="text-left text-warning">5.5.2 Pending</h5>
+                                       <h5 class="text-left text-warning">5.5.3 Expired</h5>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger"> 5.5.1 Current </h4> 
+                                       <p class="text-justify">here you would see all Current Fallow ups Date Records. </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/current_followups.png" width='450' height="350"/>-->
+                                         <ul id="currentfollowupslightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/current_followups.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/current_followups.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger">5.5.2 Pending</h4> 
+                                       <p class="text-justify">here you would see all Pending Fallow ups Date Records. </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/pending_followups.png" width='450' height="350"/>-->  
+                                        <ul id="pending_followupsslightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/pending_followups.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/pending_followups.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    <div class="col-lg-12">&nbsp;</div><div class="col-lg-12">&nbsp;</div>
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h4 class="text-left text-danger">5.5.3 Expired</h4> 
+                                       <p class="text-justify">here you would see all Expired Fallow ups Date Records. </p>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/expired]_followups.png" width='450' height="350"/>-->
+                                        <ul id="expiredfollowupslightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/expired]_followups.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/expired]_followups.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                </div>
+                                <div id="reportmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 6. Report</h3> 
+                                       <h6 class="text-justify">  You can Generate Report of Projects based upon From Date and To Date</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/report.png" width='450' height="350"/>--> 
+                                        <ul id="reportslightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/report.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/report.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                </div>
+                                <div id="signoutmoduledesp">
+                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                       <h3 class="text-left text-danger"> 7. Signout</h3> 
+                                       <h6 class="text-justify">  Thank You See you again</h6>
+                                    </div> 
+                                    <div class="col-lg-6">
+                                        <!--<img src="assets/screnshots/signout.png" class="" width='450' height="350"/>--> 
+                                        <ul id="signoutlightGallery" class="gallery">
+                                        <li data-src="assets/screnshots/signout.png" > 
+                                                <a href="#">
+                                                    <img src="assets/screnshots/signout.png" />
+                                            </a> 
+                                        </li></ul>
+                                    </div> 
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div><!-- /.container -->
+		<!-- script references -->
+		<script src="assets/js/jquery-1.11.0.js"></script>
+                <script src="assets/js/jquery.form.js"></script>
+                <script src="assets/js/jquery.wallform.js"></script>
+                <script src="assets/js/jquery-ui.min.js"></script>
+                <script src="assets/js/jquery.calendar-widget.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+                <script src="assets/js/lightGallery.js"></script>
+                <script src="assets/js/index.js"></script>
+		<script>
+			function goto_home(){
+				$(".sub_container").slideUp(1000);
+				$("#homedetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_costmuer(){
+				$(".sub_container").slideUp(1000);
+				$("#costmuerdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_prizing(){
+				$(".sub_container").slideUp(1000);
+				$("#prizingdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_helpdesk(){
+				$(".sub_container").slideUp(1000);
+				$("#helpdeskdetails").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+		</script>
+	</body>
+</html>

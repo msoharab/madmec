@@ -1,0 +1,67 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Sections
+        <small>Pic3Pic</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">Sections</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content" >
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Section's</a></li>
+        <li><a href="#Add" data-toggle="tab" id="Addfacility">Add Section</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade" id="Add">
+            <div class="panel">
+                <div class="panel-heading"><i class="fa fa-gears fa-fw fa-x2"></i>&nbsp;<strong>Add Section</strong></div>
+                <div class="panel-body">
+                    <form id="addIndiDonorForm" name="addIndiDonorForm" autocomplete="off">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Section Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="name" name="name" type="text" class="form-control" placeholder="Section Name"/>
+                                <span id="err_email"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <strong><span class="text-danger"></span> Description :<i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <textarea class="form-control" placeholder="Description" name="addrs" id="addrs"></textarea>
+                                <p class="help-block" id="gym_admsg">&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade  in active" id="Show">
+            <div class="panel">
+                <div class="panel-heading"><i class="fa fa-gears fa-fw fa-x2"></i>&nbsp;<strong>List Section's</strong></div>
+                <div class="panel-body">
+                    <div id='disdonors'>Loading............</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,1 @@
+<?php header('Location:http://vehicle.localmm.com/'); ?>

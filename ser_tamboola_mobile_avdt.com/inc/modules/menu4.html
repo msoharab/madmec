@@ -1,0 +1,70 @@
+<div class="col-lg-12" id="centerLoad" style="position:fixed;top:50%;left:50%;opacity:0.5;z-index:99;color:black;"></div>
+<div class="row output-panels" id="pgym">
+	<div class="col-lg-12">&nbsp;</div>
+	<ul class="nav nav-tabs" id="user_menu">
+		<li class="active"><a href="#add_new_package" data-toggle="tab" id="addpackmenubut">Add Packages</a></li>
+		<li><a href="#list_package" data-toggle="tab" id="listpackmenubut">List Package</a></li>
+	</ul>
+	<div class="col-lg-12">&nbsp;</div>
+	<div class="tab-content">
+	    <div class="tab-pane fade in active" id="add_new_package">
+		<div class="container">
+		<div class="row">
+		    <div class="col-lg-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+				Add Packages
+				</div>
+				<div class="panel-body">
+				    <form id="packageform" method="post">
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Gym Name <i class="fa fa-caret-down fa-fw"></i></strong>
+					<div id="displaygyms"></div>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Package Name <i class="fa fa-caret-down fa-fw"></i></strong>
+					<span><input type="text" name="packagename" class="form-control" id="packagename" /></span>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Sessions <i class="fa fa-caret-down fa-fw"></i></strong>
+					<span><input type="text" name="sessions" class="form-control" id="sessions" /></span>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Type <i class="fa fa-caret-down fa-fw"></i></strong>
+					<div id="distypeofpack"></div>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Amount <i class="fa fa-caret-down fa-fw"></i></strong>
+					<span><input type="text" name="amount" class="form-control" id="amount" /></span>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				    <div class="col-lg-12">
+					<button type="button" class="btn btn-primary btn-lg btn-block" id="savepack"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+				    </div>
+				    </form>
+				</div>
+			</div>
+		    </div>
+		</div>
+		</div>
+	    </div> 
+	    <div class="tab-pane fade in" id="list_package">
+		<div class="col-lg-12">
+		<div class="panel panel-primary">
+		    <div class="panel-heading">
+			List Packages
+		    </div>
+		    <div class="panel-body">
+			<div id='dispackages'>
+			    fetch offers from database
+			</div>
+		    </div>
+		</div>
+		</div>  
+	    </div>
+	</div>
+</div>

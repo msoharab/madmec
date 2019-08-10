@@ -1,0 +1,111 @@
+<?php
+
+class BaseView extends configure {
+
+    private $msg, $header, $body, $controller, $footer, $menufile, $jsonData;
+    public $UserDets, $title;
+    public $FBRequest, $FBError, $FBData;
+    public $GPRequest, $GPError, $GPData;
+    public $getuserDet;
+
+    public function __construct($param) {
+        parent::__construct();
+        $this->msg = $param["msg"];
+        $this->title = $param["title"];
+        $this->header = $param["header"];
+        $this->controller = $param["body"];
+        $this->body = $param["body"];
+        $this->footer = $param["footer"];
+        $this->jsonData = (array) $param["data"];
+        $this->commentNo = NULL;
+        $this->commentNoReplies = NULL;
+        $this->ploop = NULL;
+        $this->pcloop = NULL;
+        $this->listPost = NULL;
+        $this->FBError = NULL;
+        $this->FBRequest = NULL;
+        $this->FBData = NULL;
+        $this->GPResponse = NULL;
+        $this->GPError = NULL;
+    }
+
+    public function RenderView($flag) {
+        if ($flag) {
+            require_once($this->header);
+            require_once($this->body);
+            require_once($this->footer);
+        } else {
+            require_once($this->body);
+        }
+    }
+
+    public function renderJson() {
+        if (is_array($this->jsonData)) {
+            return json_encode($this->jsonData);
+        }
+    }
+
+    public function getMessage() {
+        return $this->msg;
+    }
+
+    public function getTitle() {
+        return $this->title;
+    }
+
+    public function getHeader() {
+        return $this->header;
+    }
+
+    public function getMenuFile() {
+        return $this->menufile;
+    }
+
+    public function getBody() {
+        return $this->body;
+    }
+
+    public function getFooter() {
+        return $this->footer;
+    }
+
+    public function getJsonData() {
+        return $this->jsonData;
+    }
+
+    public function setMessage($msg) {
+        $this->msg = $msg;
+    }
+
+    public function setTitle($title) {
+        $this->title = $title;
+    }
+
+    public function setHeader($header) {
+        $this->header = $this->config["DOC_ROOT"] . $this->config["VIEWS"] . $this->config["INC"] . $header;
+    }
+
+//    public function setMenuFile($menu) {
+//        $this->menufile = $this->config["DOC_ROOT"] . $this->config["VIEWS"] . $this->config["INC"] . $menu;
+//    }
+    public function setBody($body) {
+        $this->controller = $body;
+        $this->body = $this->config["DOC_ROOT"] . $this->config["VIEWS"] . $body . '/Index.php';
+    }
+
+    public function setHTML($body, $page) {
+        $this->controller = $body;
+        $this->body = $this->config["DOC_ROOT"] . $this->config["VIEWS"] . $body . '/' . $page;
+    }
+
+    public function setFooter($footer) {
+        $this->footer = $this->config["DOC_ROOT"] . $this->config["VIEWS"] . $this->config["INC"] . $footer;
+    }
+
+    public function setjsonData($jsonData) {
+        $this->jsonData = (array) $jsonData;
+    }
+
+}
+
+?>

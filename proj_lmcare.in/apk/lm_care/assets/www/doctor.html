@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>LMcare</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+                <link href="assets/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="assets/css/styles.css" rel="stylesheet">
+		<!-- signin -->
+		<link href="assets/css/signin.css" rel="stylesheet">
+                <script>
+                    function displayname(){
+                   document.getElementById("displaydocname").innerHTML=localStorage.getItem("name");
+				   
+               }
+                </script>
+		<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+	</head>
+        <body onload="init();">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                                    <a class="navbar-brand" href="doctor.html">LMcare</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a class="navbar-brand" id="displaydocname" style="float: right"></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+                                            <li><a href="javascript:void(0);" id="registrationmenuBut" onclick="javascript:goto_reg();">Registration</a></li>
+						<li><a href="javascript:void(0);" onclick="javascript:goto_app();" id="appointmentmenuBut">Appointment</a></li>
+						<li><a href="javascript:void(0);" onclick="javascript:goto_pat();" id="patientdetails">Patient</a></li> 
+                                                <li><a href="javascript:void(0);" onclick="javascript:goto_dia();" id="diagnosticdetails">Diagnostic</a></li>
+						<li><a href="javascript:void(0);" onclick="javascript:goto_pha();" id="pharmacydetails">Pharmacy</a></li>
+                                                <li><a href="javascript:void(0);" onclick="javascript:goto_passesment();" id="patientassesmentmenuBut">Patient Assessment </a></li>
+						<li><a href="javascript:void(0);" onclick="javascript:goto_sendpathis();" id="sendpathistmenuBut">Send Patient History</a></li>
+                                                <li><a href="javascript:void(0);" onclick="javascript:goto_signout();">Logout</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+                                <!--<div id="displaydocname"></div>-->
+			</div>
+		</div>
+		<div class="container">
+                    <div id="doctorinforeq">
+                        <section class="sub_container" id="doctor_info" style="display:block;">
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							Doctor Information
+						</div>
+						<div class="panel-body">
+							<form role="form">
+								<div class="form-group">
+									<label>Doctor Name</label>
+                                                                        <input class="form-control" id="doctorname" name="doctorname" placeholder="Enter the name of doctor">
+									<p class="help-block" id="doctornamemsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Doctor Id</label>
+                                                                        <input class="form-control" id="doctorid" name="doctorid" placeholder="Enter the physicain registraion ID">
+									<p class="help-block" id="doctoridmsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Clinic/Hospital Name</label>
+                                                                        <input class="form-control" id="clinicname" name="clinicname" placeholder="Enter the Clinic/Hospital Name">
+                                                                        <p class="help-block" id="clinicnamemsg"></p>
+								</div>
+								
+								<div align="right" class="form-group">
+									<a class="btn btn-danger" id="doctor_info_next1">Next</a>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div><!--row-->
+                        </section>
+                    <section class="sub_container" id="doctor_info_nextpro">
+                        <div class="row">
+                                <div class="panel panel-danger">
+                                        <div class="panel-heading">
+                                                Doctor Information
+                                        </div>
+                                        <div class="panel-body">
+                                            <form role="form" id="doctor_info_form">
+                                                        <div class="form-group">
+                                                                <label>Address</label>
+                                                                <textarea class="form-control" id="doctoraddress" name="doctoraddress" placeholder="Enter the Clinic/Hospital Name address"></textarea>
+                                                                <p class="help-block" id="doctoraddressmsg"></p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label>Phone</label>
+                                                                <input class="form-control" id="doctorcellnum" name="doctorcellnum" placeholder="Enter the mobile phone number">
+                                                                <p class="help-block" id="doctorcellnummsg"></p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label>Email</label>
+                                                                <input class="form-control" id="doctoremail" name="doctoremail" placeholder="Enter the valid Email Id">
+                                                                <p class="help-block" id="doctoremailmsg"></p>
+                                                        </div>
+                                                        <div align="right" class="form-group">
+                                                                <a class="btn btn-danger" id="doctor_info_next2">Next</a>
+                                                        </div>
+                                                </form>
+                                            <div id="adddoctormsgdiv"><strong class="text-danger"></strong></div>
+                                        </div>
+                                </div>
+                        </div><!--row-->
+			</section>
+                        
+                    </div>
+                    <div id="doctorinforesp">
+                        <section class="sub_container" id="doctor_info_nextpro" style="display:block;">
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							Welcome Message
+						</div>
+						<div class="panel-body">
+                                                 Welcome
+						</div>
+					</div>
+				</div>
+			</section>
+                    </div>
+			<!-- registration section-->
+			<section class="sub_container" id="registration" >
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							Registration
+						</div>
+						<div class="panel-body">
+                                                    <form role="form" id="patientregform" action="ajax/imageupload.php" method="post" enctype="multipart/form-data" autocomplete="off">
+                                                            <div class="form-group">
+									<label>Type</label>
+                                                                        <div id="usertypereg">fetch user type from database</div>
+									<p class="help-block" id="user_type_idmsg"></p>
+								</div>
+                                                            <div id="regpatientdetails">
+								<div class="form-group">
+									<label>Name</label>
+                                                                        <input class="form-control" id="patientname" name="patientname" placeholder="Enter the patient name">
+                                                                        <p class="help-block" id="patientnamemsg"></p>
+                                                                </div>
+                                                                  <div class="form-group">
+                                                                               <label>Select Photo</label>
+																		<div>
+																			<a class="btn btn-info" data-role="button" onClick="uploadFromGallery();">Upload from Gallery</a> &nbsp; &nbsp;
+																			<a class="btn btn-info" data-role="button" onClick="uploadFromCamera();">Upload from Camera</a> 
+																		</div>
+																		<script>
+																			function uploadFromCamera(){
+																				navigator.camera.getPicture(uploadPhoto,
+																										function(message) { alert('get picture failed'); },
+																										{ quality: 50, 
+																										destinationType: navigator.camera.DestinationType.FILE_URI }
+																										);
+																			}
+																			function uploadFromGallery() {
+																				// Retrieve image file location from specified source
+																				navigator.camera.getPicture(uploadPhoto,
+																											function(message) { alert('get picture failed'); },
+																											{ quality: 50, 
+																											destinationType: navigator.camera.DestinationType.FILE_URI,
+																											sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
+																											);
+
+																			}
+
+																			function uploadPhoto(imageURI) {
+																				var options = new FileUploadOptions();
+																				options.fileKey="patientphoto";
+																				options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.jpg';
+																				options.mimeType="text/plain";
+
+																				var params = new Object();
+
+																				options.params = params;
+
+																				var ft = new FileTransfer();
+																				ft.upload(imageURI, encodeURI("http://lmcare.in/ajax/upload.php"), win, fail, options);
+																			}
+
+																			function win(r) {
+																				alert("successfullt uploaded Patient photo");
+																				console.log("Code = " + r.responseCode);
+																				console.log("Response = " + r.response);
+																				console.log("Sent = " + r.bytesSent);
+																			}
+
+																			function fail(error) {
+																				alert("Patient photo An error has occurred: Code = " + error.code);
+																				console.log("upload error source " + error.source);
+																				console.log("upload error target " + error.target);
+																			}
+																		</script>
+																		<input  type="file"  id="patientphoto" name="patientphoto" style="display:none;" >    
+                                                                        <p class="help-block" id="patientphotomsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Age</label>
+                                                                        <input class="form-control" type="number" id="patientage"  placeholder="Enter the patient age">
+                                                                        <p class="help-block" id="patientagemsg"></p>
+                                                                </div>
+								<div class="form-group">
+									<label>Gender</label>
+									<br />
+                                                                        <input type="radio" name="patientgender" value="M"> Male
+									<br />
+                                                                        <input type="radio" name="patientgender" value="F"> Female
+									<p class="help-block" id="patientgendermsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Address</label>
+                                                                        <textarea class="form-control" placeholder="Enter the Patient address" name="patientaddress" id="patientaddress"></textarea>
+									<p class="help-block" id="patientaddressmsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Mobile</label>
+                                                                        <input class="form-control" type="number" id="patientcellnum" name="patientcellnum" placeholder="Enter the mobile phone number">
+                                                                        <p class="help-block" id="patientcellnummsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Email</label>
+                                                                        <input class="form-control" placeholder="Enter the valid Email Id" id="patientemail" name="patientemail">
+                                                                        <p class="help-block" id="patientemailmsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Guardian Name</label>
+									<input class="form-control" id="patientgname" placeholder="Enter the Guardian Name">
+									<p class="help-block" id="patientgnamemsg"></p>
+								</div>
+								<div class="form-group">
+									<label>Guardian Phone no</label>
+                                                                        <input class="form-control" placeholder="Enter the Guardian Phone no" id="patientgcellnum" name="patientgcellnum">
+                                                                        <p class="help-block" id="patientgcellnummsg"></p>
+								</div> 
+                                                                <div align="" class="form-group">
+                                                                    <button type="button" id="patientsubmitBut" class="btn btn-danger">save</button>
+								</div>
+                                                                <p class="help-block" id="patientmsgDiv"> <strong class="text-danger"></strong></p>
+                                                            </div>
+                                                            <div id="regdiagnosticdetails">
+                                                               <div class="form-group">
+									<label> Name</label>
+                                                                        <input class="form-control" id="dpname" name="dpname" placeholder="Enter the Consult Name">
+									<p class="help-block" id="dpnamemsg"></p>
+								</div> 
+                                                                <div class="form-group">
+									<label>Diagnostic Name</label>
+                                                                        <input class="form-control" id="diagnosticname" name="diagnosticname" placeholder="Enter the Diagnostic Name">
+									<p class="help-block" id="diagnosticnamemsg"></p>
+								</div> 
+                                                                <div class="form-group">
+									<label>Address</label>
+                                                                        <textarea class="form-control" placeholder="Enter the Diagnostic address" name="diagaddress" id="diagaddress"></textarea>
+									<p class="help-block" id="diagaddressmsg"></p>
+								</div>
+                                                                <div class="form-group">
+									<label>Mobile</label>
+                                                                        <input type="number" class="form-control" id="dphonenum" name="dphonenum" placeholder="Enter the Diagnostic Number">
+									<p class="help-block" id="dphonenummsg"></p>
+								</div> 
+                                                                <div class="form-group">
+									<label>Email</label>
+                                                                        <input class="form-control" id="diagemail" name="diagemail" placeholder="Enter the Diagnostic Email">
+									<p class="help-block" id="diagemailmsg"></p>
+								</div> 
+                                                                <div align="" class="form-group">
+									<a id="diagnosticsubmitBut" class="btn btn-danger">save</a>
+								</div>
+                                                                <p class="help-block" id="diagnosticmsgDiv"> <strong class="text-danger"></strong></p>
+                                                            </div>
+                                                             <div id="regpharmacydetails">
+                                                                 <div class="form-group">
+									<label> Name</label>
+                                                                        <input class="form-control" id="ppname" name="ppname" placeholder="Enter the Consult Name">
+									<p class="help-block" id="ppnamemsg"></p>
+								</div> 
+                                                                <div class="form-group">
+									<label>Pharmacy Name</label>
+                                                                        <input class="form-control" id="pharmacyname" name="pharmacyname" placeholder="Enter the Pharmacy Name">
+									<p class="help-block" id="pharmacynamemsg"></p>
+								</div> 
+                                                                <div class="form-group">
+									<label>Address</label>
+                                                                        <textarea class="form-control" placeholder="Enter the Pharmacy address" name="pharaddress" id="pharaddress"></textarea>
+									<p class="help-block" id="pharaddressmsg"></p>
+								</div>
+                                                                <div class="form-group">
+									<label>Mobile</label>
+                                                                        <input type="number" class="form-control" id="pphonenum" name="pphonenum" placeholder="Enter the Pharmacy Phone">
+									<p class="help-block" id="pphonenummsg"></p>
+								</div> 
+                                                                <div class="form-group">
+									<label>Email</label>
+                                                                        <input class="form-control" id="pharemail" name="pharemail" placeholder="Enter the Pharmacy Email">
+									<p class="help-block" id="pharemailmsg"></p>
+								</div> 
+                                                                 <div align="" class="form-group">
+                                                                     <button id="pharmacysubmitBut" class="btn btn-danger" type="button">save</button>
+								</div>
+                                                                 <p class="help-block" id="pharmacymsgDiv"> <strong class="text-danger"></strong></p>
+                                                            </div>
+                                                            
+							</form>
+						</div>
+					</div>
+				</div><!--row-->
+			</section>
+			<section class="sub_container" id="patient" >
+				<div class="row">
+					<!-- below table should be fetched from database-->
+					<div id="patient_list">
+						fetch Patients list from database
+					</div>
+                                        <div id="patient_list_history">
+                                        </div>
+				</div>
+			</section>
+			<section class="sub_container" id="diagnostic" >
+				<div class="row">
+                                    <div class="panel panel-danger">
+						<div class="panel-heading">
+							Diagnostics
+						</div>
+						<div class="panel-body">
+                                                      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <button  type="button" class="btn btn-success" id="diagnosticsendmenuBut">Diagnostic</button>
+                             </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info" id="listofdiagnosticmenuBut">List of Diagnostic</button>
+                             </div>
+                            </div>
+                                                    
+                                                    <div id="configdiagnostic">
+                                                        <div class="panel panel-danger">
+						<div class="panel-heading">
+							Diagnostics
+						</div>
+						<div class="panel-body">
+                                                    <form id="diagform">
+                                                    <div id="row">
+                                                    <label>Select Patient</label>  
+                                                    <div id="diadpatientdis">
+                                                            fetch Diagnostic patient from db
+                                                        </div>
+                                                    <p id="diagnosticpatientidmsg" class="help-block"></p>
+                                                    </div>
+                                                    <div id="row">
+                                                    <label>Select Diagnostic Center</label>  
+                                                    <div id="diacenterlistdis">
+                                                            fetch Diagnostic patient from db
+                                                        </div>
+                                                    <p id="diagnosticiddmsg" class="help-block"></p>
+                                                    </div>
+                                                    <div id="row">
+                                                    <label>Select Test Category</label>  
+                                                    <div id="diagnosticcatedisplay">
+                                                            fetch Diagnostic patient from db
+                                                        </div>
+                                                    <p id="diagnosticcatidmsg" class="help-block"></p>
+                                                    </div>
+                                                    <div id="row">
+                                                     
+                                                    <div id="diagnosticsubtypedisplay">
+                                                            
+                                                        </div>
+                                                    <p id="diagnosticpatientsubmitmsg" class="help-block"></p>
+                                                    </div>
+                                                    </form>
+                                                </div>   
+                                                        </div>
+                                                    </div>
+					<div id="diagnostic_list">
+						
+					</div>
+                                               </div>
+                                        </div>
+				</div>
+			</section>
+			<section class="sub_container" id="pharmacy" >
+				<div class="row">
+					<!-- below table should be fetched from database-->
+					<div id="pharmacy_list">
+					</div>
+				</div>
+                            
+			
+			</section>
+                        <section class="sub_container" id="patientassesment" >
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							patient Assessment
+						</div>
+						<div class="panel-body">
+                                                    <form id="passesmentform">
+                                                     <label>Select Patient</label>
+                                                     <div id="passesmentpatient">
+                                                      fetch patient from database 
+                                                      </div>
+                                                      <p class="help-block" id="passesmentpatientdelmsg"></p>
+                                                      <div class="form-group">
+                                                          <div id="patientpic">
+                                                              
+                                                          </div>
+                                                      </div>
+                                                       <div class="form-group">
+									<label>Previous Health History</label>
+                                                                        <div id="patienthistrydisp"> 
+                                                                        </div>
+                                                                        <div id="patienthistrydispl"> </div>
+                                                                        <p class="help-block" id="patientprevioushistorymsg"></p>
+                                                       </div> <input type="text" name="passmentcount" id="passmentcount" hidden=""/>
+                                                       <input type="text" name="noofhaits" id="noofhaits" hidden=""/>
+                                                       <div class="form-group">
+									<label>Diseases</label>
+                                                                        <textarea class="form-control" placeholder="Enter the Diseases" name="patientdiseases" id="patientdiseases"></textarea>
+									<p class="help-block" id="patientdiseasesmsg"></p>
+                                                        </div> 
+                                                        <div class="form-group">
+									<label>Habits</label>
+                                                                        <div id="patienthabitdis">
+                                                                            fetch from data base
+                                                                        </div>
+                                                                        <p class="help-block" id="patienthabitdismsg"></p>
+                                                        </div> 
+                                                    <div class="form-group">
+									<label>Blood Group</label>
+                                                                        <div id="patientbloodgroupdis">
+                                                                            fetch from data base
+                                                                        </div>
+                                                                        <p class="help-block" id="patientbloodgroupdismsg"></p>
+                                                        </div> 
+                                                    <div class="form-group">
+									<label>Current Assessment</label>
+                                                                        <textarea class="form-control" placeholder="Enter the Current Assessment" name="patientcassesment" id="patientcassesment"></textarea>
+									<p class="help-block" id="patientcassesmentmsg"></p>
+                                                     </div>
+                                                    <div class="form-group">
+									<label>Remark</label>
+                                                                        <textarea class="form-control" placeholder="Enter the Current Assessment Remark" name="patientcassesmentrem" id="patientcassesmentrem"></textarea>
+									<p class="help-block" id="patientcassesmentremmsg"></p>
+                                                        </div>
+                                                      <div align="" class="form-group">
+                                                       <button id="passesmentsubmitBut" class="btn btn-danger" type="button">Next</button>
+                                                       </div>
+                                                      <div class="form-group">
+                                                        <p class="help-block" id="passesmentmsgdiv"></p>
+                                                    </div>
+                                                    </form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="sub_container" id="prescription" >
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							Prescription
+						</div>
+						<div class="panel-body">
+							<form role="form" id="presform">
+<!--                                                            <div class="form-group">
+                                                                <label><strong>Select Patient</strong></label>
+                                                                        <div  id="prespatient"></div>
+									<p class="help-block" id="prespatientmsg"></p>
+								</div>-->
+                                                            <div class="form-group">
+									<label>Select Pharmacy</label>
+                                                                        <div id="prespharmacy"></div>
+									<p class="help-block" id="prespharmacymsg"></p>
+								</div>
+                                                                <div class="form-group">
+                                                                        <div id="pharmacyfulldetails"></div>
+								</div>
+								<div class="form-group">
+                                                                    <label>Tablets</label>
+                                                                    <button  id="plus_tablet_" type="button" class="text-primary btn btn-success  btn-md"><i class="fa fa-plus fa-fw fa-x2"></i> </button>
+                                                                    <div class="col-md-12" id="multiple_tablet"> </div>  
+                                                                        <p class="help-block" id="prestabletnamemsg"></p>
+                                                                </div>
+								<div align="right" class="form-group">
+                                                                    <button class="btn btn-danger" type="button" id="prescribtionsubmitBut">Submit</button>
+								</div>
+							</form>
+                                                    <p class="help-block" id="prescribtionmsgdiv"></p><br/>
+                                                    <div id="downloadpres"></div>
+                                                    </div> 
+						</div>
+					
+			</section>
+			<section class="sub_container" id="appointment">
+				<div class="row">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							Configuring Appointment
+						</div>
+						<div class="panel-body">
+                                   <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <button  type="button" class="btn btn-success" id="appointconfigBut">Configure</button>
+                             </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info" id="appointeditBut">Edit</button>
+                             </div>
+                                       <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger" id="appointviewBut">View</button>
+                             </div>
+                            </div>
+                            <div id="appointconfig">    
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                            Configure Appointment
+                                    </div>
+                                    <div class="panel-body">
+                             <form role="form" id="appointform">
+                                    <div class="form-group">
+                                    
+                                    <div id="displayconfigslot"></div>
+                                <p class="help-block" id="appointconfgmsg"></p>
+                                    </div>  
+                                  </form>
+                                    </div>
+                                </div>
+                            </div>
+                                                   <div id="appointedit">
+                                               fetch Edit appointment from database         
+                                             </div>
+                                            <div id="appointview">
+                                               fetch view appointment from database         
+                                             </div> 
+                                        </div>
+                                        </div>
+                                    </div>
+				<!--row-->
+			</section>
+                        <section class="sub_container" id="patienthistorysend">
+                           
+                                <div class="panel panel-danger">
+						<div class="panel-heading">
+                                                    Send Patient History
+						</div>
+						<div class="panel-body">
+                                                    <form id="sendhistyform">
+                               <div class="form-group">
+                                    <label>Select Patient</label>
+                                    <div id="displaysendpatienhis">
+                                        fetch patient from database
+                                    </div>
+                                    <p class="help-block" id="sendpatientidmsg"></p>
+                                </div> 
+                               <div class="form-group">
+                                    <label>EmailId</label>
+                                    <input type="text" class="form-control" id="sendpatientemail" name="sendpatientemail"/>
+                                    <p class="help-block" id="sendpatientemailmsg"></p>
+                                </div> 
+                               <div class="form-group">
+                                   <button type="button" name="sendpatientSubmitBut" class="btn btn-danger" id="sendpatientSubmitBut">Send&nbsp;</button>
+                               <p class="help-block" id="sendpatientSubmitButmsg"></p> 
+                               </div> 
+                                                    </form>
+                                </div>
+                        </section> 
+		</div><!-- /.container -->
+		<!-- script references -->
+		<script src="assets/js/jquery-1.11.0.js"></script>
+                <script src="assets/js/jquery.form.js"></script>
+                <script src="assets/js/jquery.wallform.js"></script>
+                <script src="assets/js/jquery-ui.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+                <script src="assets/js/config.js"></script>
+                <script src="assets/js/doctor.js"></script>
+                <script src="assets/js/control.js"></script>
+                
+		<script>
+			function goto_reg(){
+				$(".sub_container").slideUp(1000);
+				$("#registration").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_app(){
+				$(".sub_container").slideUp(1000);
+				$("#appointment").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_pat(){
+				$(".sub_container").slideUp(1000);
+				$("#patient").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_dia(){
+				$(".sub_container").slideUp(1000);
+				$("#diagnostic").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_pha(){
+				$(".sub_container").slideUp(1000);
+				$("#pharmacy").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+                        function goto_passesment(){
+				$(".sub_container").slideUp(1000);
+				$("#patientassesment").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+                         function goto_sendpathis(){
+				$(".sub_container").slideUp(1000);
+				$("#patienthistorysend").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+			function goto_pre(){
+				$(".sub_container").slideUp(1000);
+				$("#prescription").slideDown(1500);
+                                $('.navbar-toggle'+','+'.collapsed').trigger('click');
+			}
+                        function goto_signout()
+                        {
+                            localStorage.removeItem("doctor");
+                            window.location.href='index.html';
+                        }
+			$( document ).ready(function() {
+				displayname();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<div class="col-lg-12" id="centerLoad" style="position:fixed;top:50%;left:50%;opacity:0.5;z-index:99;color:black;"></div>
+<div class="row output-panels" id="pgym">
+	<div class="col-lg-12">&nbsp;</div>
+	<ul class="nav nav-tabs" id="user_menu">
+		<li class="active"><a href="#add_new_usr" data-toggle="tab" id="addusrbut">Add User</a></li>
+	</ul>
+	<div class="col-lg-12">&nbsp;</div>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="add_new_usr">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading"> User Profile </div>
+						<div class="panel-body" id="acrdaddgym">
+							<form action="Tamboola" name="addusrForm" id="addusrForm" method="post" onSubmit="return false" enctype="multipart/form-data">
+								<fieldset>
+									<input type="hidden" name="formid" value="addusrForm" />
+									<input type="hidden" name="action1" value="clientAdd" />
+									<input type="hidden" name="autoloader" value="true" />
+									<input type="hidden" name="type" value="master" />
+									<div class="row">
+										<div class="col-lg-4">
+											<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Name <i class="fa fa-caret-down fa-fw"></i></strong> </div>
+											<div class="col-lg-12">
+												<input class="form-control" placeholder="Name" required="required" pattern='^[-a-zA-Z ]+$' name="user_name" type="text" id="u_user_name" maxlength="100" />
+												<p class="help-block" id="user_comsg">Press enter or go button to move to next field.</p>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+										</div>
+										<!-- dob -->
+										<div class="col-lg-4">
+											<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date of birth <i class="fa fa-caret-down fa-fw"></i></strong> </div>
+											<div class="col-lg-12">
+												<input class="form-control" placeholder="YY-MM-DD" name="user_dob" type="text" id="user_dob" required="required" maxlength="100" readonly/>
+												<p class="help-block" id="user_dob_msg">Press enter or go button to move to next field.</p>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+										</div>
+										<!-- gender -->
+										<div class="col-lg-4">
+											<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Gender <i class="fa fa-caret-down fa-fw"></i></strong> </div>
+											<div class="col-lg-12">
+												<select id="u_user_gender" name="user_gender" class="form-control">
+													<option value="1">Male</option>
+													<option value="2">Female</option>
+													<option value="3">Other</option>
+												</select>
+												<p class="help-block" id="usr_dimsg">Press enter or go button to move to next field.</p>
+											</div>
+											<div class="col-lg-12">&nbsp;</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">&nbsp;</div>
+										<div class="col-lg-12">
+											<div class="panel panel-primary">
+												<div class="panel-heading"> Email IDs, Cell Numbers, Documents </div>
+												<div class="panel-body">
+													<ul class="nav nav-pills">
+														<li class="active"><a href="#usremails-pills" data-toggle="tab">Email IDs</a></li>
+														<li><a href="#usrcnums-pills" data-toggle="tab">Cell Numbers</a></li>
+													</ul>
+													<div class="tab-content">
+														<div class="tab-pane fade in active" id="usremails-pills">
+															<!-- Email ID -->
+															<div class="row">
+																<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Email ID <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+																	<button type="button" class="text-primary btn btn-success  btn-md" id="usrplus_email_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp; </div>
+																<div class="col-lg-12" id="usrmultiple_email"> </div>
+																<div class="col-lg-12">&nbsp;</div>
+															</div>
+														</div>
+														<div class="tab-pane fade" id="usrcnums-pills">
+															<!-- Cell Number -->
+															<div class="row">
+																<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Cell Number <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+																	<button type="button" class="text-primary btn btn-success  btn-md" id="usrplus_cnumber_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp; </div>
+																<div class="col-lg-12" id="usrmultiple_cnumber"> </div>
+																<div class="col-lg-12">&nbsp;</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12">&nbsp;</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" id="addusrBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp; Save</button>
+										</div>
+										<div class="col-lg-12">&nbsp;</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- list client with dataTable format -->
+		<div class="tab-pane fade" id="list_gym">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading"> List Client </div>
+						<div class="panel-body" id="generate_mmlist"> </div>
+						<div class="panel-body" id="generate_mmgymlist"> </div>
+						<div class="panel-body" id="edit_mmgymlist"> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12" id="lstgymloader"></div>
+		</div>
+	</div>
+</div>

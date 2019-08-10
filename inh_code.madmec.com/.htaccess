@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^madmec.com [NC]
+RewriteRule ^(.*)$ http://www.madmec.com/$1 [L,R=301]

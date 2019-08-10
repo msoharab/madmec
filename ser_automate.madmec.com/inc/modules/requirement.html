@@ -1,0 +1,82 @@
+<!-- Requirements -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pRequirements">
+    <ul class="nav nav-tabs" id="requi_menu">
+        <li class="active"><a href="#add_requi" data-toggle="tab" id="addrequisbut">Add Requirements</a> </li>
+        <li><a href="#list_requi" data-toggle="tab" id="listrequibut">List Requirements</a> </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_requi">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            Create new requirements specfication document. </div>
+                        <div class="panel-body" id="accordionaddrequi">
+                            <form id="addrequiForm">
+                                <!-- Name of the project -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Project Name </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Project Name" name="requi_proj_name" type="text" id="requi_proj_name" maxlength="100" />
+                                        <p class="help-block" id="requi_proj_name_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <!-- Select ethnographer, Select client / customer, Select representative -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-4">
+                                            <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Ethnographer </strong> </div>
+                                            <div class="col-lg-12" id="UEthnoList"> Fetch organizaion employees </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Client </strong> </div>
+                                            <div class="col-lg-12" id="UClientList"> Fetch customer list </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Contact Person </strong> </div>
+                                            <div class="col-lg-12" id="UCompRepList"> Fetch Company representatives </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Date of ethnography -->
+                                <div class="row">
+                                    <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date of Ethnography </strong> </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Date of Ethnography" name="requi_doeth" type="text" id="requi_doeth" maxlength="15" readonly="readonly" />
+                                        <p class="help-block" id="requi_doeth_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <!-- Particulars -->
+                                <div class="row">
+                                    <div class="col-lg-3"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Particulars </strong>&nbsp;</div>
+                                    <div class="col-lg-9">
+                                        <button class="text-primary btn btn-success  btn-md" type="button" id="plus_requipt_"><i class="fa fa-plus fa-fw fa-x2"></i> </button>&nbsp; </div>
+                                    <div class="col-lg-12" id="multiple_requi_part"> </div>
+                                </div>
+                                <!-- Block / Floor  / Description -->
+                                <div class="row">
+                                    <div class="col-lg-3"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Block / Floor  / Description </strong>&nbsp;</div>
+                                    <div class="col-lg-9">
+                                        <button class="text-primary btn btn-success  btn-md" type="button" id="plus_requiptpaint_"><i class="fa fa-plus fa-fw fa-x2"></i> </button>&nbsp; </div>
+                                    <div class="col-lg-12" id="multiple_rpp_block"> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-lg btn-primary btn-block" id="addrequiationBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_requi">
+            <div class="row">
+                <div class="col-lg-12" id="listSRS"> List Requirements </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="requi_message"></div>
+</div>

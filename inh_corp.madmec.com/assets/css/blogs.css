@@ -1,0 +1,133 @@
+.aboutus{
+    background: url(../images/site/blog.jpg) no-repeat;
+    display: block!important; 
+    background-size: 100%;
+    color: #FFFFFF;
+    min-height: 400px;
+}
+.carousel-caption {
+    top: 5px;
+    /*border: solid 1px #ff0000;*/
+    width: 100%;
+}
+.carousel-caption p{
+    font-size: 2vw;
+    background: url(../images/site/text-bg.png) repeat;
+    float: left;
+    color: #FFFFFF;
+}
+
+@media (max-width:1366px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 275px;
+    }
+    .carousel-caption {
+        top: 5px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/* max-width:1280px*/
+@media (max-width:1280px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 255px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/* max-width:1024px */
+@media (max-width:1024px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 235px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/*max-width:800px  */
+@media (max-width:800px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 225px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/*max-width:768px  */
+@media (max-width:768px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 215px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/*max-width:640px  */
+@media (max-width:640px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 195px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/*max-width:480px  */
+@media (max-width:480px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 185px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}
+/*max-width:320px  */
+@media (max-width:320px) {
+    .aboutus{
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -ms-background-size: 100%;
+        min-height: 175px;
+    }
+    .carousel-caption p{
+        font-size: 2vw;
+    }
+}

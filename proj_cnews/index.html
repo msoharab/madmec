@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> B News</title>
+    <script src="cordova-1.9.0.js" type="text/javascript"></script>
+    <script src="phonegap-1.4.1.js" type="text/javascript"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="assets/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/color/default.css" rel="stylesheet">
+        <style>
+            /*5-11-2015 */
+            .left{ position:fixed; bottom:10px;left:10px; z-index:100; border-radius: 50%}
+            .right{ position:fixed; bottom:10px;right:10px; z-index:100;  border-radius: 50%}
+            .main_sec{display:none; padding-top:15px;}
+        </style>
+</head>
+<body data-spy="scroll">
+        <div id="loginmenu">
+        <div class="container">
+			<ul id="gn-menuww" class="gn-menu-main">
+				<li><a href="javascript:void(0)" style="color:#FFF; padding-right: 150px" id="bnewshomer">B News</a></li>
+			</ul>
+	</div>
+        </div>
+    <div id="menudet">
+    <div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+                                                                <li name="LOGIN" id="LOGINBUT"><a href="javascript:void(0);" class="gn-icon gn-icon-download" >LOGIN</a></li>
+								<li name="SPONSORS" id="SPONSORSBUT"><a href="javascript:void(0);" class="gn-icon gn-icon-download" >SPONSORS</a></li>
+								<li name="NEWS" id="NEWSBUT"><a href="javascript:void(0);" class="gn-icon gn-icon-cog" >NEWS</a></li>
+								<li name="BUSINESS" id="BUSINESSBUT"><a href="javascript:void(0);"  class="gn-icon gn-icon-help" >BUSINESS</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a  href="javascript:void(0)" style="color:#FFF;" id="bnewshome">B News</a></li>
+				<li><a  href="javascript:void(0)" style="color:#FFF;" id="breakingnewshome">Breaking News</a></li>
+				<li><ul class="company-social">
+                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>	</li>
+			</ul>
+	</div>
+    </div>
+         <div id="validatedetails">
+	<section id="SPONSORS" class="main_sec">
+		<div class="container">
+                    <div id="displaysopnsopers">
+                    </div>
+                    <br />
+                    <button class="btn btn-danger right" id="addspons">Add</button>
+                    <br />
+                    <div id="addsponsers">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Add SPONSORS
+                            </div>
+                            <div class="panel-body ">
+                                <form id="sponform" method="post" action="ajax/imageupload.php" enctype="multipart/form-data" autocomplete="off">
+                                <!--<label>Image</label>
+                                <input type="file"  name="sponimg" id="sponimg"/>-->
+										<div class="form-group">
+																	   <label>Select Photo</label>
+																		<div>
+																			<a class="btn btn-info" data-role="button" onClick="uploadFromGallery1();">Upload from Gallery</a> &nbsp; &nbsp;
+																			<a class="btn btn-info" data-role="button" onClick="uploadFromCamera1();">Upload from Camera</a> 
+																		</div>
+																		<script>
+																			function uploadFromCamera1(){
+																				navigator.camera.getPicture(uploadPhoto1,
+																										function(message) { alert('get picture failed'); },
+																										{ quality: 50, 
+																										destinationType: navigator.camera.DestinationType.FILE_URI }
+																										);
+																			}
+																			function uploadFromGallery1() {
+																				// Retrieve image file location from specified source
+																				navigator.camera.getPicture(uploadPhoto1,
+																											function(message) { alert('get picture failed'); },
+																											{ quality: 50, 
+																											destinationType: navigator.camera.DestinationType.FILE_URI,
+																											sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
+																											);
+																			}
+																			function uploadPhoto1(imageURI) {
+																				var options = new FileUploadOptions();
+																				options.fileKey="patientphoto1";
+																				options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.jpg';
+																				options.mimeType="text/plain";
+																				var params = new Object();
+																				options.params = params;
+																				var ft = new FileTransfer();
+																				ft.upload(imageURI, encodeURI("http://cnews.madmec.com/ajax/upload1.php"), win1, fail1, options);
+																			}
+																			function win1(r) {
+																				alert("successfullt uploaded photo");
+																				console.log("Code = " + r.responseCode);
+																				console.log("Response = " + r.response);
+																				console.log("Sent = " + r.bytesSent);
+																			}
+																			function fail1(error) {
+																				alert("photo An error has occurred: Code = " + error.code);
+																				console.log("upload error source " + error.source);
+																				console.log("upload error target " + error.target);
+																			}
+																		</script>
+																		<input  type="file"  id="patientphoto1" name="patientphoto1" style="display:none;" >    
+                                                                        <p class="help-block" id="patientphoto0msg"></p>
+										</div>
+                                <br/>
+                                <label>URL</label>
+                                <input placeholder="tile" type="url" class="form-control" name="spomurl" id="spomurl" required="">
+                                <br/>
+                                <button type="button" class="btn btn-primary" id="addsponbut">&nbsp;ADD</button> 
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+		</div>
+	</section>
+	<section id="NEWS" class="main_sec">
+		<div class="container">
+			<div id="news_screen" class="">
+				<div id="disnews">
+				</div>
+			</div>
+			<div id="news_form" style="display:none;">
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						Add News
+					</div>
+					<div class="panel-body">
+						<form id="addnewform" method="post" action="ajax/imageupload.php" enctype="multipart/form-data" autocomplete="off">
+						<div class="form-group" id="desktop-version"></div>
+						<div class="form-group" id="mobile-version"></div>
+						<div class="form-group">
+							<label>headlines</label>
+							<input placeholder="tile" class="form-control" name="newsheading" id="newsheading" required="">
+							<br/>
+							<label>News Description</label>
+							<textarea placeholder="descripttion" name="newsdescb" id="newsdescb" class="form-control" required=""></textarea>
+							<br/>
+							<button type="button" id="addnewsbut" class="btn btn-primary">&nbsp;ADD NEWS</button>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div>
+				<button class="btn btn-danger left" id="view_news" onclick="view_news();" >View</button>
+				<button class="btn btn-danger right" id="add_news" onclick="add_news();">Add</button>
+			</div> 
+		</div>
+	</section>
+	<section id="BUSINESS" class="main_sec">
+		<div class="container">
+			<div id="buzz_screen" class="">
+				<div id="displaybusiness">
+				</div>
+			</div>
+			<div id="buzz_form" style="display:none;">
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						Add Your business
+					</div>
+					<div class="panel-body">
+						<form id="addbussform" method="post" action="ajax/imageupload.php" enctype="multipart/form-data" autocomplete="off">
+							<!--<label>Image</label>
+							<input type="file" name="bussinessimg" id="bussinessimg" >-->
+							<div class="form-group">
+							   <label>Select Photo</label>
+								<div>
+									<a class="btn btn-info" data-role="button" onClick="uploadFromGallery0();">Upload from Gallery</a> &nbsp; &nbsp;
+									<a class="btn btn-info" data-role="button" onClick="uploadFromCamera0();">Upload from Camera</a> 
+								</div>
+								<script>
+									function uploadFromCamera0(){
+										navigator.camera.getPicture(uploadPhoto0,
+																function(message) { alert('get picture failed'); },
+																{ quality: 50, 
+																destinationType: navigator.camera.DestinationType.FILE_URI }
+																);
+									}
+									function uploadFromGallery0() {
+										// Retrieve image file location from specified source
+										navigator.camera.getPicture(uploadPhoto0,
+																	function(message) { alert('get picture failed'); },
+																	{ quality: 50, 
+																	destinationType: navigator.camera.DestinationType.FILE_URI,
+																	sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
+																	);
+									}
+									function uploadPhoto0(imageURI) {
+										var options = new FileUploadOptions();
+										options.fileKey="patientphoto0";
+										options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.jpg';
+										options.mimeType="text/plain";
+										var params = new Object();
+										options.params = params;
+										var ft = new FileTransfer();
+										ft.upload(imageURI, encodeURI("http://cnews.madmec.com/ajax/upload0.php"), win0, fail0, options);
+									}
+									function win0(r) {
+										alert("successfullt uploaded photo");
+										console.log("Code = " + r.responseCode);
+										console.log("Response = " + r.response);
+										console.log("Sent = " + r.bytesSent);
+									}
+									function fail0(error) {
+										alert("photo An error has occurred: Code = " + error.code);
+										console.log("upload error source " + error.source);
+										console.log("upload error target " + error.target);
+									}
+								</script>
+								<input  type="file"  id="patientphoto0" name="patientphoto0" style="display:none;" >    
+								<p class="help-block" id="patientphoto0msg"></p>
+							</div>
+							<br/>
+							<label>Name of the business</label>
+							<input placeholder="Name of Business" name="bussinessname" id="bussinessname" class="form-control"><br/>
+							<label>Address</label>
+							<textarea placeholder="Address" id="busdescripttion" class="form-control"></textarea><br/>
+							<label>Phone Number</label>
+							<input type="number" placeholder="Phone Number" name="bussinessphone" id="bussinessphone" class="form-control"><br/>
+							<label>Email</label>
+							<input type="email" placeholder="Email" name="bussinessemail" id="bussinessemail" class="form-control"><br/>
+							<label>Description</label>
+							<textarea placeholder="Description" class="form-control" name="bussinessdesc" id="bussinessdesc"></textarea><br/>
+							 <button type="button" id="addbusinessbut" class="btn btn-primary">&nbsp;ADD Business</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div>
+				<button class="btn btn-danger left" id="view_buzz" onclick="view_buzz();" >View</button>
+				<button class="btn btn-danger right" id="add_buzz" onclick="add_buzz();">Add</button>
+			</div> 
+		</div>
+	</section>
+         </div>
+    <div id="signdetails">
+        <section id="LOGIN" class="main_sec">
+            <div class="container">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                       Login form
+                    </div>
+                    <div class="panel-body">
+                        <div id="signdiv">
+                        <form id="signform" method="post" autocomplete="off"> 
+                            <label>Email Id</label>
+                            <input  class="form-control" type="email" name="username" id="username" required=""  placeholder="Enter the Email ID"><br/>
+                            <label>Password</label>
+                            <input  class="form-control" type="password" name="password" id="password" required=""  placeholder="Enter the Password"><br/>
+                            <button class="btn btn-primary" id="signbut" type="submit">&nbsp;SignIn</button> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-primary" type="button" id="newacc">&nbsp;New User ?</button>
+                            </form>
+                         </div>
+                        <div id="registerdiv">
+                        <form id="regform" method="post" autocomplete="off">
+                            <label>Name</label>
+                            <input  class="form-control" name="name" id="name" required="" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)*$" placeholder="Enter the Name"><br/>
+                            <label>Mobile</label>
+                            <input type="number" class="form-control" name="regemobile" id="regemobile" required=""  placeholder="Enter the Mobile Number"><br/>
+                            <label>Email Id</label>
+                            <input type="email" class="form-control"  name="regemail" id="regemail" required=""  placeholder="Enter the Email ID"><br/>
+                            <label>Password</label>
+                            <input type="password"  class="form-control" pattern=".{6,20}" name="regpass" id="regpass" required=""  placeholder="Enter the Password"><br/>
+                            <label>confirm Password</label>
+                            <input  type="password"  class="form-control" pattern=".{6,20}"  name="regcpass" id="regcpass" required=""  placeholder="Enter the Password"><br/>
+                            <input type="text" hidden="" name="emailhid" value="10" required="">
+                            <input type="text" hidden="" name="action" value="sigup" required="">
+                            <button class="btn btn-primary" type="submit">&nbsp;SignUp</button>
+                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-primary" type="button" id="signacc">&nbsp;SignIn</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+	<footer style="display:none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<p>Copyright &copy; 2014 Ninestars - by <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
+				</div>
+			</div>	
+		</div>
+	</footer>   
+    <!-- Core JavaScript Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>	
+	<script src="assets/js/classie.js"></script>
+	<script src="assets/js/gnmenu.js"></script>
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/nivo-lightbox.min.js"></script>
+	<script src="assets/js/stellar.js"></script>
+	<script src="assets/js/jquery.form.js"></script>
+	<script src="assets/js/jquery.wallform.js"></script>
+	<script src="assets/js/isMobile.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/config.js" type="text/javascript"></script>
+    <script src="assets/js/control.js" type="text/javascript"></script>
+    <script src="assets/js/controller.js" type="text/javascript"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
+</body>
+</html>

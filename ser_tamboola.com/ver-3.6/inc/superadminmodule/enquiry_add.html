@@ -1,0 +1,166 @@
+<!-- Enquiry add -->
+<div class="row output-panels" id="ctrlEnquiryAdd">
+    <h3 class="page-header text-primary">
+        <label>&nbsp; Add Enquiry</label>
+    </h3>
+    <div class="col-lg-12" id="ctEnquiryAdd">
+        <!-- Add Enquiry start -->
+        <form role="form" id="enquiry_form">
+            <fieldset>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Referrer : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input  id="ref_box" type="text" class="form-control" placeholder="Name - Email Id - Cell Number" />
+                                    <p class="help-block">This field is not mandatory.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Attender : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div id="list_handel"/>
+                                    <input  id="handel_box" type="text" class="form-control" placeholder="Name - Email Id - Cell Number"/>
+                                    <p class="help-block">This field is not mandatory.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Visitor Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input name="eq_name" id="eq_name" type="text" class="form-control"/>
+                                    <p class="help-block" id="eq_name_msg">&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Email Id : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="form-control" placeholder="Email Id" name="enq_email" type="text" id="enq_email" maxlength="100"/>
+                                    <p class="help-block" id="enq_em_msgDiv">&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Cell Number : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="form-control" placeholder="Cell Number" name="enq_cnumber" type="text" id="enq_cnumber" maxlength="20" />
+                                    <p class="help-block" id="cmsg">&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>First Follow-up : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input name="followup1" type="text" class="form-control"id="followup1" readonly="readonly" />
+                                    <p class="help-block" id="f1msg">&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Second Follow-up : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input name="followup2" type="text" class="form-control" id="followup2" />
+                                    <p class="help-block">&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Third Follow-up : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input name="followup3" type="text" class="form-control" id="followup3" />
+                                    <p class="help-block">&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>How Do You Know About Us : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <select name="knowabout" id="knowabout" class="form-control">
+                                        <option>Select know about us</option>
+                                    </select>
+                                    <p class="help-block">This field is not mandatory.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="col-lg-12">
+                                    <strong>Joining Probability : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <select name="jop" id="jop" class="form-control">
+                                        <option value="selectVal" selected>Select joining</option>
+                                        <option value="Today"> Today</option>
+                                        <option value="2">After 2 days</option>
+                                        <option value="4">After 4 days</option>
+                                        <option value="7">After a week</option>
+                                        <option value="30">After a month</option>
+                                    </select>
+                                    <p class="help-block" id="jopmsg">&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="col-lg-12">
+                                    <strong>Comments : <i class="fa fa-caret-down fa-fw"></i></strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea rows="4" cols="100" id="comments" class="form-control" style="resize:none;"/>
+                                    <p class="help-block">This field is not mandatory.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-12">
+                                <strong>Send Demo credential : <i class="fa fa-caret-down fa-fw"></i></strong> &nbsp;&nbsp;&nbsp;
+                                <input type="checkbox" name="sendcred" id="sendcred"  value="sendcred"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="enq_add_msg"/>
+                            <div class="form-group">
+                                <input type="button" id="enquiry_save" class="btn btn-lg btn-primary btn-block" name="action" value="Save"/>
+                            </div>
+                        </div>
+                    </div>
+            </fieldset>
+        </form>
+        <!-- modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_open" id="myModal_enqaddbtn" style="display: none;"></button>
+        <div class="modal fade" id="myModal_open" tabindex="-1" role="dialog" aria-labelledby="myModal_open" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModal_title">
+                            <i class="fa fa-bell fa-fw "/> Alert</h4>
+                    </div>
+                    <div class="modal-body" id="myModal_enqaddbody"/>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal over -->
+    </div>
+    <!-- Add Enquiry End -->
+</div>

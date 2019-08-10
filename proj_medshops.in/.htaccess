@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^medshops.in [NC]
+RewriteRule ^(.*)$ http://www.medshops.in/$1 [L,R=301]

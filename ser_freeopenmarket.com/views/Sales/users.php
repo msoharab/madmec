@@ -1,0 +1,96 @@
+<?php
+$UsrProf = isset($this->idHolders["onlinefood"]["masterdata"]["ListUserProof"]) ? (array) $this->idHolders["onlinefood"]["masterdata"]["ListUserProof"] : false;
+$UsrType = isset($this->idHolders["onlinefood"]["masterdata"]["ListUserTypes"]) ? (array) $this->idHolders["onlinefood"]["masterdata"]["ListUserTypes"] : false;
+?>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Users
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo $this->config["URL"] . $this->config["CTRL_0"]; ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li class="active">Protocols</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Folders</h3>
+                        <div class="box-tools">
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body no-padding">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active">
+                                <a href="#utype1" data-toggle="tab">
+                                    <i class="fa fa-users"></i>
+                                    REST
+                                    <span class="label label-primary pull-right">&nbsp;</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#utype2" data-toggle="tab">
+                                    <i class="fa fa-users"></i>
+                                    SOAP
+                                    <span class="label label-primary pull-right">&nbsp;</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#utype3" data-toggle="tab">
+                                    <i class="fa fa-users"></i>
+                                    XML-RPC
+                                    <span class="label label-primary pull-right">&nbsp;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.box-body -->
+                </div><!-- /. box -->
+            </div><!-- /.col -->
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <div class="active tab-pane" id="utype1">
+                        <h3>
+                            REST
+                        </h3>
+                        <?php
+                        require_once 'user_type.php';
+                        ?>
+                    </div>
+                    <div class="active tab-pane" id="utype2">
+                        <h3>
+                            SOAP
+                        </h3>
+                        <?php
+                        require_once 'user_type_1.php';
+                        ?>
+                    </div>
+                    <div class="active tab-pane" id="utype3">
+                        <h3>
+                            XML-RPC
+                        </h3>
+                        <?php
+                        require_once 'user_type_2.php';
+                        ?>
+                    </div>
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </section><!-- /.content -->
+</div>
+<!--<script type="text/javascript">
+    $(document).ready(function () {
+        var para = getJSONIds({
+            autoloader: true,
+            action: 'getIdHolders',
+            url: URL + 'MasterData/getIdHolders',
+            type: 'POST',
+            dataType: 'JSON'
+        }).onlinefood.masterdata;
+        var obj = new masterdataController();
+        obj.__constructor(para);
+        obj.__User();
+    });
+</script>-->

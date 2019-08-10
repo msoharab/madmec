@@ -1,0 +1,46 @@
+﻿<!-- Payments -->
+    <div class="row output-panels" id="ctrlRPayments">
+        <h3 class="page-header text-primary"><label>&nbsp; Payments</label></h3>
+        <div class="col-lg-12" id="ctRPayments">
+            <!-- payments form start -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div>
+                                <div class="panel-body" id="ff">
+                                    <form id="payform" name="payform">
+                                        <!-- form id-->
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>From :</label> <input name="paydate1" type="text" class="form-control" id="paydate1" placeholder="Date" readonly="readonly" style="cursor:pointer"><!-- date1 id-->
+                                                 <span class="text-success"><!--
+                                                <input type="text" id="alternate1" size="30" readonly="readonly" class="form-control" style="border:hidden;"/>
+                                                --></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>To :</label> <input name="paydate2" type="text" class="form-control" id="paydate2" placeholder="Date" readonly="readonly" style="cursor:pointer"><!-- date2 id-->
+                                                 <span class="text-success"><!--
+                                                <input type="text" id="alternate2" size="30" readonly="readonly" class="form-control" style="border:hidden;"/>
+                                                --></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>&nbsp;</label> <input type="button" class="btn btn-lg btn-success btn-block" name="genrep" id="paybutton" value="Generate"><!--form btn id-->
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" id="payOutput"></div><!--output id-->
+                    </div>
+                </div>
+            </div><!-- pay form over -->
+        </div>
+    </div>
+
+

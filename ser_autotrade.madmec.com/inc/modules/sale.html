@@ -1,0 +1,177 @@
+<div class="row output-panels" id="pSale">
+    <ul class="nav nav-tabs" id="sales_menu">
+        <li class="active"><a href="#add_sale_patty" data-toggle="tab" id="entrypattysbut">Add / Edit Sale Entry</a></li>
+        <li><a href="#list_sale" data-toggle="tab" id="listsale">List Sale</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_sale_patty">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <strong> Select patty</strong>
+                        </div>
+                        <div class="panel-body" id="selectsalespatty">
+                            <div class="col-lg-12">
+                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select patty <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control" placeholder="User name / Product name / Date / Refernence NO / Vehicle NO" name="patty_sale_name" type="text" id="patty_sale_name" maxlength="100"/>
+                                <p class="help-block" id="patty_sale_name_msg">Select a patty to generate sales.</p>
+                            </div>
+                            <!-- List sales -->
+                            <div class="col-lg-12 table-responsive" >
+                                <table class="table table-striped table-bordered table-hover" id="ps_list">
+                                </table>
+                            </div>
+                            <div class="col-lg-12" id="psl_loader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Patty sales -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Patty sales <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                </div>
+                <div class="col-lg-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <strong>Entry number</strong>&nbsp;
+                        </div>
+                        <div class="panel-body" id="multiple_sales">
+                            <form id="addsaleform">
+                                <div class="row">
+                                    <!-- Retailer / Customer -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Retailer / Customer <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Retailer / Customer" name="pd_customer" type="text" id="pd_customer" maxlength="100" />
+                                            <p class="help-block" id="pd_customer_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Date -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date Of Receipt <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Date Of Receipt" name="patty_date_sales" type="text" id="patty_date_sales" maxlength="15" readonly="readonly"/>
+                                            <p class="help-block" id="pds_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading">
+                                                <strong>Payment details</strong>
+                                            </div>
+                                            <div class="panel-body">
+                                                <!-- Number of bags / box / krates -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Number of bags / box / krates <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" name="num_packs" type="text" id="num_packs" maxlength="9" value="0"/>
+                                                        <p class="help-block" id="edit_num_packs_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Kilo weight (KG's) -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Kilo Grams <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" name="kg_packs" type="text" id="kg_packs" maxlength="9" value="0"/>
+                                                        <p class="help-block" id="kg_packs_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Rate per KG -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Rate per KG <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" name="rate_packs" type="text" id="rate_packs" maxlength="9" value="0"/>
+                                                        <p class="help-block" id="rate_packs_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Total Amount -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Amount <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" name="calc_amt" type="text" id="calc_amt" maxlength="9" disabled="disabled" value="0"/>
+                                                        <p class="help-block" id="calc_amt_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading">
+                                               <strong> Due details</strong>
+                                            </div>
+                                            <div class="panel-body">
+                                                <!-- Amount paid -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Amount paid <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" name="amt_paid" type="text" id="amt_paid" maxlength="9" value="0"/>
+                                                        <p class="help-block" id="amt_paid_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Due amount -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Due amount <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" name="due_pay" type="text" id="due_pay" maxlength="9" disabled="disabled" value="0"/>
+                                                        <p class="help-block" id="due_pay_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- Due date -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Due date <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <input class="form-control" placeholder="Due date" name="due_date" type="text" id="due_date" maxlength="15" />
+                                                        <p class="help-block" id="due_date_msg">Enter/ Select.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12"><button type="button" class="btn btn-lg btn-primary btn-block" id="addpattysalesBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button></div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_sale">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            List pattys
+                        </div>
+                        <div class="panel-body table-responsive"  id="lstpattys"></div>
+                        <div class="col-lg-12"  id="lstpattysloader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12" id="patty_message"></div>
+    </div>

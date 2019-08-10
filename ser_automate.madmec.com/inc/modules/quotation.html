@@ -1,0 +1,191 @@
+<!-- Quotation -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pQuotation">
+	<ul class="nav nav-tabs" id="quot_menu">
+		<li class="active"><a href="#add_quot" data-toggle="tab" id="addquotsbut">Add Quotation</a> </li>
+		<li><a href="#list_quot" data-toggle="tab" id="listquotbut">List Quotation</a> </li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="add_quot">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							Generate a quotation. </div>
+						<div class="panel-body" id="accordionaddquot">
+							<form id="addquotForm">
+								<!-- Select requirement -->
+								<div class="row">
+									<div class="col-lg-12">
+										<strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Requirement Specification </strong>
+									</div>
+									<div class="col-lg-12" id="URequiQuotList">
+										<input class="form-control" placeholder="Select Requirement Specification" type="text" maxlength="100" id="Qrequi_type" />
+										<p class="help-block" id="Qrequi_type_msg" >Select / Enter</p>
+									</div>
+									<!-- Requirement -->
+									<div class="col-lg-12" id="requi_doc"></div>
+								</div>
+								<div class="col-lg-12" id="psl_loader"></div>
+								<!-- Subject / Description -->
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Subject </strong> </div>
+										<div class="col-lg-12">
+											<input class="form-control" placeholder="Subject of the quotation" name="quot_subject" type="text" id="quot_subject" maxlength="500" />
+											<p class="help-block" id="quot_subject_msg">Enter / Select</p>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Description </strong> </div>
+										<div class="col-lg-12">
+											<textarea class="form-control" id="quot_desc" name="quot_desc"></textarea>
+											<p class="help-block" id="quot_desc_msg">Enter / Select</p>
+										</div>
+									</div>
+								</div>
+								<!-- Total / Vat @ 14.5% on supply / 50% @ 12.36% on Labour-->
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="col-lg-4">
+											<div class="panel panel-info">
+												<div class="panel-heading">
+													Installation Cost
+												</div>
+												<div class="panel-body">
+													<div class="row">
+														<!-- Total -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Installation Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Total" name="quot_totins" type="text" id="quot_totins" maxlength="11" readonly="readonly" />
+															<p class="help-block" id="quot_totins_msg">Enter / Select</p>
+														</div>
+														<!-- STC -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> STC @ 12.36% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="STC" name="quot_totins_stc" type="text" id="quot_totins_stc" maxlength="11"/>
+															<p class="help-block" id="quot_totins_stc_msg">Enter / Select</p>
+														</div>
+														<!-- E.Cess 50% on 2% -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> E.Cess 50% on 2% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="E.Cess 50% on 2%" name="quot_totins_ecess" type="text" id="quot_totins_ecess" maxlength="11" />
+															<p class="help-block" id="quot_totins_ecess_msg">Enter / Select</p>
+														</div>
+														<!-- H E.Cess 50% on 1% -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> H E.Cess 50% on 1% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="H E.Cess 50% on 1%" name="quot_hecess" type="text" id="quot_totins_hecess" maxlength="11" />
+															<p class="help-block" id="quot_totins_hecess_msg">Enter / Select</p>
+														</div>
+														<!-- Net Total -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Net Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Net Total" name="qntotins" type="text" id="qntotins" maxlength="11"  readonly="readonly"  />
+															<p class="help-block" id="qntotins_msg">Enter / Select</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-4">
+											<div class="panel panel-info">
+												<div class="panel-heading">
+													Painting Cost
+												</div>
+												<div class="panel-body">
+													<div class="row">
+														<!-- Total -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Painting Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Total" name="quot_paint" type="text" id="quot_paint" maxlength="11" readonly="readonly" />
+															<p class="help-block" id="quot_paint_msg">Enter / Select</p>
+														</div>
+														<!-- STC -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> STC @ 12.36% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="STC" name="quot_paint_stc" type="text" id="quot_paint_stc" maxlength="11"/>
+															<p class="help-block" id="quot_paint_stc_msg">Enter / Select</p>
+														</div>
+														<!-- E.Cess 50% on 2% -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> E.Cess 50% on 2% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="E.Cess 50% on 2%" name="quot_paint_ecess" type="text" id="quot_paint_ecess" maxlength="11" />
+															<p class="help-block" id="quot_paint_ecess_msg">Enter / Select</p>
+														</div>
+														<!-- H E.Cess 50% on 1% -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> H E.Cess 50% on 1% (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="H E.Cess 50% on 1%" name="quot_paint_hecess" type="text" id="quot_paint_hecess" maxlength="11" />
+															<p class="help-block" id="quot_paint_hecess_msg">Enter / Select</p>
+														</div>
+														<!-- Net Total -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Net Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Net Total" name="pntotins" type="text" id="pntotins" maxlength="11"  readonly="readonly" />
+															<p class="help-block" id="pntotins_msg">Enter / Select</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-4">
+											<div class="panel panel-info">
+												<div class="panel-heading">
+													Supply Cost
+												</div>
+												<div class="panel-body">
+													<div class="row">
+														<!-- Total -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Supply Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Total" name="quot_paint" type="text" id="quot_totsup" maxlength="11" readonly="readonly" />
+															<p class="help-block" id="quot_totsup_msg">Enter / Select</p>
+														</div>
+														<!-- Vat @ 14.5% on supply -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Vat @ 14.5% on supply (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Vat @ 14.5% on supply" name="quot_totsup_vat" type="text" id="quot_totsup_vat" maxlength="11" />
+															<p class="help-block" id="quot_totsup_vat_msg">Enter / Select</p>
+														</div>
+														<!-- Net Total -->
+														<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Net Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+														<div class="col-lg-12">
+															<input class="form-control" placeholder="Net Total" name="supntotins" type="text" id="supntotins" maxlength="11"  readonly="readonly"  />
+															<p class="help-block" id="supntotins_msg">Enter / Select</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Grand Total -->
+								<div class="row">
+									<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Grand Total (in<i class="fa fa-rupee fa-fw"></i>)</strong>&nbsp; </div>
+									<div class="col-lg-12">
+										<input class="form-control" placeholder="Grand Total" name="quot_gtotal" type="text" id="quot_gtotal" maxlength="11" readonly="readonly" />
+										<p class="help-block" id="quot_gtotal_msg">Enter / Select</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12 text-center">
+										<!-- <button class="btn btn-lg btn-danger" href="javascript:void(0);" id="addquotationPDFBut"><i class="fa fa-file-pdf-o fa-fw fa-2x"></i> &nbsp;PDF</button>&nbsp; -->
+										<button class="btn btn-lg btn-danger" href="javascript:void(0);" id="addquotationXLSXBut"><i class="fa fa-file-excel-o fa-fw fa-2x"></i> &nbsp;XLSX</button>&nbsp; 
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="list_quot">
+			<div class="row">
+				<div class="col-lg-12" id="listQUOT"> Fetch quotation list </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12" id="quot_message"></div>
+</div>
+

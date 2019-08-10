@@ -1,0 +1,625 @@
+<?php
+	define("MODULE_0","config.php");
+	require_once (MODULE_0);
+	require_once(CONFIG_ROOT.MODULE_0);
+	returnRandomSourceEmail();
+	// echo '<br />'.print_r($_SESSION["GMAIL"]);
+	// echo '<br />'.print_r($_SESSION["BIGROCKMAILS"]);
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bulk Eamil</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="js/jquery.js"  language="javascript" type="text/javascript"></script>
+<script src="js/index.js"  language="javascript" type="text/javascript"></script>
+</head>
+<body bgcolor="#999999">
+<form name="form1">
+<table border="1" align="center" cellpadding="5" cellspacing="5">
+  <tr>
+    <td colspan="2" align="center" bgcolor="#CCCCCC"><strong><h3>BulkEmail</h3></strong></td>
+    </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>From</strong></td>
+    <td bgcolor="#CCCCCC">
+	<!--
+    <select name="fromemail" id="fromemail">
+		<option value="info@madmec.com">info@madmec.com</option>
+	</select>
+	-->
+    <select name="fromemail" id="fromemail">
+		<option value="one186@madmec.com">one186@madmec.com</option>
+		<option value="one187@madmec.com">one187@madmec.com</option>
+		<option value="one188@madmec.com">one188@madmec.com</option>
+		<option value="one189@madmec.com">one189@madmec.com</option>
+		<option value="one190@madmec.com">one190@madmec.com</option>
+		<option value="one191@madmec.com">one191@madmec.com</option>
+		<option value="one192@madmec.com">one192@madmec.com</option>
+		<option value="one193@madmec.com">one193@madmec.com</option>
+		<option value="one194@madmec.com">one194@madmec.com</option>
+		<option value="one195@madmec.com">one195@madmec.com</option>
+		<option value="one196@madmec.com">one196@madmec.com</option>
+		<option value="one197@madmec.com">one197@madmec.com</option>
+		<option value="one198@madmec.com">one198@madmec.com</option>
+		<option value="one199@madmec.com">one199@madmec.com</option>
+		<option value="one200@madmec.com">one200@madmec.com</option>	  
+		<option value="gift1@madmec.com">gift1@madmec.com</option>
+		<option value="gift2@madmec.com">gift2@madmec.com</option>
+		<option value="gift3@madmec.com">gift3@madmec.com</option>
+		<option value="gift4@madmec.com">gift4@madmec.com</option>
+		<option value="gift5@madmec.com">gift5@madmec.com</option>
+		<option value="gift6@madmec.com">gift6@madmec.com</option>
+		<option value="gift7@madmec.com">gift7@madmec.com</option>
+		<option value="gift8@madmec.com">gift8@madmec.com</option>
+		<option value="gift9@madmec.com">gift9@madmec.com</option>
+		<option value="gift10@madmec.com">gift10@madmec.com</option>
+		<option value="gift11@madmec.com">gift11@madmec.com</option>
+		<option value="gift12@madmec.com">gift12@madmec.com</option>
+		<option value="gift13@madmec.com">gift13@madmec.com</option>
+		<option value="gift14@madmec.com">gift14@madmec.com</option>
+		<option value="gift15@madmec.com">gift15@madmec.com</option>
+		<option value="gift16@madmec.com">gift16@madmec.com</option>
+		<option value="gift17@madmec.com">gift17@madmec.com</option>
+		<option value="gift18@madmec.com">gift18@madmec.com</option>
+		<option value="gift19@madmec.com">gift19@madmec.com</option>
+		<option value="gift20@madmec.com">gift20@madmec.com</option>
+		<option value="gift21@madmec.com">gift21@madmec.com</option>
+		<option value="gift22@madmec.com">gift22@madmec.com</option>
+		<option value="gift23@madmec.com">gift23@madmec.com</option>
+		<option value="gift24@madmec.com">gift24@madmec.com</option>
+		<option value="gift25@madmec.com">gift25@madmec.com</option>
+		<option value="gift26@madmec.com">gift26@madmec.com</option>
+		<option value="gift27@madmec.com">gift27@madmec.com</option>
+		<option value="gift28@madmec.com">gift28@madmec.com</option>
+		<option value="gift29@madmec.com">gift29@madmec.com</option>
+		<option value="gift30@madmec.com">gift30@madmec.com</option>
+		<option value="gift31@madmec.com">gift31@madmec.com</option>
+		<option value="gift32@madmec.com">gift32@madmec.com</option>
+		<option value="gift33@madmec.com">gift33@madmec.com</option>
+		<option value="gift34@madmec.com">gift34@madmec.com</option>
+		<option value="gift35@madmec.com">gift35@madmec.com</option>
+		<option value="gift36@madmec.com">gift36@madmec.com</option>
+		<option value="gift37@madmec.com">gift37@madmec.com</option>
+		<option value="gift38@madmec.com">gift38@madmec.com</option>
+		<option value="gift39@madmec.com">gift39@madmec.com</option>
+		<option value="gift40@madmec.com">gift40@madmec.com</option>
+		<option value="gift41@madmec.com">gift41@madmec.com</option>
+		<option value="gift42@madmec.com">gift42@madmec.com</option>
+		<option value="gift43@madmec.com">gift43@madmec.com</option>
+		<option value="gift44@madmec.com">gift44@madmec.com</option>
+		<option value="gift45@madmec.com">gift45@madmec.com</option>
+		<option value="gift46@madmec.com">gift46@madmec.com</option>
+		<option value="gift47@madmec.com">gift47@madmec.com</option>
+		<option value="gift48@madmec.com">gift48@madmec.com</option>
+		<option value="gift49@madmec.com">gift49@madmec.com</option>
+		<option value="gift50@madmec.com">gift50@madmec.com</option>
+		<option value="gift51@madmec.com">gift51@madmec.com</option>
+		<option value="gift52@madmec.com">gift52@madmec.com</option>
+		<option value="gift53@madmec.com">gift53@madmec.com</option>
+		<option value="gift54@madmec.com">gift54@madmec.com</option>
+		<option value="gift55@madmec.com">gift55@madmec.com</option>
+		<option value="gift56@madmec.com">gift56@madmec.com</option>
+		<option value="gift57@madmec.com">gift57@madmec.com</option>
+		<option value="gift58@madmec.com">gift58@madmec.com</option>
+		<option value="gift59@madmec.com">gift59@madmec.com</option>
+		<option value="gift60@madmec.com">gift60@madmec.com</option>
+		<option value="gift61@madmec.com">gift61@madmec.com</option>
+		<option value="gift62@madmec.com">gift62@madmec.com</option>
+		<option value="gift63@madmec.com">gift63@madmec.com</option>
+		<option value="gift64@madmec.com">gift64@madmec.com</option>
+		<option value="gift65@madmec.com">gift65@madmec.com</option>
+		<option value="gift66@madmec.com">gift66@madmec.com</option>
+		<option value="gift67@madmec.com">gift67@madmec.com</option>
+		<option value="gift68@madmec.com">gift68@madmec.com</option>
+		<option value="gift69@madmec.com">gift69@madmec.com</option>
+		<option value="gift70@madmec.com">gift70@madmec.com</option>
+		<option value="gift71@madmec.com">gift71@madmec.com</option>
+		<option value="gift72@madmec.com">gift72@madmec.com</option>
+		<option value="gift73@madmec.com">gift73@madmec.com</option>
+		<option value="gift74@madmec.com">gift74@madmec.com</option>
+		<option value="gift75@madmec.com">gift75@madmec.com</option>
+		<option value="gift76@madmec.com">gift76@madmec.com</option>
+		<option value="gift77@madmec.com">gift77@madmec.com</option>
+		<option value="gift78@madmec.com">gift78@madmec.com</option>
+		<option value="gift79@madmec.com">gift79@madmec.com</option>
+		<option value="gift80@madmec.com">gift80@madmec.com</option>
+		<option value="gift81@madmec.com">gift81@madmec.com</option>
+		<option value="gift82@madmec.com">gift82@madmec.com</option>
+		<option value="gift83@madmec.com">gift83@madmec.com</option>
+		<option value="gift84@madmec.com">gift84@madmec.com</option>
+		<option value="gift85@madmec.com">gift85@madmec.com</option>
+		<option value="gift86@madmec.com">gift86@madmec.com</option>
+		<option value="gift87@madmec.com">gift87@madmec.com</option>
+		<option value="gift88@madmec.com">gift88@madmec.com</option>
+		<option value="gift89@madmec.com">gift89@madmec.com</option>
+		<option value="gift90@madmec.com">gift90@madmec.com</option>
+		<option value="gift91@madmec.com">gift91@madmec.com</option>
+		<option value="gift92@madmec.com">gift92@madmec.com</option>
+		<option value="gift93@madmec.com">gift93@madmec.com</option>
+		<option value="gift94@madmec.com">gift94@madmec.com</option>
+		<option value="gift95@madmec.com">gift95@madmec.com</option>
+		<option value="gift96@madmec.com">gift96@madmec.com</option>
+		<option value="gift97@madmec.com">gift97@madmec.com</option>
+		<option value="gift98@madmec.com">gift98@madmec.com</option>
+		<option value="gift99@madmec.com">gift99@madmec.com</option>
+		<option value="gift100@madmec.com">gift100@madmec.com</option>
+		<option value="gift101@madmec.com">gift101@madmec.com</option>
+		<option value="gift102@madmec.com">gift102@madmec.com</option>
+		<option value="gift103@madmec.com">gift103@madmec.com</option>
+		<option value="gift104@madmec.com">gift104@madmec.com</option>
+		<option value="gift105@madmec.com">gift105@madmec.com</option>
+		<option value="gift106@madmec.com">gift106@madmec.com</option>
+		<option value="gift107@madmec.com">gift107@madmec.com</option>
+		<option value="gift108@madmec.com">gift108@madmec.com</option>
+		<option value="gift109@madmec.com">gift109@madmec.com</option>
+		<option value="gift110@madmec.com">gift110@madmec.com</option>
+		<option value="gift111@madmec.com">gift111@madmec.com</option>
+		<option value="gift112@madmec.com">gift112@madmec.com</option>
+		<option value="gift113@madmec.com">gift113@madmec.com</option>
+		<option value="gift114@madmec.com">gift114@madmec.com</option>
+		<option value="gift115@madmec.com">gift115@madmec.com</option>
+		<option value="gift116@madmec.com">gift116@madmec.com</option>
+		<option value="gift117@madmec.com">gift117@madmec.com</option>
+		<option value="gift118@madmec.com">gift118@madmec.com</option>
+		<option value="gift119@madmec.com">gift119@madmec.com</option>
+		<option value="gift120@madmec.com">gift120@madmec.com</option>
+		<option value="gift121@madmec.com">gift121@madmec.com</option>
+		<option value="gift122@madmec.com">gift122@madmec.com</option>
+		<option value="gift123@madmec.com">gift123@madmec.com</option>
+		<option value="gift124@madmec.com">gift124@madmec.com</option>
+		<option value="gift125@madmec.com">gift125@madmec.com</option>
+		<option value="gift126@madmec.com">gift126@madmec.com</option>
+		<option value="gift127@madmec.com">gift127@madmec.com</option>
+		<option value="gift128@madmec.com">gift128@madmec.com</option>
+		<option value="gift129@madmec.com">gift129@madmec.com</option>
+		<option value="gift130@madmec.com">gift130@madmec.com</option>
+		<option value="gift131@madmec.com">gift131@madmec.com</option>
+		<option value="gift132@madmec.com">gift132@madmec.com</option>
+		<option value="gift133@madmec.com">gift133@madmec.com</option>
+		<option value="gift134@madmec.com">gift134@madmec.com</option>
+		<option value="gift135@madmec.com">gift135@madmec.com</option>
+		<option value="gift136@madmec.com">gift136@madmec.com</option>
+		<option value="gift137@madmec.com">gift137@madmec.com</option>
+		<option value="gift138@madmec.com">gift138@madmec.com</option>
+		<option value="gift139@madmec.com">gift139@madmec.com</option>
+		<option value="gift140@madmec.com">gift140@madmec.com</option>
+		<option value="gift141@madmec.com">gift141@madmec.com</option>
+		<option value="gift142@madmec.com">gift142@madmec.com</option>
+		<option value="gift143@madmec.com">gift143@madmec.com</option>
+		<option value="gift144@madmec.com">gift144@madmec.com</option>
+		<option value="gift145@madmec.com">gift145@madmec.com</option>
+		<option value="gift146@madmec.com">gift146@madmec.com</option>
+		<option value="gift147@madmec.com">gift147@madmec.com</option>
+		<option value="gift148@madmec.com">gift148@madmec.com</option>
+		<option value="gift149@madmec.com">gift149@madmec.com</option>
+		<option value="gift150@madmec.com">gift150@madmec.com</option>
+		<option value="gift151@madmec.com">gift151@madmec.com</option>
+		<option value="gift152@madmec.com">gift152@madmec.com</option>
+		<option value="gift153@madmec.com">gift153@madmec.com</option>
+		<option value="gift154@madmec.com">gift154@madmec.com</option>
+		<option value="gift155@madmec.com">gift155@madmec.com</option>
+		<option value="gift156@madmec.com">gift156@madmec.com</option>
+		<option value="gift157@madmec.com">gift157@madmec.com</option>
+		<option value="gift158@madmec.com">gift158@madmec.com</option>
+		<option value="gift159@madmec.com">gift159@madmec.com</option>
+		<option value="gift160@madmec.com">gift160@madmec.com</option>
+		<option value="gift161@madmec.com">gift161@madmec.com</option>
+		<option value="gift162@madmec.com">gift162@madmec.com</option>
+		<option value="gift163@madmec.com">gift163@madmec.com</option>
+		<option value="gift164@madmec.com">gift164@madmec.com</option>
+		<option value="gift165@madmec.com">gift165@madmec.com</option>
+		<option value="gift166@madmec.com">gift166@madmec.com</option>
+		<option value="gift167@madmec.com">gift167@madmec.com</option>
+		<option value="gift168@madmec.com">gift168@madmec.com</option>
+		<option value="gift169@madmec.com">gift169@madmec.com</option>
+		<option value="gift170@madmec.com">gift170@madmec.com</option>
+		<option value="gift171@madmec.com">gift171@madmec.com</option>
+		<option value="gift172@madmec.com">gift172@madmec.com</option>
+		<option value="gift173@madmec.com">gift173@madmec.com</option>
+		<option value="gift174@madmec.com">gift174@madmec.com</option>
+		<option value="gift175@madmec.com">gift175@madmec.com</option>
+		<option value="gift176@madmec.com">gift176@madmec.com</option>
+		<option value="gift177@madmec.com">gift177@madmec.com</option>
+		<option value="gift178@madmec.com">gift178@madmec.com</option>
+		<option value="gift179@madmec.com">gift179@madmec.com</option>
+		<option value="gift180@madmec.com">gift180@madmec.com</option>
+		<option value="gift181@madmec.com">gift181@madmec.com</option>
+		<option value="gift182@madmec.com">gift182@madmec.com</option>
+		<option value="gift183@madmec.com">gift183@madmec.com</option>
+		<option value="gift184@madmec.com">gift184@madmec.com</option>
+		<option value="gift185@madmec.com">gift185@madmec.com</option>
+		<option value="gift186@madmec.com">gift186@madmec.com</option>
+		<option value="gift187@madmec.com">gift187@madmec.com</option>
+		<option value="gift188@madmec.com">gift188@madmec.com</option>
+		<option value="gift189@madmec.com">gift189@madmec.com</option>
+		<option value="gift190@madmec.com">gift190@madmec.com</option>
+		<option value="gift191@madmec.com">gift191@madmec.com</option>
+		<option value="gift192@madmec.com">gift192@madmec.com</option>
+		<option value="gift193@madmec.com">gift193@madmec.com</option>
+		<option value="gift194@madmec.com">gift194@madmec.com</option>
+		<option value="gift195@madmec.com">gift195@madmec.com</option>
+		<option value="gift196@madmec.com">gift196@madmec.com</option>
+		<option value="gift197@madmec.com">gift197@madmec.com</option>
+		<option value="gift198@madmec.com">gift198@madmec.com</option>
+		<option value="gift199@madmec.com">gift199@madmec.com</option>
+		<option value="gift200@madmec.com">gift200@madmec.com</option>
+		<option value="gift201@madmec.com">gift201@madmec.com</option>
+		<option value="gift202@madmec.com">gift202@madmec.com</option>
+		<option value="gift203@madmec.com">gift203@madmec.com</option>
+		<option value="gift204@madmec.com">gift204@madmec.com</option>
+		<option value="gift205@madmec.com">gift205@madmec.com</option>
+		<option value="gift206@madmec.com">gift206@madmec.com</option>
+		<option value="gift207@madmec.com">gift207@madmec.com</option>
+		<option value="gift208@madmec.com">gift208@madmec.com</option>
+		<option value="gift209@madmec.com">gift209@madmec.com</option>
+		<option value="gift210@madmec.com">gift210@madmec.com</option>
+		<option value="gift211@madmec.com">gift211@madmec.com</option>
+		<option value="gift212@madmec.com">gift212@madmec.com</option>
+		<option value="gift213@madmec.com">gift213@madmec.com</option>
+		<option value="gift214@madmec.com">gift214@madmec.com</option>
+		<option value="gift215@madmec.com">gift215@madmec.com</option>
+		<option value="gift216@madmec.com">gift216@madmec.com</option>
+		<option value="gift217@madmec.com">gift217@madmec.com</option>
+		<option value="gift218@madmec.com">gift218@madmec.com</option>
+		<option value="gift219@madmec.com">gift219@madmec.com</option>
+		<option value="gift220@madmec.com">gift220@madmec.com</option>
+		<option value="gift221@madmec.com">gift221@madmec.com</option>
+		<option value="gift222@madmec.com">gift222@madmec.com</option>
+		<option value="gift223@madmec.com">gift223@madmec.com</option>
+		<option value="gift224@madmec.com">gift224@madmec.com</option>
+		<option value="gift225@madmec.com">gift225@madmec.com</option>
+		<option value="gift226@madmec.com">gift226@madmec.com</option>
+		<option value="gift227@madmec.com">gift227@madmec.com</option>
+		<option value="gift228@madmec.com">gift228@madmec.com</option>
+		<option value="gift229@madmec.com">gift229@madmec.com</option>
+		<option value="gift230@madmec.com">gift230@madmec.com</option>
+		<option value="gift231@madmec.com">gift231@madmec.com</option>
+		<option value="gift232@madmec.com">gift232@madmec.com</option>
+		<option value="gift233@madmec.com">gift233@madmec.com</option>
+		<option value="gift234@madmec.com">gift234@madmec.com</option>
+		<option value="gift235@madmec.com">gift235@madmec.com</option>
+		<option value="gift236@madmec.com">gift236@madmec.com</option>
+		<option value="gift237@madmec.com">gift237@madmec.com</option>
+		<option value="gift238@madmec.com">gift238@madmec.com</option>
+		<option value="gift239@madmec.com">gift239@madmec.com</option>
+		<option value="gift240@madmec.com">gift240@madmec.com</option>
+		<option value="gift241@madmec.com">gift241@madmec.com</option>
+		<option value="gift242@madmec.com">gift242@madmec.com</option>
+		<option value="gift243@madmec.com">gift243@madmec.com</option>
+		<option value="gift244@madmec.com">gift244@madmec.com</option>
+		<option value="gift245@madmec.com">gift245@madmec.com</option>
+		<option value="gift246@madmec.com">gift246@madmec.com</option>
+		<option value="gift247@madmec.com">gift247@madmec.com</option>
+		<option value="gift248@madmec.com">gift248@madmec.com</option>
+		<option value="gift249@madmec.com">gift249@madmec.com</option>
+		<option value="gift250@madmec.com">gift250@madmec.com</option>
+		<option value="gift251@madmec.com">gift251@madmec.com</option>
+		<option value="gift252@madmec.com">gift252@madmec.com</option>
+		<option value="gift253@madmec.com">gift253@madmec.com</option>
+		<option value="gift254@madmec.com">gift254@madmec.com</option>
+		<option value="gift255@madmec.com">gift255@madmec.com</option>
+		<option value="gift256@madmec.com">gift256@madmec.com</option>
+		<option value="gift257@madmec.com">gift257@madmec.com</option>
+		<option value="gift258@madmec.com">gift258@madmec.com</option>
+		<option value="gift259@madmec.com">gift259@madmec.com</option>
+		<option value="gift260@madmec.com">gift260@madmec.com</option>
+		<option value="gift261@madmec.com">gift261@madmec.com</option>
+		<option value="gift262@madmec.com">gift262@madmec.com</option>
+		<option value="gift263@madmec.com">gift263@madmec.com</option>
+		<option value="gift264@madmec.com">gift264@madmec.com</option>
+		<option value="gift265@madmec.com">gift265@madmec.com</option>
+		<option value="gift266@madmec.com">gift266@madmec.com</option>
+		<option value="gift267@madmec.com">gift267@madmec.com</option>
+		<option value="gift268@madmec.com">gift268@madmec.com</option>
+		<option value="gift269@madmec.com">gift269@madmec.com</option>
+		<option value="gift270@madmec.com">gift270@madmec.com</option>
+		<option value="gift271@madmec.com">gift271@madmec.com</option>
+		<option value="gift272@madmec.com">gift272@madmec.com</option>
+		<option value="gift273@madmec.com">gift273@madmec.com</option>
+		<option value="gift274@madmec.com">gift274@madmec.com</option>
+		<option value="gift275@madmec.com">gift275@madmec.com</option>
+		<option value="gift276@madmec.com">gift276@madmec.com</option>
+		<option value="gift277@madmec.com">gift277@madmec.com</option>
+		<option value="gift278@madmec.com">gift278@madmec.com</option>
+		<option value="gift279@madmec.com">gift279@madmec.com</option>
+		<option value="gift280@madmec.com">gift280@madmec.com</option>
+		<option value="gift281@madmec.com">gift281@madmec.com</option>
+		<option value="gift282@madmec.com">gift282@madmec.com</option>
+		<option value="gift283@madmec.com">gift283@madmec.com</option>
+		<option value="gift284@madmec.com">gift284@madmec.com</option>
+		<option value="gift285@madmec.com">gift285@madmec.com</option>
+		<option value="one29@madmec.com">one29@madmec.com</option>
+		<option value="one30@madmec.com">one30@madmec.com</option>
+		<option value="one31@madmec.com">one31@madmec.com</option>
+		<option value="one32@madmec.com">one32@madmec.com</option>
+		<option value="one33@madmec.com">one33@madmec.com</option>
+		<option value="one34@madmec.com">one34@madmec.com</option>
+		<option value="one35@madmec.com">one35@madmec.com</option>
+		<option value="one36@madmec.com">one36@madmec.com</option>
+		<option value="one37@madmec.com">one37@madmec.com</option>
+		<option value="one38@madmec.com">one38@madmec.com</option>
+		<option value="one39@madmec.com">one39@madmec.com</option>
+		<option value="one40@madmec.com">one40@madmec.com</option>
+		<option value="one41@madmec.com">one41@madmec.com</option>
+		<option value="one42@madmec.com">one42@madmec.com</option>
+		<option value="one43@madmec.com">one43@madmec.com</option>
+		<option value="one44@madmec.com">one44@madmec.com</option>
+		<option value="one45@madmec.com">one45@madmec.com</option>
+		<option value="one46@madmec.com">one46@madmec.com</option>
+		<option value="one47@madmec.com">one47@madmec.com</option>
+		<option value="one48@madmec.com">one48@madmec.com</option>
+		<option value="one49@madmec.com">one49@madmec.com</option>
+		<option value="one50@madmec.com">one50@madmec.com</option>
+		<option value="one51@madmec.com">one51@madmec.com</option>
+		<option value="one52@madmec.com">one52@madmec.com</option>
+		<option value="one53@madmec.com">one53@madmec.com</option>
+		<option value="one54@madmec.com">one54@madmec.com</option>
+		<option value="one55@madmec.com">one55@madmec.com</option>
+		<option value="one56@madmec.com">one56@madmec.com</option>
+		<option value="one57@madmec.com">one57@madmec.com</option>
+		<option value="one58@madmec.com">one58@madmec.com</option>
+		<option value="one59@madmec.com">one59@madmec.com</option>
+		<option value="one60@madmec.com">one60@madmec.com</option>
+		<option value="one61@madmec.com">one61@madmec.com</option>
+		<option value="one62@madmec.com">one62@madmec.com</option>
+		<option value="one63@madmec.com">one63@madmec.com</option>
+		<option value="one64@madmec.com">one64@madmec.com</option>
+		<option value="one65@madmec.com">one65@madmec.com</option>
+		<option value="one66@madmec.com">one66@madmec.com</option>
+		<option value="one67@madmec.com">one67@madmec.com</option>
+		<option value="one68@madmec.com">one68@madmec.com</option>
+		<option value="one69@madmec.com">one69@madmec.com</option>
+		<option value="one70@madmec.com">one70@madmec.com</option>
+		<option value="one71@madmec.com">one71@madmec.com</option>
+		<option value="one72@madmec.com">one72@madmec.com</option>
+		<option value="one73@madmec.com">one73@madmec.com</option>
+		<option value="one74@madmec.com">one74@madmec.com</option>
+		<option value="one75@madmec.com">one75@madmec.com</option>
+		<option value="one76@madmec.com">one76@madmec.com</option>
+		<option value="one77@madmec.com">one77@madmec.com</option>
+		<option value="one78@madmec.com">one78@madmec.com</option>
+		<option value="one79@madmec.com">one79@madmec.com</option>
+		<option value="gift286@madmec.com">gift286@madmec.com</option>
+		<option value="gift287@madmec.com">gift287@madmec.com</option>
+		<option value="gift288@madmec.com">gift288@madmec.com</option>
+		<option value="gift289@madmec.com">gift289@madmec.com</option>
+		<option value="gift290@madmec.com">gift290@madmec.com</option>
+		<option value="gift291@madmec.com">gift291@madmec.com</option>
+		<option value="gift292@madmec.com">gift292@madmec.com</option>
+		<option value="gift293@madmec.com">gift293@madmec.com</option>
+		<option value="gift294@madmec.com">gift294@madmec.com</option>
+		<option value="gift295@madmec.com">gift295@madmec.com</option>
+		<option value="gift296@madmec.com">gift296@madmec.com</option>
+		<option value="gift297@madmec.com">gift297@madmec.com</option>
+		<option value="gift298@madmec.com">gift298@madmec.com</option>
+		<option value="gift299@madmec.com">gift299@madmec.com</option>
+		<option value="gift300@madmec.com">gift300@madmec.com</option>
+		<option value="post@madmec.com">post@madmec.com</option>
+		<option value="share@madmec.com">share@madmec.com</option>
+		<option value="comment@madmec.com">comment@madmec.com</option>
+		<option value="like@madmec.com">like@madmec.com</option>
+		<option value="suggestions@madmec.com">suggestions@madmec.com</option>
+		<option value="pad@madmec.com">pad@madmec.com</option>
+		<option value="board@madmec.com">board@madmec.com</option>
+		<option value="panel@madmec.com">panel@madmec.com</option>
+		<option value="resume@madmec.com">resume@madmec.com</option>
+		<option value="profile@madmec.com">profile@madmec.com</option>
+		<option value="madmec@madmec.com">madmec@madmec.com</option>
+		<option value="thinkbook@madmec.com">thinkbook@madmec.com</option>
+		<option value="diary@madmec.com">diary@madmec.com</option>
+		<option value="router@madmec.com">router@madmec.com</option>
+		<option value="standard@madmec.com">standard@madmec.com</option>
+		<option value="mates@madmec.com">mates@madmec.com</option>
+		<option value="friends@madmec.com">friends@madmec.com</option>
+		<option value="colleagues@madmec.com">colleagues@madmec.com</option>
+		<option value="school@madmec.com">school@madmec.com</option>
+		<option value="college@madmec.com">college@madmec.com</option>
+		<option value="university@madmec.com">university@madmec.com</option>
+		<option value="test@madmec.com">test@madmec.com</option>
+		<option value="one1@madmec.com">one1@madmec.com</option>
+		<option value="one2@madmec.com">one2@madmec.com</option>
+		<option value="one3@madmec.com">one3@madmec.com</option>
+		<option value="no-reply@madmec.com">no-reply@madmec.com</option>
+		<option value="info@madmec.com">info@madmec.com</option>
+		<option value="career@madmec.com">career@madmec.com</option>
+		<option value="social@madmec.com">social@madmec.com</option>
+		<option value="education@madmec.com">education@madmec.com</option>
+		<option value="professional@madmec.com">professional@madmec.com</option>
+		<option value="digitalbooks@madmec.com">digitalbooks@madmec.com</option>
+		<option value="geek@madmec.com">geek@madmec.com</option>
+		<option value="nerd@madmec.com">nerd@madmec.com</option>
+		<option value="jobs@madmec.com">jobs@madmec.com</option>
+		<option value="invite@madmec.com">invite@madmec.com</option>
+		<option value="request@madmec.com">request@madmec.com</option>
+		<option value="edu@madmec.com">edu@madmec.com</option>
+		<option value="join@madmec.com">join@madmec.com</option>
+		<option value="feedback@madmec.com">feedback@madmec.com</option>
+		<option value="web@madmec.com">web@madmec.com</option>
+		<option value="mad@madmec.com">mad@madmec.com</option>
+		<option value="mec@madmec.com">mec@madmec.com</option>
+		<option value="ebooks@madmec.com">ebooks@madmec.com</option>
+		<option value="portal@madmec.com">portal@madmec.com</option>
+		<option value="user@madmec.com">user@madmec.com</option>
+		<option value="data@madmec.com">data@madmec.com</option>
+		<option value="internet@madmec.com">internet@madmec.com</option>
+		<option value="solutions@madmec.com">solutions@madmec.com</option>
+		<option value="business@madmec.com">business@madmec.com</option>
+		<option value="connection@madmec.com">connection@madmec.com</option>
+		<option value="connect@madmec.com">connect@madmec.com</option>
+		<option value="advice@madmec.com">advice@madmec.com</option>
+		<option value="one4@madmec.com">one4@madmec.com</option>
+		<option value="one5@madmec.com">one5@madmec.com</option>
+		<option value="one6@madmec.com">one6@madmec.com</option>
+		<option value="one7@madmec.com">one7@madmec.com</option>
+		<option value="one8@madmec.com">one8@madmec.com</option>
+		<option value="one9@madmec.com">one9@madmec.com</option>
+		<option value="one10@madmec.com">one10@madmec.com</option>
+		<option value="one11@madmec.com">one11@madmec.com</option>
+		<option value="one12@madmec.com">one12@madmec.com</option>
+		<option value="one13@madmec.com">one13@madmec.com</option>
+		<option value="one14@madmec.com">one14@madmec.com</option>
+		<option value="one15@madmec.com">one15@madmec.com</option>
+		<option value="one16@madmec.com">one16@madmec.com</option>
+		<option value="one17@madmec.com">one17@madmec.com</option>
+		<option value="one18@madmec.com">one18@madmec.com</option>
+		<option value="one19@madmec.com">one19@madmec.com</option>
+		<option value="one20@madmec.com">one20@madmec.com</option>
+		<option value="one21@madmec.com">one21@madmec.com</option>
+		<option value="one22@madmec.com">one22@madmec.com</option>
+		<option value="one23@madmec.com">one23@madmec.com</option>
+		<option value="one24@madmec.com">one24@madmec.com</option>
+		<option value="one25@madmec.com">one25@madmec.com</option>
+		<option value="one26@madmec.com">one26@madmec.com</option>
+		<option value="one27@madmec.com">one27@madmec.com</option>
+		<option value="one28@madmec.com">one28@madmec.com</option>
+		<option value="one80@madmec.com">one80@madmec.com</option>
+		<option value="one81@madmec.com">one81@madmec.com</option>
+		<option value="one82@madmec.com">one82@madmec.com</option>
+		<option value="one83@madmec.com">one83@madmec.com</option>
+		<option value="one84@madmec.com">one84@madmec.com</option>
+		<option value="one85@madmec.com">one85@madmec.com</option>
+		<option value="one86@madmec.com">one86@madmec.com</option>
+		<option value="one87@madmec.com">one87@madmec.com</option>
+		<option value="one88@madmec.com">one88@madmec.com</option>
+		<option value="one89@madmec.com">one89@madmec.com</option>
+		<option value="one90@madmec.com">one90@madmec.com</option>
+		<option value="one91@madmec.com">one91@madmec.com</option>
+		<option value="one92@madmec.com">one92@madmec.com</option>
+		<option value="one93@madmec.com">one93@madmec.com</option>
+		<option value="one94@madmec.com">one94@madmec.com</option>
+		<option value="one95@madmec.com">one95@madmec.com</option>
+		<option value="one96@madmec.com">one96@madmec.com</option>
+		<option value="one97@madmec.com">one97@madmec.com</option>
+		<option value="one98@madmec.com">one98@madmec.com</option>
+		<option value="one99@madmec.com">one99@madmec.com</option>
+		<option value="one100@madmec.com">one100@madmec.com</option>
+		<option value="one101@madmec.com">one101@madmec.com</option>
+		<option value="one102@madmec.com">one102@madmec.com</option>
+		<option value="one103@madmec.com">one103@madmec.com</option>
+		<option value="one104@madmec.com">one104@madmec.com</option>
+		<option value="one105@madmec.com">one105@madmec.com</option>
+		<option value="one106@madmec.com">one106@madmec.com</option>
+		<option value="one107@madmec.com">one107@madmec.com</option>
+		<option value="one108@madmec.com">one108@madmec.com</option>
+		<option value="one109@madmec.com">one109@madmec.com</option>
+		<option value="one110@madmec.com">one110@madmec.com</option>
+		<option value="one111@madmec.com">one111@madmec.com</option>
+		<option value="one112@madmec.com">one112@madmec.com</option>
+		<option value="one113@madmec.com">one113@madmec.com</option>
+		<option value="one114@madmec.com">one114@madmec.com</option>
+		<option value="one115@madmec.com">one115@madmec.com</option>
+		<option value="one116@madmec.com">one116@madmec.com</option>
+		<option value="one117@madmec.com">one117@madmec.com</option>
+		<option value="one118@madmec.com">one118@madmec.com</option>
+		<option value="one119@madmec.com">one119@madmec.com</option>
+		<option value="one120@madmec.com">one120@madmec.com</option>
+		<option value="one121@madmec.com">one121@madmec.com</option>
+		<option value="one122@madmec.com">one122@madmec.com</option>
+		<option value="one123@madmec.com">one123@madmec.com</option>
+		<option value="one124@madmec.com">one124@madmec.com</option>
+		<option value="one125@madmec.com">one125@madmec.com</option>
+		<option value="one126@madmec.com">one126@madmec.com</option>
+		<option value="one127@madmec.com">one127@madmec.com</option>
+		<option value="one128@madmec.com">one128@madmec.com</option>
+		<option value="one129@madmec.com">one129@madmec.com</option>
+		<option value="one130@madmec.com">one130@madmec.com</option>
+		<option value="one131@madmec.com">one131@madmec.com</option>
+		<option value="one132@madmec.com">one132@madmec.com</option>
+		<option value="one133@madmec.com">one133@madmec.com</option>
+		<option value="one134@madmec.com">one134@madmec.com</option>
+		<option value="one135@madmec.com">one135@madmec.com</option>
+		<option value="one136@madmec.com">one136@madmec.com</option>
+		<option value="one137@madmec.com">one137@madmec.com</option>
+		<option value="one138@madmec.com">one138@madmec.com</option>
+		<option value="one139@madmec.com">one139@madmec.com</option>
+		<option value="one140@madmec.com">one140@madmec.com</option>
+		<option value="one141@madmec.com">one141@madmec.com</option>
+		<option value="one142@madmec.com">one142@madmec.com</option>
+		<option value="one143@madmec.com">one143@madmec.com</option>
+		<option value="one144@madmec.com">one144@madmec.com</option>
+		<option value="one145@madmec.com">one145@madmec.com</option>
+		<option value="one146@madmec.com">one146@madmec.com</option>
+		<option value="one147@madmec.com">one147@madmec.com</option>
+		<option value="one148@madmec.com">one148@madmec.com</option>
+		<option value="one149@madmec.com">one149@madmec.com</option>
+		<option value="one150@madmec.com">one150@madmec.com</option>
+		<option value="one151@madmec.com">one151@madmec.com</option>
+		<option value="one152@madmec.com">one152@madmec.com</option>
+		<option value="one153@madmec.com">one153@madmec.com</option>
+		<option value="one154@madmec.com">one154@madmec.com</option>
+		<option value="one155@madmec.com">one155@madmec.com</option>
+		<option value="one156@madmec.com">one156@madmec.com</option>
+		<option value="one157@madmec.com">one157@madmec.com</option>
+		<option value="one158@madmec.com">one158@madmec.com</option>
+		<option value="one159@madmec.com">one159@madmec.com</option>
+		<option value="one160@madmec.com">one160@madmec.com</option>
+		<option value="one161@madmec.com">one161@madmec.com</option>
+		<option value="one162@madmec.com">one162@madmec.com</option>
+		<option value="one163@madmec.com">one163@madmec.com</option>
+		<option value="one164@madmec.com">one164@madmec.com</option>
+		<option value="one165@madmec.com">one165@madmec.com</option>
+		<option value="one166@madmec.com">one166@madmec.com</option>
+		<option value="one167@madmec.com">one167@madmec.com</option>
+		<option value="one168@madmec.com">one168@madmec.com</option>
+		<option value="one169@madmec.com">one169@madmec.com</option>
+		<option value="one170@madmec.com">one170@madmec.com</option>
+		<option value="one171@madmec.com">one171@madmec.com</option>
+		<option value="one172@madmec.com">one172@madmec.com</option>
+		<option value="one173@madmec.com">one173@madmec.com</option>
+		<option value="one174@madmec.com">one174@madmec.com</option>
+		<option value="one175@madmec.com">one175@madmec.com</option>
+		<option value="one176@madmec.com">one176@madmec.com</option>
+		<option value="one177@madmec.com">one177@madmec.com</option>
+		<option value="one178@madmec.com">one178@madmec.com</option>
+		<option value="one179@madmec.com">one179@madmec.com</option>
+		<option value="one180@madmec.com">one180@madmec.com</option>
+		<option value="one181@madmec.com">one181@madmec.com</option>
+		<option value="one182@madmec.com">one182@madmec.com</option>
+		<option value="one183@madmec.com">one183@madmec.com</option>
+		<option value="one184@madmec.com">one184@madmec.com</option>
+		<option value="one185@madmec.com">one185@madmec.com</option>
+	</select>
+	&nbsp;<br />
+	Automate register <input type="checkbox" id="automate_reg"/>
+	<br />
+	Apology to users
+<input type="checkbox" id="apology"/>
+	<br />
+	<a href="removeDuplicate.php">Remove Duplicate</a><br />
+	<a href="institute.php">Institute OR Job</a></td>
+    </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>To</strong></td>
+    <td bgcolor="#CCCCCC"><textarea name="tagetemails" cols="100" rows="10" id="tagetemails"></textarea></td>
+    </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>Subject</strong></td>
+    <td bgcolor="#CCCCCC"><input name="subject" type="text" id="subject" size="100"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>Message</strong></td>
+    <td bgcolor="#CCCCCC"><textarea name="message" id="message" cols="100" rows="10"></textarea></td>
+    </tr>
+  <tr>
+    <td colspan="2" bgcolor="#CCCCCC">&nbsp;</td>
+    </tr>
+  <tr>
+    <td colspan="2" align="center" bgcolor="#CCCCCC">
+	<input type="button" name="submit" id="submit" value="Submit">
+	&nbsp;
+	<input type="button" name="submit" id="stop" value="Stop">
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" bgcolor="#CCCCCC">
+		<div id="Televeision">
+		</div>
+	</td>
+  </tr>
+</table>
+</form>
+<div id="script">
+</div>
+</body>
+</html>

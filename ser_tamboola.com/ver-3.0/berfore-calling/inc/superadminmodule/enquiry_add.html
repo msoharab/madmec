@@ -1,0 +1,217 @@
+<!-- Enquiry add -->
+<div class="row output-panels" id="ctrlEnquiryAdd">
+    <h3 class="page-header text-primary">
+        <label>&nbsp; Add Enquiry</label>
+    </h3>
+    <div class="col-lg-12" id="ctEnquiryAdd">
+        <!-- Add Enquiry start -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <strong>Please fill the details of the visitor</strong>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" id="enquiry_form">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>Referrer :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input id="ref_box" type="text" class="form-control" placeholder="Name - Email Id - Cell Number" />
+                                                    <p class="help-block">This field is not mandatory.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>Attender :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div id="list_handel"></div>
+                                                    <input id="handel_box" type="text" class="form-control" placeholder="Name - Email Id - Cell Number" />
+                                                    <p class="help-block">This field is not mandatory.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>
+                                                        <span class="text-danger">
+                                                            
+                                                        </span>Visitor Name :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input name="eq_name" id="eq_name" type="text" class="form-control" />
+                                                    <p class="help-block" id="eq_name_msg">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>
+                                                        <span class="text-danger">
+                                                            
+                                                        </span>Email Id :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Email Id" name="enq_email" type="text" id="enq_email"
+                                                           maxlength="100" />
+                                                    <p class="help-block" id="enq_em_msgDiv">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>
+                                                        <span class="text-danger">
+                                                            
+                                                        </span>Cell Number :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Cell Number" name="enq_cnumber" type="text" id="enq_cnumber"
+                                                           maxlength="10" />
+                                                    <p class="help-block" id="cmsg">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>
+                                                        <span class="text-danger">
+                                                            
+                                                        </span>First Follow-up :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input name="followup1" type="text" class="form-control" id="followup1" readonly="readonly" />
+                                                    <p class="help-block" id="f1msg">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>Second Follow-up :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input name="followup2" type="text" class="form-control" id="followup2" readonly="readonly" />
+                                                    <p class="help-block">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>Third Follow-up :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input name="followup3" type="text" class="form-control" id="followup3" readonly="readonly" />
+                                                    <p class="help-block">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>How Do You Know About Us :</strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <select name="knowabout" id="knowabout" class="form-control">
+                                                        <option>Select know about us</option>
+                                                    </select>
+                                                    <p class="help-block">This field is not mandatory.</p>
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-lg-4">
+                                            <div class="col-lg-12">
+                                            <strong><span class="text-danger"></span><label>Interested In :</label></strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                            <select name="interested" id="interested" class="form-control" multiple rows=1></select>
+                                            <p class="help-block" id="intval">Press ctrl+click to select multiple.</p>
+                                            </div>
+                                            </div>-->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>
+                                                        <span class="text-danger">
+                                                            
+                                                        </span>
+                                                        <label>Joining Probability :</label>
+                                                    </strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <select name="jop" id="jop" class="form-control">
+                                                        <option value="selectVal" selected="selected">Select joining</option>
+                                                        <option value="Today">Today</option>
+                                                        <option value="2">After 2 days</option>
+                                                        <option value="4">After 4 days</option>
+                                                        <option value="7">After a week</option>
+                                                        <option value="30">After a month</option>
+                                                    </select>
+                                                    <p class="help-block" id="jopmsg">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong>
+                                                        <label>Comments :</label>
+                                                    </strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <textarea rows="4" cols="100" id="comments" class="form-control" style="resize:none;"></textarea>
+                                                    <p class="help-block">This field is not mandatory.</p>
+                                                </div>
+                                                <div class="col-lg-12">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <!--<div class="col-lg-4">
+                                            <div class="col-lg-12">
+                                            <strong><label>Fitness Goal :</label></strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                            <textarea rows="4" cols="100" id="ft_goal" class="form-control" style="resize:none;"></textarea>
+                                            <p class="help-block">This field is not mandatory.</p>
+                                            </div>
+                                            <div class="col-lg-12">&nbsp;</div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div id="enq_add_msg"></div>
+                                        <div class="form-group">
+                                            <input type="button" id="enquiry_save" class="btn btn-lg btn-primary btn-block" name="action" value="Save" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_open"
+                            id="myModal_enqaddbtn" style="display: none;"></button>
+                    <div class="modal fade red" id="myModal_open" tabindex="-1" role="dialog" aria-labelledby="myModal_open"
+                         aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModal_title">
+                                        <i class="fa fa-bell fa-fw fa-x2"></i>Alert</h4>
+                                </div>
+                                <div class="modal-body" id="myModal_enqaddbody"></div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal over -->
+                </div>
+                <!-- Add Profile End -->
+            </div>
+        </div>
+    </div>
+</div>

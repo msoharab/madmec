@@ -1,0 +1,143 @@
+<div class="row output-panels" id="ctrlAddOffer">
+    <h3 class="page-header text-primary"><label>Manage Offers</label></h3>
+    <div class="col-lg-12" id="ctAddOffer">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="output">
+                    <form id="offer_form" name="offer_form">
+                        <fieldset>
+                            <!-- modal -->
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_pay" id="myModal_paybtn" style="display: none;"></button>
+                            <div class="modal fade" id="myModal_pay" tabindex="-1" role="dialog" aria-labelledby="myModal_payfollow" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title" id="myModalFollowUp">Alert</h4>
+                                        </div>
+                                        <div class="modal-body" id="myModal_paybody"></div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="alertOkBtn" class="btn btn-default" data-dismiss="modal">Ok</button> <button type="button" id="alertCancelBtn" style="display:none" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- modal over -->
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>Name Of The Offer :</strong>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input type="text" name="of_name" id="of_name" class="form-control" placeholder="individual">
+                                        <p class="help-block" id="valid_nm">Press <b>Tab</b>or go button to move to next field.</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>Duration :</strong>
+                                    </div>
+                                    <div class="col-lg-12" id="of_duration">
+                                        <select class="form-control" id="of_duration">
+                                            <option>
+                                                Select Duration
+                                            </option>
+                                        </select>
+                                        <p class="help-block" id="valid_duration">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        &nbsp;
+                                    </div>
+                                </div><!-- Number Of Days -->
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>Number Of Days :</strong>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input type="text" name="of_no_days" id="of_no_days" class="form-control" placeholder="30" readonly="readonly" required="required">
+                                        <p class="help-block" id="valid_num">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>Facility Type :</strong>
+                                    </div>
+                                    <div class="col-lg-12" id="of_facility">
+                                        <select class="form-control" name="of_facility" id="of_facility">
+                                            <option>
+                                                Select Facility
+                                            </option>
+                                        </select>
+                                        <p class="help-block" id="valid_fact">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>Price Of The Offer :</strong>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input type="number" name="of_prize" id="of_prize" class="form-control" placeholder="1000">
+                                        <p class="help-block" id="valid_price">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        &nbsp;
+                                    </div>
+                                </div><!-- Minimum Member -->
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>Minimum Member :</strong>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <select name="of_member" id="of_member" class="form-control">
+                                            <option selected value="1">
+                                                1
+                                            </option>
+                                            <option value="2">
+                                                2
+                                            </option>
+                                            <option value="3">
+                                                3
+                                            </option>
+                                        </select>
+                                        <p class="help-block" id="valid_member">&nbsp;</p>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="col-lg-12">
+                                        <label><span id="no_days_msg" style="display:none; color:#FF0000; font-size:25px;">*</span> Description :</label>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <span>
+                                            <textarea placeholder="Details about the offer" name="of_des" id="of_des" class="form-control" style="resize:none;">
+                                            </textarea></span>
+                                        <p class="help-block" id="valid_desc">Press <b>Tab</b>or go button to move to next field.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-success btn-lg btn-block" id="offersave"><label>Save</label></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>LMcare</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+                <link href="assets/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="assets/css/styles.css" rel="stylesheet">
+		<!-- signin -->
+		<link href="assets/css/signin.css" rel="stylesheet">
+    </head>
+        <body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                                    <a class="navbar-brand" href="pharmacy.html">LMcare</a>	
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="javascript:void(0);" onclick="javascript:goto_app();" id="pharmcypatientmenuBut">Patient List</a></li>
+                                                <li id="displaymessagetype"></li>
+                                                <li><a href="javascript:void(0);" onclick="javascript:goto_signout();">Logout</a></li>
+                                        </ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		<br>
+		<div class="container">
+                    <section class="sub_container" id="pharmacy" >
+                            <div class="row">
+                                <div id="pharmcypatientDisplay">
+                                </div>
+                            </div>
+                    </section>
+                    <section class="sub_container" id="patientmessages" >
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                Chat Box
+                            </div>
+                            <div class="panel-body">
+                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                    <button  type="button" class="btn btn-warning" id="doctorinbox">inbox</button>
+                                 </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-info" id="doctorcompose">compose</button>
+                                 </div>
+                             </div>   <br/>
+                        <div id="displaychatdetails">
+                        </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <script src="assets/js/jquery-1.11.0.js"></script>
+                <script src="assets/js/jquery-ui.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+                <script src="assets/js/config.js"></script>
+                <script src="assets/js/control.js"></script>
+                <script src="assets/js/pharmacy.js"></script>
+                <script type="text/javascript">
+                    function goto_app(){
+				$(".sub_container").slideUp(1000);
+				$("#pharmacy").slideDown(1500);
+			}
+                    function goto_signout()
+                        {
+                            localStorage.removeItem("pharmacy");
+                            window.location.href='index.html';
+                        }
+                </script>
+</body>
+</html>		

@@ -1,0 +1,30 @@
+<!-- Mobile App -->
+<div class="row output-panels" id="ctrlCRMMobileApp">
+	<h3 class="page-header text-primary"><label id="pageheader">Message App Manager</label></h3>
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="nav nav-tabs">
+				<li><a href="#createMessage" data-toggle="tab" id="Compose">Compose</a></li>
+				<li class="active"><a href="#listMessage" data-toggle="tab" id="Outbox">Outbox</a></li>
+				<li><a href="#exp_cust" data-toggle="tab" id="Expired">Expired</a></li>
+				<li><a href="#tracker_cust" data-toggle="tab" id="Noshow-ups">No show-ups</a></li>
+				<li><a href="#follow_cust" data-toggle="tab" id="Follow-ups">Follow-ups</a></li>
+				<!--<li><a href="#crm_statistics" data-toggle="tab" id="Statistics">Statistics</a></li>-->
+			</ul>
+			<div class="tab-content" id="CRMAPPParentTarget">
+				<!-- Generate a compose form for all the customer -->
+				<div id="createMessage" class="tab-pane fade">Compose</div>
+				<!-- Generate a compose form for the expired customer -->
+				<div id="exp_cust" class="tab-pane fade">Expired</div>
+				<!-- Generate a compose form for the Follow-ups customers -->
+				<div id="follow_cust" class="tab-pane fade">Follow-ups</div>
+				<!-- Display the crm statistics -->
+				<!--<div id="crm_statistics" class="tab-pane fade">Statistics</div>-->
+				<!-- Generate the compose form for the active customer tracker -->
+				<div id="tracker_cust" class="tab-pane fade">No show-ups</div>
+				<!-- List all the customer who have received the message  -->
+				<div id="listMessage" class="tab-pane fade in active">Outbox</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,63 @@
+<div class="col-lg-12">  &nbsp;
+</div>
+<div class="col-lg-12">
+    <div class="panel panel-primary">
+        <div class="panel panel-heading">
+              Add Members
+        </div>
+        <div class="panel panel-body">
+             <form  id="adminaddform">
+            <fieldset>
+                <div class="form-group">
+                    <input onchange="javascript:checkNumber();" class="form-control" placeholder="MOBILE NUMBER" name="mobile" type="number" id="mobile" required="" value="" >
+                    <span class="danger" id="mobile_err" style="color:#F44336;display:none;">Mobile number already registered, Please type other number</span>
+                </div>
+                <div class="form-group">
+                        <input class="form-control" placeholder="Name" name="name" type="text" required="" id="name" />
+                </div>
+
+                
+                <div id="more_details">
+
+                        <div class="form-group">
+                                <input class="form-control" placeholder="Email" name="email" type="email" id="email" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="DOB EX:01-01-1989" name="dob" type="text" id="dob" readonly="" />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="gender" id="gender" >
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" placeholder="zipcode" name="zipcode" type="text" id="zipcode" />
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" placeholder="Address" name="address" type="text" id="address" />
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" placeholder="Frazer Town" name="locality" type="text" id="locality" />
+                        </div>
+                        <div class="form-group">
+                                <select class="form-control" name="city"  id="city" >
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                                <select class="form-control" name="province"  id="province" >
+                                    <option value="Bangalore">Karnataka</option>
+                                    <option value="Hyderabad">Andhra</option>
+                                </select>
+                        </div>
+                    <div class="form-group"> <div id="disuertype"></div></div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block"  id="submitt"><i class="fa fa-sign-in fa-fw fa-2x"></i> &nbsp;SUBMIT</button>
+        </fieldset>
+ </form>
+        </div>
+    </div>
+</div>

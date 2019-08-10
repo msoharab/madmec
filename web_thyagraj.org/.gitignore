@@ -1,0 +1,7 @@
+config/ampache.cfg.php
+rest/.htaccess
+play/.htaccess
+*.phpproj
+*.sln
+*.v11.suo
+*.suo

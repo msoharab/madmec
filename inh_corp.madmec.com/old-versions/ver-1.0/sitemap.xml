@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url>
+  <loc>http://www.madmec.com/</loc>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member1.jpg</image:loc>
+       <image:caption>Mohammed Soharab S, CEO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member2.jpg</image:loc>
+       <image:caption>Naseer Pasha N, COO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member3.jpg</image:loc>
+       <image:caption>Syed Sirajur Rahaman, CFO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member4.jpg</image:loc>
+       <image:caption>Shakeel Ahmed, CIO</image:caption>
+    </image:image>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.madmec.com/index.html</loc>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member1.jpg</image:loc>
+       <image:caption>Mohammed Soharab S, CEO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member2.jpg</image:loc>
+       <image:caption>Naseer Pasha N, COO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member3.jpg</image:loc>
+       <image:caption>Syed Sirajur Rahaman, CFO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member4.jpg</image:loc>
+       <image:caption>Shakeel Ahmed, CIO</image:caption>
+    </image:image>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.madmec.com/index.html#section-about</loc>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member1.jpg</image:loc>
+       <image:caption>Mohammed Soharab S, CEO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member2.jpg</image:loc>
+       <image:caption>Naseer Pasha N, COO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member3.jpg</image:loc>
+       <image:caption>Syed Sirajur Rahaman, CFO</image:caption>
+    </image:image>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/team/member4.jpg</image:loc>
+       <image:caption>Shakeel Ahmed, CIO</image:caption>
+    </image:image>
+	<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.madmec.com/index.html#section-2015</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.madmec.com/index.html#section-2013</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.madmec.com/index.html#section-works</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.madmec.com/index.html#section-contact</loc>
+     <image:image>
+       <image:loc>http://www.madmec.com/img/roadmap.png</image:loc>
+       <image:caption>Road map to MadMec office.</image:caption>
+    </image:image>
+	<changefreq>daily</changefreq>
+</url>
+</urlset>

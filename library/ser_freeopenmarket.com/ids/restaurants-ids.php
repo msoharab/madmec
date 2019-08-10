@@ -1,0 +1,211 @@
+<?php
+class restaurant_ids {
+
+    private $restaurant_ids;
+
+    public function __construct($config) {
+        $this->restaurant_ids = array(
+            "AddRestaurant" => array(
+                "form" => "AddRestaurantForm",
+                "fields" => array(
+                    "field1",
+                    "field2",
+                    "field3",
+                    "field4",
+                    "field5",
+                    "field6",
+                    "field7",
+                    "field8",
+                    "field9",
+                    "field10",
+                    "field11",
+                    "field12",
+                    "field13",
+                    "field14",
+                    "field15",
+                    "field16",
+                ),
+                "dataType" => "JSON",
+                "processData" => false,
+                "contentType" => false,
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "RestaurantAdd",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "logoImg" => "file1",
+                "logoImgClass" => "picedit_box",
+                "headerImg" => "file2",
+                "headerImgClass" => "picedit_box",
+                "inView" => "file3",
+                "inViewClass" => "picedit_box",
+                "status" => "#status",
+                "bar" => ".bar",
+                "percent" => ".percent",
+                "percentVal" => "0%",
+                "picedit" => false,
+                "ajaxForm" => false,
+                "defaultImage" => $config["DEFAULT_IMG"],
+                "clone" => array(
+                    "clonereq00",
+                    "cloneresp00",
+                ),
+                "cloneplusbut" => array(
+                    "cloneplusbut1",
+                    "cloneplusbut2",
+                ),
+                "cloneminusbut" => array(
+                    "cloneminusbut1",
+                    "cloneminusbut2",
+                ),
+                "reqparam" => array(
+                    "reqparam0",
+                ),
+                "resparam" => array(
+                    "respparam0",
+                    "respval0",
+                ),
+            ),
+            "searchRestaurant" => array(
+                "form" => "searchRestaurantForm",
+                "fields" => array(
+                    "field1",
+                ),
+                "dataType" => "JSON",
+                "processData" => false,
+                "contentType" => false,
+                "loadRestaurant" => true,
+                "listtype" => "select",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "RestaurantSearch",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+            ),
+            "AssignRestaurant" => array(
+                "form" => "AssignRestaurantForm",
+                "fields" => array(
+                    "fieldd1",
+                    "fieldd2",
+                    "fieldd3",
+                    "fieldd4",
+                ),
+                "dataType" => "JSON",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "AssignRestaurant",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "btnDiv" => "assignBtn",
+                "searchRestaurant" => array(
+                    "form" => "searchRestaurantForm",
+                    "fields" => array(
+                        "field1",
+                    ),
+                    "dataType" => "JSON",
+                    "processData" => false,
+                    "contentType" => false,
+                    "loadRestaurant" => false,
+                    "listtype" => "select",
+                    "type" => "POST",
+                    "url" => $config["URL"] . $config["CTRL_35"] . "RestaurantSearch",
+                    "Redurl" => $config["URL"] . $config["CTRL_35"],
+                ),
+                "searchUser" => array(
+                    "form" => "searchUserForm",
+                    "fields" => array(
+                        "searchUser1",
+                    ),
+                    "dataType" => "JSON",
+                    "processData" => false,
+                    "contentType" => false,
+                    "loadUser" => false,
+                    "listtype" => "select",
+                    "type" => "POST",
+                    "url" => $config["URL"] . $config["CTRL_35"] . "UserSearch",
+                    "Redurl" => $config["URL"] . $config["CTRL_35"],
+                ),
+            ),
+            "Request" => array(
+                "fields" => array(
+                    "fieldr1",
+                    "fieldr2",
+                ),
+                "dataType" => "JSON",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "Request",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "btnDiv" => "RequestRestaurantBtn",
+            ),
+            "ListRestaurant" => array(
+                "fields" => array(
+                    "fieldL1",
+                    "fieldL2",
+                ),
+                "dataType" => "JSON",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "ListRestaurant",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "btnDiv" => "listRestaurantBtn",
+            ),
+            "EditRestaurant" => array(
+                "form" => "EditRestaurantForm",
+                "fields" => array(
+                    "field1",
+                    "field2",
+                    "field3",
+                    "field4",
+                    "field5",
+                    "field6",
+                    "field7",
+                    "field8",
+                    "field9",
+                    "field10",
+                    "field11",
+                    "field12",
+                    "field13",
+                    "field14",
+                    "field15",
+                    "field16",
+                    "field17"
+                ),
+                "dataType" => "JSON",
+                "processData" => false,
+                "contentType" => false,
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "RestaurantEdit",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "logoImg" => "file1",
+                "logoImgClass" => "picedit_box",
+                "headerImg" => "file2",
+                "headerImgClass" => "picedit_box",
+                "inView" => "file3",
+                "inViewClass" => "picedit_box",
+                "status" => "#status",
+                "bar" => ".bar",
+                "percent" => ".percent",
+                "percentVal" => "0%",
+                "picedit" => false,
+                "ajaxForm" => false,
+                "defaultImage" => $config["DEFAULT_IMG"],
+                "clone" => array(
+                    "clonereq00",
+                    "cloneresp00",
+                ),
+                "cloneplusbut" => array(
+                    "cloneplusbut1",
+                    "cloneplusbut2",
+                ),
+                "cloneminusbut" => array(
+                    "cloneminusbut1",
+                    "cloneminusbut2",
+                ),
+                "reqparam" => array(
+                    "reqparam0",
+                ),
+                "resparam" => array(
+                    "respparam0",
+                    "respval0",
+                ),
+            ),
+        );
+    }
+    public function getIds() {
+        return $this->restaurant_ids;
+    }
+}
+?>

@@ -1,0 +1,57 @@
+<div class="row output-panels" id="ctrlAddPackage">
+    <h3 class="page-header text-primary">
+        <label>Manage Packages</label>
+    </h3>
+    <div class="col-lg-12" id="ctAddPackage">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="output">
+		    <form role="form" method="POST" name="addpackageform" id="addpackageform">
+			<fieldset>
+			    <div class="row">
+				<!-- Package Type ----->
+				<div class="col-lg-4">
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"></span> Package Type :<i class="fa fa-caret-down fa-fw"></i></strong>
+				    </div>
+				    <div class="col-lg-12">
+					<select class="form-control" name="pack_type"  id="pack_type">
+					</select>
+					<p class="help-block" id="pack_tymsg">&nbsp;</p>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				</div>
+				<!-- Number Of session -->
+				<div class="col-lg-4">
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"></span> Number Of Session :<i class="fa fa-caret-down fa-fw"></i></strong>
+				    </div>
+				    <div class="col-lg-12" id="No_of_session">
+					<input class="form-control" placeholder="Number Of Session" name="pack_session"  type="number" id="pack_session" min="1" max="100"/>
+					<p class="help-block" id="pack_nsmsg">&nbsp;</p>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				</div>
+				<!-- Prize -->
+				<div class="col-lg-4">
+				    <div class="col-lg-12">
+					<strong><span class="text-danger"></span> Price Of The Package :<i class="fa fa-caret-down fa-fw"></i></strong>
+				    </div>
+				    <div class="col-lg-12">
+					<input name="pack_prize" type="number" class="form-control" id="pack_prize" placeholder="1000" />
+					<p class="help-block" id="pack_rsmsg">&nbsp;</p>
+				    </div>
+				    <div class="col-lg-12">&nbsp;</div>
+				</div>
+			    </div> 
+			    <div class="row">
+				<button type="button" class="btn btn-success btn-lg btn-block" id="addpackageBtn"><label>Save</label></button>
+			    </div>
+			    <div id="package_msg"></div>
+			</fieldset>
+		    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

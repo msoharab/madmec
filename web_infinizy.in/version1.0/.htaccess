@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^infinizy.in [NC]
+RewriteRule ^(.*)$ http://www.infinizy.in/$1 [L,R=301]

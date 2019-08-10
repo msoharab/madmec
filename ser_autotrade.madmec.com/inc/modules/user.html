@@ -1,0 +1,292 @@
+<div class="row output-panels" id="pUsers">
+    <ul class="nav nav-tabs" id="user_menu">
+        <li class="active"><a href="#add_user" data-toggle="tab" id="addusersbut">Add User</a></li>
+        <li><a href="#list_user" data-toggle="tab" id="listusersbut">List User</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_user">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Add Supplier, Retailer, Distributor, Collector, Driver etc....</h4>
+                        </div>
+                        <div class="panel-body" id="acrdadduser">
+                            <form id="adduserForm">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- User Type -->
+                                        <div class="col-lg-4">
+                                            <div class="col-lg-12">
+                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> User Type <i class="fa fa-caret-down fa-fw"></i></strong>
+                                            </div>
+                                            <div class="col-lg-12 form-group">
+                                                <div class="form-group" id="TVUtype">
+                                                    <input type="radio" class="radio-botton" name="user_type" id="user_type_1" value="1"/> : Supplier<br />
+                                                    <input type="radio" class="radio-botton" name="user_type" id="user_type_2" value="2"/> : Collector<br />
+                                                    <input type="radio" class="radio-botton" name="user_type" id="user_type_3" value="3"/> : Retailer<br />
+                                                    <input type="radio" class="radio-botton" name="user_type" id="user_type_4" value="4"/> : Distributor<br />
+                                                    Fetch the user type from db display radio buttons
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- User Name -->
+                                        <div class="col-lg-4">
+                                            <div class="col-lg-12">
+                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> User Name <i class="fa fa-caret-down fa-fw"></i></strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="User Name" name="user_name" type="text" id="user_name" maxlength="100"/>
+                                                <p class="help-block" id="user_name_msg">Enter/ Select.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Outstanding Amount -->
+                                        <div class="col-lg-4">
+                                            <div class="col-lg-12">
+                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Outstanding Amount <i class="fa fa-caret-down fa-fw"></i></strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Outstanding Amount" name="ot_amt" type="number" id="ot_amt" maxlength="11" min="0" value="0"/>
+                                                <p class="help-block" id="ot_amt_msg">Enter/ Select.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading">
+                                                <h4>Products, Email IDs, Cell Numbers, Bank Accounts</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="nav nav-pills">
+                                                    <li class="active"><a href="#produc-pills" id="prdpills" data-toggle="tab">Products</a>
+                                                    </li>
+                                                    <li><a href="#emails-pills" id="emlpills"data-toggle="tab">Email IDs</a>
+                                                    </li>
+                                                    <li><a href="#cnums-pills" id="cnmpills"data-toggle="tab">Cell Numbers</a>
+                                                    </li>
+                                                    <li><a href="#backacs-pills" id="bacpills"data-toggle="tab">Bank Accounts</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade in active" id="produc-pills">
+                                                        <!-- Products -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Products <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                                                <button type="button" class="text-primary btn btn-success  btn-md" id="plus_product_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                            </div>
+                                                            <div class="col-lg-12" id="multiple_product">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="emails-pills">
+                                                        <!-- Email ID -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Email ID <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                                                <button type="button" class="text-primary btn btn-success  btn-md" id="plus_email_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                            </div>
+                                                            <div class="col-lg-12" id="multiple_email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="cnums-pills">
+                                                        <!-- Cell Number -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Cell Number <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                                                <button type="button" class="text-primary btn btn-success  btn-md" id="plus_cnumber_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                            </div>
+                                                            <div class="col-lg-12" id="multiple_cnumber">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="backacs-pills">
+                                                        <!-- Bank accounts -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Bank Accounts <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                                                <button type="button" class="text-right btn btn-success  btn-md" id="plus_account_"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                                            </div>
+                                                            <div class="col-lg-12" id="multiple_accounts">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Telephone Number -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Telephone Number <i class="fa fa-caret-down fa-fw"></i></strong>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-4">
+                                            <input class="form-control" placeholder="080" name="pcode" type="number" id="pcode" maxlength="15" value="0"/>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <input class="form-control" placeholder="Telephone Number" name="telephone" type="number" id="telephone" maxlength="20" value="0"/>
+                                        </div>
+                                        <p class="help-block" id="tp_msg">Enter/ Select.</p>
+                                    </div>
+                                </div>
+                                <!-- ACS ID -->
+                                <div class="row" style="display:none;">
+                                    <div class="col-lg-12">
+                                        <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> ACS ID <i class="fa fa-caret-down fa-fw"></i></strong>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input class="form-control" placeholder="Access Id for short login id" name="acs_id" type="text" id="acs_id" maxlength="15" />
+                                        <p class="help-block" id="ac_msg">Enter/ Select.</p>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <strong>Address</strong>&nbsp;
+                                        <button type="button" class="text-info btn btn-info  btn-md" id="addr_show_but" onClick="$('#address_body').show(300);"><i class="fa fa-plus fa-fw fa-x2"></i></button>&nbsp;
+                                        <button type="button" class="text-info btn btn-danger  btn-md" id="addr_hide_but" onClick="$('#address_body').hide(300);"><i class="fa fa-minus fa-fw fa-x2"></i></button>&nbsp;
+                                    </div>
+                                    <div class="panel-body" id="address_body" style="display:none;">
+                                        <div class="row">
+                                            <!-- Country -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Country <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Country" name="country" type="text" id="country" maxlength="100"/>
+                                                    <p class="help-block" id="comsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                            <!-- State / Province -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> State / Province <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="State / Province" name="province" type="text" id="province" maxlength="150" />
+                                                    <p class="help-block" id="prmsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                            <!-- District / Department -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> District / Department <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="District / Department" name="district" type="text" id="district" maxlength="100"/>
+                                                    <p class="help-block" id="dimsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <!-- City / Town -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> City / Town <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="City / Town" name="city_town" type="text" id="city_town" maxlength="100"/>
+                                                    <p class="help-block" id="citmsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                            <!-- Street / Locality -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Street / Locality <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Street / Locality" name="st_loc" type="text" id="st_loc" maxlength="100"/>
+                                                    <p class="help-block" id="stlmsg">Press enter or go button to move to next feild.</p>
+                                                </div>
+                                            </div>
+                                            <!-- Address Line -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Address Line <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Address Line" name="addrs" type="text" id="addrs" maxlength="200"/>
+                                                    <p class="help-block" id="admsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <!-- Zipcode -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Zipcode <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Zipcode" name="zipcode" type="text" id="zipcode" maxlength="25" />
+                                                    <p class="help-block" id="zimsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                            <!-- Personal Website -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Personal Website <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Personal Website" name="website" type="text" id="website" maxlength="250" value="http://"/>
+                                                    <p class="help-block" id="wemsg">Enter/ Select.</p>
+                                                </div>
+                                            </div>
+                                            <!-- Google Map URL -->
+                                            <div class="col-lg-4">
+                                                <div class="col-lg-12">
+                                                    <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Google Map URL <i class="fa fa-caret-down fa-fw"></i></strong>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <input class="form-control" placeholder="Google Map URL" name="gmaphtml" type="text" id="gmaphtml" value="http://"/>
+                                                    <p class="help-block" id="gmmsg">Press enter or go button to update user address.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="adduserBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list_user">
+            <!-- search menu -->
+            <div class="row">
+                <div class="col-lg-12" id="menuHtml">								
+                </div> 
+            </div>
+            <!-- /search menu -->
+            <!-- search form -->
+            <div class="row">
+                <div class="col-lg-12" id="searhHtml">
+                </div>
+                <div class="col-lg-12">&nbsp;
+                </div>
+            </div>
+            <!-- /search form -->
+            <div class="row">
+                <div class="col-lg-12" id="lstusrloader"></div>
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            List users
+                        </div>
+                        <div class="panel-body table-responsive" id="accorlistuser"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="user_message"></div>
+</div>

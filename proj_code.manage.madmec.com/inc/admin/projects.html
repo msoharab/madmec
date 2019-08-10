@@ -1,0 +1,126 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Countries
+        <small>Pic3Pic</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">Countries</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content" >
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Country's</a></li>
+        <li><a href="#Add" data-toggle="tab" id="Addfacility">Add Country</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade" id="Add">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><i class="fa fa-map fa-fw fa-x2"></i>&nbsp;<strong>Add Country</strong></div>
+                <div class="panel-body">
+                    <form id='projectaddform'>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Continent : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12" id="selectcontinent">
+                                <!--<input  id="projectname" name="projectname" type="text" class="form-control"  placeholder="Continent" required=""/>-->
+                                <select class="form-control" name="selectcont" id="selectcontss"><option value="">Please Select the Continent</option></select>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Country Name : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="countryname" name="countryname"  type="text" class="form-control" required="" placeholder="Country Name"/>
+                                <span id="err_email"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>ISO : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="ISO" name="ISO"  type="text" class="form-control"  placeholder="ISO" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>ISO3 : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="ISO3" name="ISO3"  type="text" class="form-control"  placeholder="ISO3"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>ISO-Numeric : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="ISO-Numeric" name="ISO-Numeric" type="text" class="form-control"  placeholder="ISO-Numeric" required=""/>
+                                <span id="err_email"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Capital : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="Capital" name="Capital"  type="text" class="form-control"  placeholder="Capital"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>T.L.D : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="tld" name="tld"  type="text" class="form-control"  placeholder="Top Level Domain"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong><i class="fa fa-star text-danger">&nbsp;</i>Currency Code : <i class="fa fa-caret-down fa-fw"></i></strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input  id="ccode" name="ccode"  type="text" class="form-control"  placeholder="Currency Code"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">&nbsp;</div>
+                        <div class="col-lg-12">
+                            <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade in active" id="Show">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><i class="fa fa-map fa-fw fa-x2"></i>&nbsp;<strong>List Country's</strong></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12" id="selectcontinent2">
+                            <!--<input  id="projectname" name="projectname" type="text" class="form-control"  placeholder="Continent" required=""/>-->
+                            <select class="form-control" name="selectcont1" id="selectcontss1"><option value="">Please Select the Continent</option></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <div class="table-responsive" id='disvehicletype'>
+                                Loading............
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

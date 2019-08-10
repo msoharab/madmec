@@ -1,0 +1,70 @@
+<?php
+define("MODULE_0", "config.php");
+require_once(MODULE_0);
+require_once(CONFIG_ROOT . MODULE_0);
+$module = array(
+    "client" => preg_replace("/\s+/", " ", file_get_contents(MOD_CLIENT)),
+    "clubSelect" => preg_replace("/\s+/", " ", file_get_contents(MOD_CLUBSELECT)),
+    "dash" => preg_replace("/\s+/", " ", file_get_contents(MOD_DASHBOARD)),
+    "aprofile" => preg_replace("/\s+/", " ", file_get_contents(MOD_APROFILE)),
+    "enqadd" => preg_replace("/\s+/", " ", file_get_contents(MOD_ENQADD)),
+    "enqflw" => preg_replace("/\s+/", " ", file_get_contents(MOD_ENQFLW)),
+    "enqlist" => preg_replace("/\s+/", " ", file_get_contents(MOD_ENQLIST)),
+    "custadd" => preg_replace("/\s+/", " ", file_get_contents(MOD_CUSTADD)),
+    "custlist" => preg_replace("/\s+/", " ", file_get_contents(MOD_CUSTLIST)),
+    "custimpt" => preg_replace("/\s+/", " ", file_get_contents(MOD_CUSTIMPT)),
+    "grpadd" => preg_replace("/\s+/", " ", file_get_contents(MOD_GRPADD)),
+    "grplist" => preg_replace("/\s+/", " ", file_get_contents(MOD_GRPLIST)),
+    "traadd" => preg_replace("/\s+/", " ", file_get_contents(MOD_TRAADD)),
+    "tralist" => preg_replace("/\s+/", " ", file_get_contents(MOD_TRALIST)),
+    "trapay" => preg_replace("/\s+/", " ", file_get_contents(MOD_TRAPAY)),
+    "traimpt" => preg_replace("/\s+/", " ", file_get_contents(MOD_TRAIMPT)),
+    "mngatten" => preg_replace("/\s+/", " ", file_get_contents(MOD_MNGATTEN)),
+    "mngfacility" => preg_replace("/\s+/", " ", file_get_contents(MOD_MNGFACILITY)),
+    "mngaddofr" => preg_replace("/\s+/", " ", file_get_contents(MOD_MNGADDOFR)),
+    "mnglistofr" => preg_replace("/\s+/", " ", file_get_contents(MOD_MNGLISTOFR)),
+    "mngaddpack" => preg_replace("/\s+/", " ", file_get_contents(MOD_MNGADDPACK)),
+    "mnglistpack" => preg_replace("/\s+/", " ", file_get_contents(MOD_MNGLISTPACK)),
+    "accpackfee" => preg_replace("/\s+/", " ", file_get_contents(MOD_ACCPACKFEE)),
+    "accfctfee" => preg_replace("/\s+/", " ", file_get_contents(MOD_ACCFCTFEE)),
+    "accduebal" => preg_replace("/\s+/", " ", file_get_contents(MOD_ACCDUEBAL)),
+    "accstfpay" => preg_replace("/\s+/", " ", file_get_contents(MOD_ACCSTFPAY)),
+    "accexp" => preg_replace("/\s+/", " ", file_get_contents(MOD_ACCEXP)),
+    "stsacc" => preg_replace("/\s+/", " ", file_get_contents(MOD_STSACC)),
+    "stsreg" => preg_replace("/\s+/", " ", file_get_contents(MOD_STSREG)),
+    "ststra" => preg_replace("/\s+/", " ", file_get_contents(MOD_STSTRA)),
+    "stscust" => preg_replace("/\s+/", " ", file_get_contents(MOD_STSCUST)),
+    "repclub" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPCLUB)),
+    "reppack" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPPACK)),
+    "repreg" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPREG)),
+    "reppay" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPPAY)),
+    "repexp" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPEXP)),
+    "repbal" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPBAL)),
+    "repcust" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPCUST)),
+    "repemp" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPEMP)),
+    "reprec" => preg_replace("/\s+/", " ", file_get_contents(MOD_REPREC)),
+    "crmmob" => preg_replace("/\s+/", " ", file_get_contents(MOD_CRMMOB)),
+    "crmfeed" => preg_replace("/\s+/", " ", file_get_contents(MOD_CRMFEED)),
+    "userrequest" => preg_replace("/\s+/", " ", file_get_contents(MOD_USERREQUEST)),
+    "custrequest" => preg_replace("/\s+/", " ", file_get_contents(MOD_CUSTREQUEST)),
+//    "addgym" => preg_replace("/\s+/", " ", file_get_contents(MOD_ADDGYM)),
+    "owneruser" => preg_replace("/\s+/", " ", file_get_contents(MOD_OWNERUSER)),
+    "admincollection" => preg_replace("/\s+/", " ", file_get_contents(SU_MODULE_ADMINCOLLECTION)),
+    "notify" => preg_replace("/\s+/", " ", file_get_contents(SU_MODULE_NOTIFY)),
+    "orderfollowups" => preg_replace("/\s+/", " ", file_get_contents(SU_MODULE_FOLLOWUP)),
+    "duefollowups" => preg_replace("/\s+/", " ", file_get_contents(SU_MODULE_DUEFOLLOWUP)),
+    "dueadmin" => preg_replace("/\s+/", " ", file_get_contents(SU_MODULE_DUE)),
+    "saenqadd" => preg_replace("/\s+/", " ", file_get_contents(SU_MOD_ENQADD)),
+    "saenqflw" => preg_replace("/\s+/", " ", file_get_contents(SU_MOD_ENQFLW)),
+    "saenqlist" => preg_replace("/\s+/", " ", file_get_contents(SU_MOD_ENQLIST)),
+    "sentcredentail" => preg_replace("/\s+/", " ", file_get_contents(SU_MOD_SENT_CREDENTIALS)),
+    "sasms" => preg_replace("/\s+/", " ", file_get_contents(SU_MOD_SMS)),
+    "custsearchgym" => preg_replace("/\s+/", " ", file_get_contents(CUST_SEARCHGYM)),
+);
+if (!isset($_SESSION["GYMREQPEN"])) {
+    $module['addgym'] = preg_replace("/\s+/", " ", file_get_contents(MOD_ADDGYM));
+} else {
+    $module['addgym'] = "<div class='col-lg-12'>&nbsp;</div><div class='col-lg-12'>&nbsp;</div><div class='col-lg-12'>&nbsp;</div><div class='col-lg-12'>&nbsp;</div><div class='col-lg-12 text-center'><strong class='text-danger' style='font-size : 20px' >Your Previous Request is Under Process....</strong></div>";
+}
+echo json_encode($module);
+?>

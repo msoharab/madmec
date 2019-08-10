@@ -1,0 +1,105 @@
+<!-- Drawing -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pDrawing">
+    <ul class="nav nav-tabs" id="draw_menu">
+        <li><a href="#add_prtkdrw" data-toggle="tab" id="adddrawbut">Upload Drawings</a> </li>
+        <li><a href="#list_prtaskdrw" data-toggle="tab" id="listdrawbut">List Drawings</a> </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Drawings -->
+        <div class="tab-pane fade  in active" id="add_prtkdrw">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    Upload drawing.
+                </div>
+                <div class="panel-body" id="accordionupdraw">
+                    <form role="form" action="" method="post" name="adddrawForm" id="adddrawForm" enctype="multipart/form-data">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Select Designer / Employee -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select Designer / Employee  </strong> </div>
+                                        <div class="col-lg-12" id="UDrawDesinList">
+                                            <input class="form-control" placeholder="Select Designer / Employee" name="UDrawDesin" type="text" id="UDrawDesin" maxlength="100" />
+                                            <p class="help-block" id="UDrawDesin_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <!-- Select PCC / Project Task -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Select PCC / Project Task   </strong> </div>
+                                        <div class="col-lg-12" id="UDrawPccList">
+                                            <input class="form-control" placeholder="Select PCC / Project Task" name="UDrawPcc" type="text" id="UDrawPcc" maxlength="100" />
+                                            <p class="help-block" id="UDrawPcc_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" id="stdraw_descp"></div>
+                                <div class="col-lg-12">
+                                    <!-- Drawing Name -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Drawing Name </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Drawing Name" name="draw_name" type="text" id="draw_name" maxlength="100" />
+                                            <p class="help-block" id="draw_name_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                    <!-- Date of Upload -->
+                                    <div class="col-lg-6">
+                                        <div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date of Upload </strong> </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Date of Upload" name="draw_dou" type="text" id="draw_dou" maxlength="100" readonly="readonly" />
+                                            <p class="help-block" id="draw_dou_msg">Enter / Select</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Upload Drawing -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4> Upload Drawing </h4>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                            <!-- Select a file -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="file" name="draw_file_upload" id="draw_file_upload" />
+                                        <p class="help-block" id="draw_file_upload_msg">Enter / Select</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                            <!-- Button -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-lg btn-primary btn-block" name="upload_draw_But" id="upload_draw_But">Upload and Save</button>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                            </div>
+                            <!-- Loaders -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="progress" id="draw_progress">
+                                        <div class="bar" id="draw_bar"></div>
+                                        <div class="percent" id="draw_percent">0%</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12" id="draw_status"></div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- List Drawings -->
+        <div class="tab-pane fade" id="list_prtaskdrw">
+            <div class="row">
+                <div class="col-lg-12" id="listDRAW"> List Drawings </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="draw_message"></div>
+</div>

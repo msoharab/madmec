@@ -1,0 +1,86 @@
+﻿<!-- staff payment -->
+    <div class="row output-panels" id="ctrlStaffPay">
+        <h3 class="page-header text-primary"><label>&nbsp; Staff Payments</label></h3>
+        <div class="col-lg-12" id="ctStaffPay">
+            <div class="panel-body text-primary" id="StaffPayoutput">
+                <form id="payform" name="payform">
+                    <fieldset name="payments" id="payments">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="col-lg-12">
+                                    <strong><span id="name_msg" style="display:none; color:#FF0000; font-size:25px;">*</span> Name - Email Id - Cell Number of the staff :</strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div id="list_ref"></div><input name="name" type="text" class="form-control" id="payname" placeholder="Name - Email Id - Cell Number" required="required">
+                                </div>
+                                <div class="col-lg-12" id="pnm_msg">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12">
+                                    <strong><span id="amt_msg" style="display:none; color:#FF0000; font-size:25px;">*</span>Amount :</strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="text" name="amount" class="form-control" id="amount" placeholder="0.00" required="required">
+                                </div>
+                                <div class="col-lg-12" id="pamt_msg">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="col-lg-12">
+                                    <strong>Date :</strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <span><input name="pay_date" type="text" class="form-control" id="st_pay_date" readonly="readonly"></span>
+                                </div>
+                                <div class="col-lg-12">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-12">
+                                    <strong>Description :</strong>
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea rows="6" cols="30" id="description" class="form-control" placeholder="January salary paid to syed on so and so details..." required="required">
+</textarea>
+                                </div>
+                                <div class="col-lg-12" id="pdec_msg">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="button" class="btn-primary btn-lg btn-block" id="paySave" value="Save">
+                            </div>
+                            <div class="col-lg-12">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </fieldset>
+                </form><!-- modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_pay" id="myModal_paybtn" style="display: none;"></button>
+                <div class="modal fade" id="myModal_pay" tabindex="-1" role="dialog" aria-labelledby="myModal_payfollow" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModal_payfollow">Alert</h4>
+                            </div>
+                            <div class="modal-body" id="myModal_paybody"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- modal over -->
+            </div>
+        </div>
+    </div>
+
+

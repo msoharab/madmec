@@ -1,0 +1,381 @@
+﻿<!-- customer add -->
+    <div class="row output-panels" id="ctrlCustomerAdd">
+        <h3 class="page-header text-primary"><label>&nbsp;Add Customer</label></h3>
+        <div class="col-lg-12" id="ctCustomerAdd">
+            <form role="form" method="post" name="userdetails" id="userdetails">
+                <fieldset>
+                    <div id="custmodeofpament">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>&nbsp;&nbsp;Registration Fee :</strong>
+                                    </div><select name="cust_mod_pay" id="cust_mod_pay_1" class="form-control">
+                                        <option value="NULL">
+                                            Select Mode Of Payment
+                                        </option>
+                                    </select>
+                                    <p class="help-block" id="mod_msg_1">&nbsp;</p>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-lg-12">
+                                        <strong>&nbsp;&nbsp;Amount :</strong>
+                                    </div><input name="user_fee" type="text" value="0" id="cust_fee_mop_1" class="form-control">
+                                </div>
+                                <div class="col-lg-3" id="alltextgrp_1"></div>
+                                <div class="col-lg-3">
+                                    <a id="cust_addmop_1" class="btn btn-success" href="javascript:void(0);" onclick="$(this).hide();"></a>
+                                </div>
+                                <div id="keycodes" style="display:none">
+                                    1
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Cell Number :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="emer_cellnum" type="text" class="form-control" required="" placeholder="9999999999" maxlength="10" id="emer_cellnum">
+                                <p class="help-block" id="cnummsg">&nbsp;</p>
+                            </div>
+                        </div><!-- Cell Code -->
+                        <div class="col-lg-3" style="display:none;">
+                            <div class="col-lg-12">
+                                <strong>Cell Code :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="cell_id" type="text" class="form-control" maxlength="5" id="cell_id" required="" value="+91" readonly="readonly">
+                                <p class="help-block" id="cellmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- Cell Number -->
+                        <!-- Name -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Name :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control" placeholder="Name" name="cust_name" required="" type="text" id="cust_name">
+                                <p class="help-block" id="cust_nmmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- Emaild Id -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Emaild Id :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="emer_email" type="text" class="form-control" required="" placeholder="Enter Email Id" id="emer_email">
+                                <p class="help-block" id="emmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- DOB -->
+                        <div class="col-lg-3">
+                            <!--  
+                        <div class="col-lg-12">
+                            <strong><span class="text-danger" style="display:none;"></span> Date Of Birth :<i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input name="dateofbirth" type="text" class="form-control" id="dateofbirth" placeholder="DOB" readonly="readonly" style="cursor:pointer" />
+                            <p class="help-block" id="gym_dobmsg">&nbsp;</p>
+                        </div>
+                        -->
+                        </div><!-- Date Of Join -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Date Of Join :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="dateofjoin" type="text" class="form-control" id="dateofjoin" required="" placeholder="DOJ" readonly="readonly" style="cursor:pointer">
+                                <p class="help-block" id="gym_dojmsg">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            &nbsp;
+                        </div><!-- Referred By -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12" id="ddd">
+                                <strong>Referred By :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="list_ref"></div><input id="ref_boxadd" type="text" class="form-control" placeholder="Name - Email Id - Cell Number">
+                                <p class="help-block" id="cust_rfmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- sex -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Gender :</strong>
+                            </div>
+                            <div class="col-lg-12" id="cust_sexParent">
+                                <select class="form-control">
+                                    <option>
+                                        Select sex
+                                    </option>
+                                </select>
+                                <p class="help-block" id="cust_sexParentmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- Emergency Name -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Emergency Name :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="emer_name" type="text" class="form-control" required="" placeholder="Your family member" id="emer_name">
+                                <p class="help-block" id="emnmmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- Emeragency Number -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Emergency Number :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="emer_num" type="text" class="form-control" required="" placeholder="9999999999" maxlength="10" id="emer_num">
+                                <p class="help-block" id="emnummsg">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Company -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Company :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="comp_name" type="text" class="form-control" required="" placeholder="MadMec" id="comp_name">
+                                <p class="help-block" id="customer_cpmsg">&nbsp;</p>
+                            </div>
+                        </div><!-- Occupation -->
+                        <div class="col-lg-3">
+                            <div class="col-lg-12">
+                                <strong>Occupation :</strong>
+                            </div>
+                            <div class="col-lg-12">
+                                <select name="cust_occ" id="cust_occ" class="form-control">
+                                    <option value="">
+                                        Select Occupation
+                                    </option>
+                                    <option value="Student">
+                                        Student
+                                    </option>
+                                    <option value="Professional">
+                                        Professional
+                                    </option>
+                                    <option value="Other">
+                                        Other
+                                    </option>
+                                </select>
+                                <p class="help-block" id="cust_ocmsg">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- ADDRESS -->
+                            <div class="panel panel-info">
+                                <div class="col-lg-12 panel-heading">
+                                    <div class="col-lg-6 text-left">
+                                        <span><strong>Address</strong></span>
+                                    </div>
+                                    <div class="col-lg-6 text-right">
+                                        <span><button class="text-info btn btn-info btn-circle btn-md" type="button" id="addr_show_but" onclick="$(this).hide(); $(&#39;#addr_hide_but&#39;).show(); $(&#39;#gym_address_body&#39;).show(300);">&nbsp; <button class="text-info btn btn-danger btn-circle btn-md" type="button" id="addr_hide_but" onclick="$(this).hide(); $(&#39;#addr_show_but&#39;).show(); $(&#39;#gym_address_body&#39;).hide(300);" style="display:none;"></button>&nbsp;</button></span>
+                                    </div>
+                                </div>
+                                <div class="panel-body" id="gym_address_body" style="display:none;">
+                                    <!-- Country -->
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Country :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Country" name="gym_country" required="" type="text" id="gym_country" maxlength="100">
+                                                <p class="help-block" id="gym_comsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- State / Province -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>State / Province :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="State / Province" name="gym_province" required="required" type="text" id="gym_province" maxlength="150">
+                                                <p class="help-block" id="gym_prmsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- District / Department -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>District / Department :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="District / Department" name="gym_district" required="required" type="text" id="gym_district" maxlength="100">
+                                                <p class="help-block" id="gym_dimsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- City / Town -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>City / Town :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="City / Town" name="gym_city_town" required="required" type="text" id="gym_city_town" maxlength="100">
+                                                <p class="help-block" id="gym_citmsg">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- Street / Locality -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Street / Locality :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Street / Locality" name="gym_st_loc" type="text" id="gym_st_loc" maxlength="100">
+                                                <p class="help-block" id="gym_stlmsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- Address Line -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Address Line :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Address Line" name="gym_addrs" type="text" id="gym_addrs" maxlength="200">
+                                                <p class="help-block" id="gym_admsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- Zipcode -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Zipcode :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Zipcode" name="gym_zipcode" required="" type="text" id="gym_zipcode" maxlength="25">
+                                                <p class="help-block" id="gym_zimsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- Personal Website -->
+                                        <div class="col-lg-3">
+                                            <div class="col-lg-12">
+                                                <strong>Website :</strong>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input class="form-control" placeholder="Personal Website" name="gym_website" required="" type="text" id="gym_website" maxlength="250" value="http://">
+                                                <p class="help-block" id="gym_wemsg">&nbsp;</p>
+                                            </div>
+                                        </div><!-- Google Map URL -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="cust_add_msg"></div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-lg btn-success btn-block" value="Save" id="cust_savebtn">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="col-lg-12">
+                &nbsp;
+            </div>
+            <div class="col-lg-4">
+                &nbsp;
+            </div>
+            <div class="col-lg-6">
+                <div id="displayreciept"></div>
+            </div>
+            <div class="col-lg-2">
+                &nbsp;
+            </div><!--  Pic data=-->
+            <button class="btn btn-primary btn-md" id="photo_Cbut_edit" data-toggle="modal" data-target="#myModal_CPhoto" style="display:none">Upload Photo</button>
+            <form action="control.php" name="changePic" id="changePic" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <input type="hidden" name="formid" value="changePic"> <input type="hidden" name="action1" value="ChangeCphoto"> <input type="hidden" name="autoloader" value="true"> <input type="hidden" name="type" value="slave"> <input type="hidden" name="photo_id" id="photo_id" value="">
+                    <div class="modal" id="myModal_CPhoto" tabindex="-1" role="dialog" aria-labelledby="myModal_Photo_Label" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="color:#000;">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModal_Photo_Label">Customer Photo Upload</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- begin_picedit_box -->
+                                    <div class="picedit_box">
+                                        <!-- Placeholder for messaging -->
+                                        <div class="picedit_message"></div><!-- Picedit navigation -->
+                                        <div class="picedit_nav_box picedit_gray_gradient">
+                                            <div class="picedit_pos_elements"></div>
+                                            <div class="picedit_nav_elements">
+                                                <!-- Picedit button element begin -->
+                                                <div class="picedit_element">
+                                                    <div class="picedit_control_menu">
+                                                        <div class="picedit_control_menu_container picedit_tooltip picedit_elm_3">
+                                                            <label class="picedit_colors"></label> <label class="picedit_sizes"> </label>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- Picedit button element end -->
+                                                <!-- Picedit button element begin -->
+                                                <div class="picedit_element"></div><!-- Picedit button element end -->
+                                                <!-- Picedit button element begin -->
+                                                <div class="picedit_element">
+                                                    <div class="picedit_control_menu">
+                                                        <div class="picedit_control_menu_container picedit_tooltip picedit_elm_1">
+                                                            <label><span>90° CW</span></label> <label><span>90° CCW</span> </label>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- Picedit button element end -->
+                                                <!-- Picedit button element begin -->
+                                                <div class="picedit_element">
+                                                    <div class="picedit_control_menu">
+                                                        <div class="picedit_control_menu_container picedit_tooltip picedit_elm_2">
+                                                            <label></label> <label><span>Width (px)</span> <input type="text" class="picedit_input" data-variable="resize_width" value="0"></label> <label><span>Height (px)</span> <input type="text" class="picedit_input" data-variable="resize_height" value="0"></label>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- Picedit button element end -->
+                                            </div>
+                                        </div><!-- Picedit canvas element -->
+                                        <div class="picedit_canvas_box">
+                                            <div class="picedit_painter">
+                                                <canvas></canvas>
+                                            </div>
+                                            <div class="picedit_canvas">
+                                                <canvas></canvas>
+                                            </div>
+                                            <div class="picedit_action_btns active">
+                                                <div class="picedit_control ico-picedit-picture" data-action="load_image"></div>
+                                                <div class="picedit_control ico-picedit-camera" data-action="camera_open"></div>
+                                                <div class="center">
+                                                    or copy/paste image here
+                                                </div>
+                                            </div>
+                                        </div><!-- Picedit Video Box -->
+                                        <div class="picedit_video">
+                                            <video autoplay=""></video>
+                                            <div class="picedit_video_controls"></div>
+                                        </div><!-- Picedit draggable and resizeable div to outline cropping boundaries -->
+                                        <div class="picedit_drag_resize">
+                                            <div class="picedit_drag_resize_canvas"></div>
+                                            <div class="picedit_drag_resize_box">
+                                                <div class="picedit_drag_resize_box_corner_wrap">
+                                                    <div class="picedit_drag_resize_box_corner"></div>
+                                                </div>
+                                                <div class="picedit_drag_resize_box_elements"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end_picedit_box -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" name="submit" class="btn btn-success" id="addusrBut">Upload Photo</button> <button type="button" class="btn btn-success" data-dismiss="modal" id="photoCancel">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+

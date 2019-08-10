@@ -1,0 +1,41 @@
+<!-- Report Generation -->
+<div class="row"><div class="col-lg-12">&nbsp;</div></div>
+<div class="row output-panels" id="pReports">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Reports. 
+				</div>
+				<div class="panel-body" id="accordionaddrep">
+					<form id="addrepForm">
+						<!-- Date From / Date To. -->
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date From </strong> </div>
+								<div class="col-lg-12">
+									<input class="form-control" placeholder="Date From" name="rep_date_from" type="text" id="rep_date_from" maxlength="11" readonly="readonly" />
+									<p class="help-block" id="rep_date_from_msg">Enter / Select</p>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="col-lg-12"> <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date To </strong> </div>
+								<div class="col-lg-12">
+									<input class="form-control" placeholder="Date To" name="rep_date_to" type="text" id="rep_date_to" maxlength="11" readonly="readonly"/>
+									<p class="help-block" id="rep_date_to_msg">Enter / Select</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 text-center">
+								<!-- <button type="button" class="btn btn-lg btn-danger" href="javascript:void(0);" id="addreportPDFBut"><i class="fa fa-file-pdf-o fa-fw fa-2x"></i> &nbsp;PDF</button>&nbsp; -->
+								<button type="button" class="btn btn-lg btn-danger" href="javascript:void(0);" id="addreportXLSXBut"><i class="fa fa-file-excel-o fa-fw fa-2x"></i> &nbsp;XLSX</button>&nbsp; 
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12" id="rep_msg"></div>
+	</div>
+</div>

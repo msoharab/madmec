@@ -1,0 +1,46 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#Add" data-toggle="tab" id="Addfacility">Add Vehicle Type</a></li>
+    <li><a href="#Show" data-toggle="tab" id="Showdonormenubut">List Vehicle Type's</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="Add">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-bolt fa-fw fa-x2"></i>&nbsp;<strong>Add Vehicle Type</strong></div>
+            <div class="panel-body">
+                <form id='vehicletypeform'>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Vehicle Type : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <input  id="vehicletypee" name="vehicletype" type="text" class="form-control" placeholder="Vehicle Type" required=""/>
+                            <span id="err_email"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <strong><i class="fa fa-star text-danger">&nbsp;</i>Comment : <i class="fa fa-caret-down fa-fw"></i></strong>
+                        </div>
+                        <div class="col-lg-12">
+                            <textarea  id="comment" name="comment"  class="form-control" placeholder="Comment" required="" style="resize: none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">&nbsp;</div>
+                    <div class="col-lg-12">
+                        <button type="submit" name="formsubmit" id="formsubmit" class="btn btn-primary btn-lg btn-block">&nbsp ADD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="Show">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-bolt fa-fw fa-x2"></i>&nbsp;<strong>List Vehicle Type's</strong></div>
+            <div class="panel-body">
+                <div id='disvehicletype'>Loading............</div>
+            </div>
+        </div>
+    </div>
+</div>

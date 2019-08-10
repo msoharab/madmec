@@ -1,0 +1,53 @@
+info_begin
+format: 1
+mpd_version: 0.16.4
+fs_charset: UTF-8
+tag: Artist
+tag: Album
+tag: Title
+tag: Track
+tag: Name
+tag: Genre
+tag: Date
+tag: Composer
+tag: Performer
+tag: Disc
+info_end
+directory: MadMec Atif Aslam
+mtime: 1456589067
+begin: MadMec Atif Aslam
+directory: 201602 - MadMec
+mtime: 1456589067
+begin: MadMec Atif Aslam/201602 - MadMec
+song_begin: 001 - HUA HAIN AAJ PEHLI BAAR.mp3
+Time: 136
+mtime: 1456589067
+song_end
+end: MadMec Atif Aslam/201602 - MadMec
+end: MadMec Atif Aslam
+directory: Shakeel Atif Aslam
+mtime: 1456568614
+begin: Shakeel Atif Aslam
+directory: 201602 - Shakeel
+mtime: 1456815979
+begin: Shakeel Atif Aslam/201602 - Shakeel
+song_begin: _MP3_Yaar_Ko_Hamne_Ja_Ba_Ja_Dekha_Abida_Parveen.mp3
+Time: 385
+mtime: 1456815874
+song_end
+song_begin: 001 - sanam re.mp3
+Time: 277
+Artist: Mithoon , Tulsi Kumar
+Title: Sanam Re (Lounge Mix) - SongsMp3.Com
+Album: Sanam Re - SongsMp3.Com
+Track: 1/1
+Date: 2016
+Genre: Bollywood
+Composer: Mithoon | SongsMp3.Com
+Performer: SongsMp3.Com
+Performer: SongsMp3.Com
+Disc: 1/1
+mtime: 1456568614
+song_end
+end: Shakeel Atif Aslam/201602 - Shakeel
+end: Shakeel Atif Aslam

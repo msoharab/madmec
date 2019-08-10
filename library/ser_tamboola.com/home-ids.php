@@ -1,0 +1,215 @@
+<?php
+
+class home_ids {
+
+    private $home_ids;
+
+    public function __construct($config) {
+        $this->home_ids = array(
+            "AddGym" => array(
+                "form" => "AddGymForm",
+                "fields" => array(
+                    "field1",
+                    "field2",
+                    "field3",
+                    "field4",
+                    "field5",
+                    "field6",
+                    "field7",
+                    "field8",
+                    "field9",
+                    "field10",
+                    "field11",
+                    "field12",
+                    "field13",
+                    "field14",
+                    "field15",
+                    "field16",
+                ),
+                "dataType" => "JSON",
+                "processData" => false,
+                "contentType" => false,
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "GymAdd",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "logoImg" => "file1",
+                "logoImgClass" => "picedit_box",
+                "headerImg" => "file2",
+                "headerImgClass" => "picedit_box",
+                "inView" => "file3",
+                "inViewClass" => "picedit_box",
+                "status" => "#status",
+                "bar" => ".bar",
+                "percent" => ".percent",
+                "percentVal" => "0%",
+                "picedit" => false,
+                "ajaxForm" => false,
+                "defaultImage" => $config["DEFAULT_IMG"],
+                "clone" => array(
+                    "clonereq00",
+                    "cloneresp00",
+                ),
+                "cloneplusbut" => array(
+                    "cloneplusbut1",
+                    "cloneplusbut2",
+                ),
+                "cloneminusbut" => array(
+                    "cloneminusbut1",
+                    "cloneminusbut2",
+                ),
+                "reqparam" => array(
+                    "reqparam0",
+                ),
+                "resparam" => array(
+                    "respparam0",
+                    "respval0",
+                ),
+            ),
+            "searchGym" => array(
+                "form" => "searchGymForm",
+                "fields" => array(
+                    "field1",
+                ),
+                "dataType" => "JSON",
+                "processData" => false,
+                "contentType" => false,
+                "loadGym" => true,
+                "listtype" => "select",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "GymSearch",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+            ),
+            "AssignGym" => array(
+                "form" => "AssignGymForm",
+                "fields" => array(
+                    "fieldd1",
+                    "fieldd2",
+                    "fieldd3",
+                    "fieldd4",
+                ),
+                "dataType" => "JSON",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "AssignGym",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "btnDiv" => "assignBtn",
+                "searchGym" => array(
+                    "form" => "searchGymForm",
+                    "fields" => array(
+                        "field1",
+                    ),
+                    "dataType" => "JSON",
+                    "processData" => false,
+                    "contentType" => false,
+                    "loadGym" => false,
+                    "listtype" => "select",
+                    "type" => "POST",
+                    "url" => $config["URL"] . $config["CTRL_35"] . "GymSearch",
+                    "Redurl" => $config["URL"] . $config["CTRL_35"],
+                ),
+                "searchUser" => array(
+                    "form" => "searchUserForm",
+                    "fields" => array(
+                        "searchUser1",
+                    ),
+                    "dataType" => "JSON",
+                    "processData" => false,
+                    "contentType" => false,
+                    "loadUser" => false,
+                    "listtype" => "select",
+                    "type" => "POST",
+                    "url" => $config["URL"] . $config["CTRL_35"] . "UserSearch",
+                    "Redurl" => $config["URL"] . $config["CTRL_35"],
+                ),
+            ),
+            "Request" => array(
+                "fields" => array(
+                    "fieldr1",
+                    "fieldr2",
+                ),
+                "dataType" => "JSON",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "Request",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "btnDiv" => "RequestGymBtn",
+            ),
+            "ListGym" => array(
+                "fields" => array(
+                    "fieldL1",
+                    "fieldL2",
+                ),
+                "dataType" => "JSON",
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "ListGym",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "btnDiv" => "listGymBtn",
+            ),
+            "EditGym" => array(
+                "form" => "AddGymForm",
+                "fields" => array(
+                    "field1",
+                    "field2",
+                    "field3",
+                    "field4",
+                    "field5",
+                    "field6",
+                    "field7",
+                    "field8",
+                    "field9",
+                    "field10",
+                    "field11",
+                    "field12",
+                    "field13",
+                    "field14",
+                    "field15",
+                    "field16",
+                    "field17"
+                ),
+                "dataType" => "JSON",
+                "processData" => false,
+                "contentType" => false,
+                "type" => "POST",
+                "url" => $config["URL"] . $config["CTRL_35"] . "GymEdit",
+                "Redurl" => $config["URL"] . $config["CTRL_35"],
+                "logoImg" => "file1",
+                "logoImgClass" => "picedit_box",
+                "headerImg" => "file2",
+                "headerImgClass" => "picedit_box",
+                "inView" => "file3",
+                "inViewClass" => "picedit_box",
+                "status" => "#status",
+                "bar" => ".bar",
+                "percent" => ".percent",
+                "percentVal" => "0%",
+                "picedit" => false,
+                "ajaxForm" => false,
+                "defaultImage" => $config["DEFAULT_IMG"],
+                "clone" => array(
+                    "clonereq00",
+                    "cloneresp00",
+                ),
+                "cloneplusbut" => array(
+                    "cloneplusbut1",
+                    "cloneplusbut2",
+                ),
+                "cloneminusbut" => array(
+                    "cloneminusbut1",
+                    "cloneminusbut2",
+                ),
+                "reqparam" => array(
+                    "reqparam0",
+                ),
+                "resparam" => array(
+                    "respparam0",
+                    "respval0",
+                ),
+            ),
+        );
+    }
+
+    public function getIds() {
+        return $this->home_ids;
+    }
+
+}
+
+?>

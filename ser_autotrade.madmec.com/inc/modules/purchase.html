@@ -1,0 +1,111 @@
+<div class="row output-panels" id="pPurchase">
+    <ul class="nav nav-tabs" id="sales_menu">
+        <li class="active"><a href="#add_patty" data-toggle="tab" id="addpattybut">Add Purchase</a></li>
+        <li><a href="#lists_purchase" data-toggle="tab" id="list_purchase">List purchase</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="add_patty">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Initiate a consignment <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                        </div>
+                        <div class="panel-body" id="pattyBasicInfo">
+                            <form id="addpattyForm">
+                                <div class="row">
+                                    <!-- Package Type -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Package Type <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12 text-left" id="TVPtype">
+                                            <input type="radio" class="radio-botton" name="pack_type" id="pack_type" value="1"/> : Box<br />
+                                            <input type="radio" class="radio-botton" name="pack_type" id="pack_type" value="2"/> : Bag<br />
+                                            <input type="radio" class="radio-botton" name="pack_type" id="pack_type" value="3"/> : Krate<br />
+                                            Fetch the Package type from db display radio buttons
+                                            <p class="help-block" id="pack_type_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Number Of Packs -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Number Of Packs <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Number Of Packs" name="num_packs" type="number" id="num_packs" maxlength="11" value="0" required />
+                                            <p class="help-block" id="num_packs_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Supplier -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Supplier Name <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Supplier Name" name="supp_name" type="text" id="supp_name" maxlength="100"/>
+                                            <p class="help-block" id="supp_name_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Products -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Product Name <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Product Name" name="prduct_name" type="text" id="prduct_name" maxlength="100"/>
+                                            <p class="help-block" id="prduct_name_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Vehichle details -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Vehicle Number <i class="fa fa-caret-down fa-fw"></i></strong>&nbsp;
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Vehicle Number" name="vehicle_no" type="text" id="vehicle_no" maxlength="100"/>
+                                            <p class="help-block" id="vd_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Date -->
+                                    <div class="col-lg-4">
+                                        <div class="col-lg-12">
+                                            <strong><span class="text-danger"><i class="fa fa-star fa-fw"></i></span> Date <i class="fa fa-caret-down fa-fw"></i></strong>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <input class="form-control" placeholder="Date" name="patty_date" type="text" id="patty_date" maxlength="15"  readonly="readonly" />
+                                            <p class="help-block" id="pd_msg">Enter/ Select.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-lg btn-primary btn-block" href="javascript:void(0);" id="inipattyBut"><i class="fa fa-upload fa-fw fa-2x"></i> &nbsp;Add</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade " id="lists_purchase">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            List purchase
+                        </div>
+                        <div class="panel-body table-responsive" id="lstpurchase"></div>
+                        <div class="col-lg-12" id="lstpurchaseloader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" id="purchase_message"></div>
+</div>
+
+
