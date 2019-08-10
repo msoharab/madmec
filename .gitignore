@@ -1,5 +1,7 @@
 /vendor
+/vendor/*
 /nbproject
+/nbproject/*
 /public/storeApp
 /public/storeDI
 /public/chrome
@@ -99,3 +101,4 @@ library/web_ramapriya.org/
 library/web_researchramayana.org/
 library/web_templeofmusic.co.in/
 library/zend.zip
+!proguard-project.txt
